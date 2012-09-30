@@ -1,0 +1,35 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+[[!BootstrapTheme]]
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>[[*longtitle:isnotempty:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]] | [[++site_name]]</title>
+	[[+description:notempty=`<meta name="description" content="[[+description]]">`]]
+	<meta name="author" content="">
+	<base href="[[++site_url]]" id="site_url" />
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/bootstrap.min.css">
+	<!--link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/fontawesome/css/font-awesome.css" -->			
+	
+	<style>
+	body {
+	  padding-top: 60px;
+	  padding-bottom: 40px;
+	}
+	</style>
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/css/docs.css">
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/style.css">
+
+	<script src="[[++site_url]]assets/templates/bootstrap/themes/default/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+[[$tpl.navbar]]
+<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">

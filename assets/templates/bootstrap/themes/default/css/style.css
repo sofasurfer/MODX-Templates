@@ -1,0 +1,77 @@
+
+
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+
+/*
+.content {background: url('../img/page-bg.png') repeat center top; font-family: arial, sans-serif; color: #595959; font-size: 12px; padding: 0px; margin: 0px; text-shadow: #ffffff 0px 1px 0px;}
+*/
+/*
+.navbar-fixed-top .nav{
+	height: 45px;
+}
+*/
+
+.subnav p{
+	padding-top:10px;
+	padding-left: 10px;
+}
+.nav .tl-cloud{
+	margin:0;
+	padding:0;
+}
+.nav .tl-tag{
+	float:left;
+	margin:0;
+	padding:2px;
+	list-style: none;
+}
+
+#modal-video{
+	overflow:auto;
+	max-height:100%;
+	/*background: #000;*/
+}
+
+#back-top {
+	position:fixed; /* this is the magic */
+	bottom:10px; /* together with this to put the div at the bottom*/
+	right:10px;
+	cursor:pointer;
+	display:none;
+}
+
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 30px;
+}
+.rating span.star {
+  font-family: FontAwesome;
+  font-size: medium;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.rating span.star:hover {
+  cursor: pointer;
+}
+.rating span.star:before {
+  content: "\f006";
+  padding-right: 5px;
+  color: #999999;
+}
+.rating span.star:hover:before,
+.rating span.star:hover ~ span.star:before {
+  content: "\f005";
+  color: #e3cf7a;
+}
+
+.icon-modx{
+	width: 28px;
+	height: 28px;
+	background-repeat: no-repeat;
+	background-image: url('/assets/templates/bootstrap/themes/default/img/modx-logo-s.png');
+}

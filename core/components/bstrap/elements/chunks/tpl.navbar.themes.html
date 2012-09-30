@@ -1,0 +1,15 @@
+<li class="visible-desktop [[+wf.classnames]] [[+wf.isfolder:isequal=`1`:then=`dropdown`]] ">
+	<a href="[[+wf.link]]" title="[[+wf.title]]" [[+wf.isfolder:isequal=`1`:then=`class="dropdown-toggle" data-toggle="dropdown"`]] >
+	[[+navicon:isnot=``:then=`<i class="[[+navicon]]  icon-white"></i>`:else=`[[+wf.linktext]]`]][[+wf.isfolder:isequal=`1`:then=`<b class="caret visible-desktop"></b>`]]</a>
+	<ul class="dropdown-menu visible-desktop">
+		<li class="nav-header">Themes by Thomas Park</li>
+		<li class="divider"></li>
+		<li [[+site_theme:isequal=`default`:then=`class="active"`:else=``]]><a target="_top"  href="[[~[[*id]]]]?theme=default">Default</a></li>
+		<li [[+site_theme:isequal=`sofa`:then=`class="active"`:else=``]]><a target="_top"  href="[[~[[*id]]]]?theme=sofaweb">SofaSurfer</a></li>
+		<li [[+site_theme:isequal=`amelia`:then=`class="active"`:else=``]]><a target="_top"  href="[[~[[*id]]]]?theme=amelia">Amelia</a></li>
+		<li [[+site_theme:isequal=`journal`:then=`class="active"`:else=``]]><a target="_top"  href="[[~[[*id]]]]?theme=journal">Journal</a></li>					
+		<li [[+site_theme:isequal=`slate`:then=`class="active"`:else=``]]><a target="_top"  href="[[~[[*id]]]]?theme=slate">Slate</a></li>					
+		<li [[+site_theme:isequal=`superhero`:then=`class="active"`:else=``]]><a target="_top"  href="[[~[[*id]]]]?theme=superhero">Superhero</a></li>					
+		<li [[+site_theme:isequal=`united`:then=`class="active"`:else=`class="last"`]]><a target="_top"  href="[[~[[*id]]]]?theme=united">United</a></li>				
+	</ul>
+</li>

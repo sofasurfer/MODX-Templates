@@ -1,0 +1,57 @@
+[[!FormIt?
+   &hooks=`spam,FormItLog,email,redirect`
+   &logfile=`[[++formitlog.logfile]]`
+   &emailTpl=`ContactEmail`
+   &emailFrom=`[[++emailsender]]`
+   &emailFromName=`[[++site_name]]`
+   &emailTo=`kib@sofasurfer.ch`
+   &redirectTo=`21`
+   &language=`[[++fe_editor_lang]]`
+   &emailHtml=`true`
+   &emailUseFieldForSubject=`true`
+   &validate=`name:required,
+      email:email:required,
+      subject:required,
+      text:required:stripTags,
+      validate=`workemail:blank`
+]]
+<form class="form-horizontal" name="formContact" action="[[~[[*id]]]]" method="post">
+
+    [[+errors:notempty=`
+        <div class="alert alert-block alert-error fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading"><i class="icon-thumbs-down" /> Oh snap! You got an error!</h4>
+            <p>[[+fi.error.error_message]]</p>
+        </div>
+    `]]	
+	
+	<input name="subject" value="[[++http_host]] - ContactForm" type="hidden" />
+	<input name="workemail" value="" type="hidden" />
+	
+	<div class="control-group [[+fi.error.name:notempty=`error`]]">
+		<label class="control-label" for="name">[[%name ]]:</label>
+		<div class="controls">			
+			<input name="name" id="name" value="[[+fi.name]]" type="text">
+			<span class="help-inline">[[+fi.error.name]]</span>
+		</div>
+	</div>
+	<div class="control-group [[+fi.error.email:notempty=`error`]]">
+		<label class="control-label" for="email">[[%email ]]:</label>
+		<div class="controls">			
+			<input name="email" id="email" value="[[+fi.email]]" type="email" />
+			<span class="help-inline">[[+fi.error.email]]</span>
+		</div>
+	</div>
+	<div class="control-group [[+fi.error.text:notempty=`error`]]">	
+		<label class="control-label" for="text">Message:</label>
+		<div class="controls">			
+			<textarea name="text" id="text" rows="5">[[+fi.text]]</textarea>
+			<span class="help-inline">[[+fi.error.text]]</span>
+		</div>				
+	</div>
+	[[+hidebutton:isempty=`
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary">Send Contact Inquiry</button>
+		</div>		
+	`]]
+</form>

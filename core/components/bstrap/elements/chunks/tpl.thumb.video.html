@@ -1,0 +1,13 @@
+<li class="[[+className]]" id="[[+alias]]">
+	<div class="thumbnail">
+		<a href="[[+href]]"><h3>[[+title]]</h3></a>
+		<video width="[[+width]]" height="[[+height]]" class="mejs-ted"
+			[[+jpg:isnot=``:then=`poster="[[+path]]/[[+jpg:phpthumbof=`w=[[+width]]&h=[[+height]]&zc=[[+imagecrop:default=`1`]]]]"`]] 
+			controls="controls" preload="[[+preload:default=`none`]]" [[+autoplay:isequal=`1`:then=`autoplay="autoplay"`]]>
+			[[+mp4:isnot=``:then=`<source type="video/mp4" src="[[+path]]/[[+mp4]]" />`]]
+			[[+webm:isnot=``:then=`<source type="video/webm" src="[[+path]]/[[+webm]]" />`]]
+			[[+ogv:isnot=``:then=`<source type="video/ogg" src="[[+path]]/[[+ogv]]" />`]]
+			<img src="myvideo.jpg" width="[[+width]]" height="[[+height]]" title="No video playback capabilities" />
+		</video>
+	</div>
+</li>

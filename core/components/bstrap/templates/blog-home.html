@@ -1,0 +1,22 @@
+[[$tpl.header]]
+<header class="jumbotron subhead" id="overview">
+	<h1>[[*pagetitle]]</h1>
+	[[*introtext:notempty=`<div class="lead">[[*introtext]]</div>`]]
+	<div class="subnav">
+	[[!Wayfinder?
+		&outerClass=`nav nav-pills`
+		&innerClass=`dropdown-menu`
+		&rowTpl=`@CODE: <li><a href="#[[+wf.alias]]" title="[[+wf.linktext]]">[[+wf.linktext:limit=`12`]]</a></li>`
+		&startId=`[[*id]]`
+		&level=`0`
+		&limit=`10` 
+		&sortBy=`publishedon`
+		&sortOrder=`DESC`
+		&titleOfLinks=``
+	]]	
+	</div>
+</header>	
+<div class="row">
+    <div class="span12">[[*content]]</div>
+</div>
+[[$tpl.footer]]

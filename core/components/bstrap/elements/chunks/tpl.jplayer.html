@@ -1,0 +1,22 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    [[+title:notempty=`<h3>[[+title]]</h3>`]]
+    </div>
+<div id="modal-body" class="modal-body">
+        <video id="[[+path]]" [[+width:notempty=`width="[[+width]]"`]] [[+height:notempty=`height="[[+height]]"`]] [[+classVideo:isnot=``:then=`class="[[+classVideo]]"`]] 
+            [[+image:isnot=``:then=`poster="[[+image:phpthumbof=`w=[[+width]]&h=[[+height]]&zc=[[+imagecrop:default=`1`]]]]"`]] 
+            [[+controls:isequal=`1`:then=`controls="controls"`]] [[+preload:isequal=`1`:then=`preload="preload"`]] [[+autoplay:isequal=`1`:then=`autoplay="autoplay"`]] >
+            [[+mp4:isnot=``:then=`<source type="video/mp4" src="[[+path]]/[[+mp4]]" />`]]
+            [[+webm:isnot=``:then=`<source type="video/webm" src="[[+path]]/[[+webm]]" />`]]
+            [[+ogv:isnot=``:then=`<source type="video/ogg" src="[[+path]]/[[+ogv]]" />`]]
+            <img alt="No video playback capabilities" />
+        </video>   
+</div>
+<div class="modal-footer">
+	<div class="pull-left">
+			<i class="icon-download-alt"></i>
+			[[+mp4:notempty=`<a href="[[+path]]/[[+mp4]]">mp4 ([[+mp4.size:getBites]])</a>, `]] 
+			[[+webm:notempty=`<a href="[[+path]]/[[+webm]]">webm ([[+webm.size:getBites]])</a>, `]]
+			[[+ogv:notempty=`<a href="[[+path]]/[[+ogv]]">ogv ([[+ogv.size:getBites]])</a>`]]
+	</div>
+</div>

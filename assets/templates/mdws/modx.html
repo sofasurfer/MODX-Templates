@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		[[$HeadDebug]]
+		<title>[[*longtitle]] | [[++site_name]]</title>
+		<base href="[[++site_url]]" id="site_url" />
+		<meta http-equiv="Content-Type" content="text/html; charset=[[++modx_charset]]" />
+		<meta name="robots" content="index,follow" />
+		<meta name="description" content="[[*introtext]]" />
+
+		<script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+		
+		<!-- ADD jQuery from google API source -->
+		<script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAArGC3p9zX-ldt6pS0RPBeNxS7Cqy6TB1sqkW6B7pbZ1ClkON5yBR00TEZUvMzI6G6TFKZQC4RsUPdjA"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<!--
+		<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" rel="stylesheet"  />
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+		-->
+		<!-- MODX WorkShop CSS and JS files -->
+		<link rel="stylesheet" href="[[++site_url]]/assets/components/mdws/css/default.css" type="text/css" />
+		<script type="text/javascript" src="[[++site_url]]/assets/components/mdws/js/default.js"></script>
+		[[Analytics?setAccount=`[[++analytics_webPropertyId]]` &setDomainName=`sofasurfer.org` ]]
+	</head>
+	<body>
+		<div id="debug"></div>
+                <div class="site">     	
+			<div class="header rounded">
+				<div class="quickLinks">
+			    	[[!Login? &loginTpl=`LogInTop` &logoutTpl=`LogOutTop` ]]
+				</div>
+				<div class="topNavigation">
+					[[!Wayfinder?startId=`291` &level=`1` &hereClass=`navActive` ]]
+				</div>
+			</div>
+			<div class="content rounded">
+				[[Breadcrumbs]]
+				<h1 id="pageTitle">[[*longtitle]]</h1>
+				[[*content]]
+			</div>
+			<div class="menu">
+	                    [[*menu]][[$PayPalButton]]
+			</div>
+                        <div class="footer">[[$footer]]</div>
+		</div>
+		<script>
+		var options={ "publisher": "deefb6d6-6a52-485d-adc7-651a367bbb41", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "email", "sharethis"]}};
+		var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+.floating-insertion-indicator {
+    position: absolute;
+    background-color: #77BC71;
+    width: 4px;
+}
+.gal-item-inactive {
+    opacity: 0.5;
+}
+.green { color: green; }
+.red { color: red; }
+
+.gal-detail-active {
+     float: right;
+}
+.gal-view-item-albums {
+    overflow:auto;
+    border-top: 1px solid #d4d4d4;
+    margin-top: 4px;
+}
+
+.gal-item-thumb {
+    border: 1px solid #ddd;
+    padding: 5px 5px 3px;
+}
+
+.gal-item-update-preview {
+    margin: 0 auto;
+    text-align: center;
+    padding: 2px;
+}

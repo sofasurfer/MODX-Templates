@@ -1,0 +1,138 @@
+
+
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+
+/*
+.content {background: url('../img/page-bg.png') repeat center top; font-family: arial, sans-serif; color: #595959; font-size: 12px; padding: 0px; margin: 0px; text-shadow: #ffffff 0px 1px 0px;}
+*/
+/*
+#E8107B
+.navbar-fixed-top .nav{
+	height: 45px;
+}
+*/
+			html, body{
+				height: 100%;
+
+			}
+			body{   
+				padding: 0 !important;
+		    	/*background-color: rgb(241, 241, 241);*/
+		    	background-color: #fff;
+		    	background-position: top center;
+				background-repeat: no-repeat;
+		    }
+		    header{
+		    	top:0px;
+		    	color:#fff;
+		    	margin-bottom:20px;
+		    }
+		    header .lead{
+		    	margin-top:20px;		    
+		    }
+		    #page_logo{
+		    	padding: 5px;
+		   		opacity:0.9;
+				filter:alpha(opacity=90);
+				background-color: #2C2C2C;			    
+				border-radius: 0px 0px 5px 5px;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;	
+		    }
+		    .navbar .nav{
+		    	margin-top: 50px;
+		    	margin-right: 50px;
+		   		opacity:0.9;
+				filter:alpha(opacity=90);	
+				border-radius: 4px 4px 4px 4px;   	
+		    }
+		    .subnav{
+		    	margin-top:20px;
+		    	margin-bottom:20px;
+		    }
+		    .subnav-fixed{
+		    	margin:0;
+		    	top:0 !important;
+		    }
+
+
+			
+h3 span{
+	font-size: .6em;
+}
+
+.footer {
+	margin-bottom:0 !important;
+	background-color: #E9E9E9;
+    /*background-color: #2C2C2C;*/
+    color: #445142;
+    /*color: #fff;*/
+    width: 100%;
+}		
+/*	
+.footer_bottom{
+	background-color: #2C2C2C;					
+}
+.footer_bottom, .footer_bottom h3 {
+    color: #FFFFFF;
+}
+*/
+.nav .tl-cloud{
+	margin:0;
+	padding:0;
+}
+.nav .tl-tag{
+	float:left;
+	margin:0;
+	padding:2px;
+	list-style: none;
+}
+
+#modal-video{
+	overflow:auto;
+	max-height:100%;
+	/*background: #000;*/
+}
+
+#back-top {
+	position:fixed; /* this is the magic */
+	bottom:10px; /* together with this to put the div at the bottom*/
+	right:10px;
+	cursor:pointer;
+	display:none;
+}
+
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 30px;
+}
+.rating span.star {
+  font-family: FontAwesome;
+  font-size: medium;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.rating span.star:hover {
+  cursor: pointer;
+}
+.rating span.star:before {
+  content: "\f006";
+  padding-right: 5px;
+  color: #999999;
+}
+.rating span.star:hover:before,
+.rating span.star:hover ~ span.star:before {
+  content: "\f005";
+  color: #e3cf7a;
+}
+
+.icon-modx{
+	width: 28px;
+	height: 28px;
+	background-repeat: no-repeat;
+	background-image: url('/assets/templates/bootstrap/themes/default/img/modx-logo-s.png');
+}

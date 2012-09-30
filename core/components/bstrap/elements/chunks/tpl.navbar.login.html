@@ -1,0 +1,15 @@
+<li class="dropdown [[+wf.classnames]]">
+	<a href="[[+wf.link]]" title="[[+wf.title]]" class="dropdown-toggle" data-toggle="dropdown" >
+		<i class="icon-signin"></i> Login
+	</a>
+	<form class="dropdown-menu form-inline well span3"  action="[[~[[++unauthorized_page]]]]" method="post">
+		<input class="input-small" type="text" name="username" placeholder="username">
+		<input class="input-small" type="password" name="password" placeholder="Password">
+		<input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />		
+		<button type="submit" class="btn btn-small btn-primary" name="Login" >Login</button>	
+		<label class="checkbox">
+			<input type="checkbox"> Remember me
+		</label>
+		<input type="hidden" name="service" value="login" />
+	</form>			
+</li>

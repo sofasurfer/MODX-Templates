@@ -1,0 +1,28 @@
+[[$tpl.header]]
+[[$tpl.navbar]]
+<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
+	<header class="jumbotron subhead" id="overview">
+		<h1>[[*pagetitle]]</h1>
+		[[*introtext:notempty=`<div class="lead">[[*introtext]]</div>`]]
+		<div class="subnav">
+			[[!Wayfinder?
+				&outerClass=`nav nav-pills`
+				&innerClass=`dropdown-menu`
+				&rowTpl=`@CODE: <li><a href="#[[+wf.alias]]" title="[[+wf.title]]">[[+wf.linktext]]</a></li>`
+				&innerRowTpl=`@CODE: <li[[+wf.id]][[+wf.classes]]><a href="[[+wf.link]]" title="[[+wf.title]]" [[+wf.attributes]]>[[+wf.linktext]]</a>[[+wf.wrapper]]</li>`
+				&startId=`[[*id]]`
+				&level=`2`
+				&limit=`10` 
+				&sortBy=`menuindex`
+			]]	
+		</div>
+	    <div id="[[+alias]]">[[*content]]</div>		
+	</header>
+    <div class="row">
+        <div class="[[*sidebar:isnot=``:then=`span8 offset1`:else=`span12`]]">
+			[[!getResources? &parents=`[[*id]]` &limit=`10`  &depth=`1` &sortBy=`menuindex` &includeContent=`1` &tpl=`@INLINE <div id="[[+alias]]"><h1>[[+pagetitle]]</h1>[[+content]]</div>`]]
+        </div>
+        [[*sidebar:notempty:=`<div class="span4>">[[*sidebar]]</div>`]]
+    </div>
+</div> <!-- /container -->    
+[[$tpl.footer]]

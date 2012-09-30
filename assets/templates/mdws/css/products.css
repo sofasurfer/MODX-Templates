@@ -1,0 +1,23 @@
+/**************************************************************
+
+	Products related Styles
+ 
+    @author	Kilian Bohnenblust (sofasurfer.org)
+
+**************************************************************/
+
+
+.basket .total{
+	float:right;	
+	margin-top:5px;
+	font-size:20px;
+}
+
+
+.basket input[type="submit"]{
+
+	font-size:large;
+	font-weight: bold;
+	padding:2px 5px 2px 5px;
+
+}

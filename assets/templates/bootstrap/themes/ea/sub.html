@@ -1,0 +1,148 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+[[!BootstrapTheme]]
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>[[*longtitle:isnotempty:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]] | [[++site_name]]</title>
+	[[+description:notempty=`<meta name="description" content="[[+description]]">`]]
+	<meta name="author" content="">
+	<base href="[[++site_url]]" id="site_url" />
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/bootstrap.css">
+	<!--link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/fontawesome/css/font-awesome.css" -->			
+	
+	<style>
+	body {
+	  padding-top: 60px;
+	  padding-bottom: 0px;
+	}
+	</style>
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/css/docs.css">
+	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/style.css">
+
+	<script src="[[++site_url]]assets/templates/bootstrap/themes/default/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50" style="background-image: url('[[*HeaderImage]]'), url('/assets/templates/bootstrap/themes/ea/images/bg.jpg');">
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
+<div class="navbar">
+		<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<!-- Be sure to leave the brand out there if you want it shown -->
+		<a class="logo pull-left" href="[[~[[++SiteStart]]]]" title="[[++site_name]]">
+			<img id="page_logo" src="/assets/templates/bootstrap/themes/ea/img/logo2.png" width="125" height="100" alt="[[++site_name]]">
+		</a>	
+				<!-- Everything you want hidden at 940px or less, place within here -->
+		<div class="nav-collapse">	
+
+		<!-- Everything you want hidden at 940px or less, place within here -->
+		[[!Wayfinder?
+			&outerClass=`nav nav-pills pull-right`
+			&innerTpl=`@CODE [[+wf.wrapper]]`
+			&rowTpl=`@CODE <li class="[[+wf.classnames]]"><a href="[[+wf.link]]" title="[[+wf.title]]" >[[+wf.linktext]]</a></li>`
+			&innerRowTpl=`tpl.navbar.row.inner`
+			&startId=`0`
+			&level=`1`
+		]]
+
+		</div>
+
+  </div>
+</div>
+</div>
+<header  id="overview">
+	<div class="container">
+		[[*introtext:notempty=`<div class="lead">[[*introtext]]</div>`]]
+	</div>
+</header>
+<!-- /header -->
+<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]] well">
+    [[!BreadCrumb? &containerTpl=`tpl.breadcrumb.container` &linkCrumbTpl=`tpl.breadcrumb.row`]]
+
+	<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]]</h1>
+	<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
+		<div class="[[*sidebar:isnot=``:then=`span9`:else=`span12`]]">       
+			[[*content]]
+		</div>
+		[[*sidebar:isnot=``:then=`<div class="span3">[[*sidebar]]</div>`]]
+	</div>
+</div> <!-- /container --> 
+
+<footer class="footer">
+  <div class="container footer_content">
+    <div class="row">
+      <div class="span2 frow_white">
+        <p>&copy; <strong>Elite Asia Co., Ltd.</strong> 2012</p>
+		<p>
+		<!--
+		Skype 'My status' button
+		http://www.skype.com/go/skypebuttons
+		-->
+		<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+		<a href="skype:eliteasia.org?call"><img src="http://mystatus.skype.com/smallclassic/eliteasia%2Eorg" style="border: none;" width="114" height="20" alt="My status" /></a>
+		</p>
+      </div>
+      <div class="span3 footer_render">
+        <h4>Footer menu</h4>
+        <ul class="unstyled">
+          <li> <a href="[[~662]]">Services</a> </li>
+          <li><span class="label label-warning">Update</span> <a href="index.html">Promotions</a> </li>
+          <li> <a href="[[~661]]">About Us</a> </li>
+          <li> <a href="[[~663]]">Contact</a> </li>
+        </ul>
+      </div>
+      <div class="span4 footer_render">
+          <div class="input-prepend">
+            <h4>Stay connected</h4>
+            <p>Newsletters offering a stylish and entertaining mix of information and inspiration.</p>
+            <form class=" form-inline">
+              <span class="add-on"><i class="icon-envelope"></i></span>
+              <input type="text" class="input-small span2" placeholder="Email">
+              <button type="submit" class="btn"><i class="icon-check"></i>Subscribe</button>
+            </form>
+          </div>
+      </div>
+      <div class="span3 footer_render">
+        <p> <strong>Phone: </strong> +66 (76) 364 570/571<br>
+          <strong>Fax: </strong> +66 (76) 364 572<br>
+          <br>
+          <strong>Address: </strong> 11 Baan Suan Kamnan, Pa Tong
+          Phuket, 83150, Thailand<br>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="[[++site_url]]assets/templates/bootstrap/themes/default/js/libs/jquery-1.7.2.min.js"></script>
+<script>window.jQuery || document.write('<script src="[[++site_url]]assets/templates/bootstrap/themes/default/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="[[++site_url]]assets/templates/bootstrap/themes/default/js/bootstrap.min.js"></script>
+<script src="[[++site_url]]assets/templates/bootstrap/themes/default/js/libs/bootstrap/easing.js"></script>
+<script src="[[++site_url]]assets/templates/bootstrap/themes/ea/js/script.js"></script>
+[[++ga_account:notempty=`<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '[[++ga_account]]']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>`]]
+</body>
+</html>
+
+
+

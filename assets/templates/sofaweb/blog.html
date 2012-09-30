@@ -1,0 +1,42 @@
+[[$bx-head-open]]
+[[$bx-head-append]]
+[[$bx-head-close]]
+[[$bx-container-open]]
+<div id="header">
+  <div id="search">[[!Login? &loginTpl=`LogInTop` &logoutTpl=`LogOutTop` ]]</div>
+  <div id="siteName"><a href="[[~0]]" title="Home">[[++site_name]]</a></div>
+  [[!Wayfinder? &startId=`[[~[[*id]]]]` &level=`2` &outerTpl=`cssplay_outer` &innerTpl=`cssplay_inner` &rowTpl=`cssplay_row` &hereClass=`active` &firstClass=`first` &lastClass=`last`]]
+</div>
+[[BreadCrumbs? &titleField=`menutitle` ]]
+<div id="content-blog">
+    [[SyntaxHighlighter?]]
+	<div id="menu-blog">[[$MenuBlog]]</div>
+    <h2 class="title"><a href="[[~[[*id]]]]">[[*pagetitle]]</a></h2>
+    <div class="post-info">
+        <span class="left">
+			Posted on [[*publishedon:strtotime:date=`%b %d, %Y`]] by <a href="[[~[[*parent]]]]author/[[*publishedby:userinfo=`username`]]">[[*publishedby:userinfo=`username`]]</a>
+		</span>
+        [[+comments_enabled:is=`1`:then=`&nbsp;| <a href="[[~[[*id]]]]#comments" class="comments">Comments ([[+comments_count]])</a>`]]
+        [[*articlestags:notempty=`
+                <div class="tags">Tags: [[+article_tags]]</div>           
+        `]]            
+    </div>
+    <div class="entry">
+        [[*introtext:notempty=`
+            <p><i>[[*introtext]]</i></p>
+        `]]
+        [[*content]]
+    </div>
+    <hr />
+    <div class="post-comments" id="comments">
+        [[+comments]]
+        <br />
+        <h3>Add a Comment</h3>
+        [[+comments_form]]
+    </div>
+</div>
+<div id="footer">[[$footer]]</div>
+<div id="toTop">^ Back to Top</div>
+[[$bx-container-close]]
+[[$bx-bottom-open]]
+[[$bx-bottom-close]]

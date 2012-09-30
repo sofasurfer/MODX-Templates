@@ -1,0 +1,19 @@
+[[$bx-head-open]]
+[[$bx-head-append]]
+[[$bx-head-close]]
+[[$bx-container-open]]
+<div id="header">
+  <div id="search">[[!Login? &loginTpl=`LogInTop` &logoutTpl=`LogOutTop` ]]</div>
+  <div id="siteName"><a href="[[~0]]" title="Home">[[++site_name]]</a></div>
+  [[!Wayfinder? &startId=`[[~[[*id]]]]` &level=`2` &outerTpl=`cssplay_outer` &innerTpl=`cssplay_inner` &rowTpl=`cssplay_row` &hereClass=`active` &firstClass=`first` &lastClass=`last`]]
+</div>
+[[BreadCrumbs? &titleField=`menutitle` ]]
+<div id="content">
+	<h1>[[*pagetitle]]</h1>
+    [[*content]]
+</div>
+<div id="footer">[[$footer]]</div>
+<div id="toTop">^ Back to Top</div>
+[[$bx-container-close]]
+[[$bx-bottom-open]]
+[[$bx-bottom-close]]

@@ -1,0 +1,824 @@
+@import url(http://fonts.googleapis.com/css?family=Contrail+One);
+
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	color: gray;
+	font-family:Arial;
+	font-size: 12px;
+	text-align: center; /* IE/Win bug fix */
+}
+
+h1
+{
+	font-size: 18px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+h2
+{
+	color: #660000;
+	font-size: 16px;
+	font-style: italic;
+	letter-spacing: 2px;
+	padding:0;
+	margin-top:15px;
+	margin-bottom:5px;
+}
+h3
+{
+	font-size: 14px;
+	padding-bottom:0;
+	margin-bottom:2px;
+}
+
+a
+{
+	color: silver;
+	text-decoration: none;
+}
+a:link
+{
+	color: silver;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #660000;		
+}
+
+.button
+{
+	font-size: 10px;
+	color: #660000;
+	width:auto;
+	cursor:pointer;
+	text-decoration: none;
+	font-weight: bold;
+	border:0;
+	background:transparent;
+}
+
+label{
+	display:inline-block;
+	float:left;
+	top:0px;
+	background: white;
+	width:70px;
+}
+
+input
+{
+	font-size: 10px;
+	width:280px;
+	color: gray;
+	border:0;
+	border: solid 1px silver;
+}
+
+textarea
+{
+	font-size: 10px;
+	width:280px;
+	height:80px;
+	color: gray;
+	border:0;
+	border: solid 1px silver;
+}
+
+select
+{
+	color: gray;
+	background-color: white;
+}
+
+.errorField
+{
+	padding-top:5px;
+	margin-left: 75px;
+}
+
+.error
+{
+	font-size: 9px;
+	color: red;
+}
+
+.hidden{
+
+	display: none;
+
+}
+
+.space{
+
+	clear:both;
+	float: none;
+
+}
+
+.site {
+	margin:0 auto;
+	margin-top: 5%;
+	width:740px;
+	height:440px;
+}
+
+.headerHome{
+	padding-top:170px;
+	height:10px;
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-image: url(../images/top_left.gif);
+
+}
+
+.headerSub{
+	padding-top:100px;
+	height:25px;
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-image: url(../images/top_left.gif);
+
+}
+
+.logo{
+	float:left;
+	width:320px;
+	height:25px;
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-image: url(../images/logo_home.gif);
+}
+
+.hidden{
+
+	display: none;
+
+}
+
+.justifyfull{
+
+	text-align:justify;
+
+}
+
+.contentHome
+{
+	float:right;
+	width: 400px;
+	height:110px;
+	text-align:left;
+	border-right: solid 1px #660000;
+	border-bottom: solid 1px #660000;
+	padding-top: 20px;
+	padding-right: 15px;
+	padding-left: 20px;
+}
+
+.contentHome h1{
+/*
+	font-size: 24px;
+	font-family: 'Contrail One', cursive;
+*/
+	letter-spacing: 2px;
+	padding-top: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom:0px;
+
+}
+
+.contentHome p{
+	margin:0;
+	padding:0;
+	margin-left:10px;
+	margin-top:10px;
+	font-size:14px;
+	letter-spacing: 1px;
+
+}
+
+.contentFull{
+
+	width:738px;
+	height:279px;
+	margin-bottom: 15px;
+	border-left: #660000 1px solid;
+	border-right: #660000 1px solid;
+	border-bottom: #660000 1px solid;
+}
+
+.leftHome
+{
+	float:left;
+	width:303px;
+	height:110px;
+	padding-top:20px;
+	border-left: #660000 1px solid;
+	border-bottom: #660000 1px solid;
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	background-image: url(../images/homepage_flowers2.gif);
+}
+
+
+.contentPanel
+{
+	font-size:12px;
+	letter-spacing: 1px;
+	float:left;
+	width: 405px;
+	height:285px;
+	padding-top: 10px;
+	padding-left: 15px;
+	text-align:left;
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-image: url(../images/content.gif);
+}
+
+
+.contentPanel h2
+{
+	float:left;
+	/*background-repeat:no-repeat;
+	background-position:top right;
+	background-image: url(../images/end.gif);*/
+}
+
+.contentPanel ul
+{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+.contentPanel ul li
+{
+	margin-left:10px;
+	padding-left: 15px;
+	letter-spacing: 0px;
+	background-repeat:no-repeat;
+	background-position: 0px 5px;
+	background-image: url(../images/redQot.jpg);
+}
+
+.contentDefault{
+	padding-left:10px;
+	margin-right:10px;
+	height:193px;
+	background-repeat:no-repeat;
+	background-position:bottom right;
+}
+
+.contentLanding{
+	padding: 0;
+	padding-top: 5px;
+	padding-left:10px;
+	margin-right:12px;
+	height:240px;
+	float:none;
+	clear:both;
+	background-repeat:no-repeat;
+	background-position:200px 140px;
+}
+
+.contentLanding ul li
+{
+	font-weight: bold;
+}
+
+.smallText{
+
+	font-size:10px;
+	letter-spacing:0;
+
+}
+
+#scrollContainer{
+	position:relative;
+	float:left;
+	border:solid 0px aqua;
+	height:200px;
+	width: 400px;
+	overflow: hidden;
+}
+#scrollContent
+{
+	display:block;
+	padding:0;
+	margin:0;
+	padding-left:10px;
+	padding-right: 10px;
+}
+
+
+#imageContainer{
+	position: relative;
+	width:300px;
+	height:239px;
+	overflow:hidden;
+	border: solid 0px gray;
+
+}
+
+
+.mb-wrapper {
+
+	border: 0px !important;
+
+}
+
+.mb-panel {
+	border: 0px !important;
+	padding:0px !important;
+}
+
+a.mb-scrollButtons {
+
+	top: 30% !important;
+
+}
+
+.scrollBar{
+	float:right;
+	width: 15px;
+	clear:both;
+}
+
+.upBtn{
+	float:right;
+	width:15px;
+	height:15px;
+	background: url(../images/upBtn.gif) no-repeat 0 0;
+	cursor:pointer;
+}
+
+.upBtn:hover{
+	background: url(../images/upBtn.gif) no-repeat 0 -12px;
+}
+
+.upBtn-Active, .upBtn-Active:hover{
+	background: url(../images/upBtn.gif) no-repeat 0 -12px;
+}
+
+.downBtn{
+	float:right;
+	margin-top:170px;
+	width:15px;
+	height:15px;
+	background: url(../images/downBtn.gif) no-repeat 0 0px;
+	cursor:pointer;
+}
+
+.downBtn:hover{
+	background: url(../images/downBtn.gif) no-repeat 0 -12px;
+}
+
+.downBtn-Active, .downBtn-Active:hover{
+	background: url(../images/downBtn.gif) no-repeat 0 -12px;
+}
+
+.imageList{
+	width:150px;
+	height:90px;
+	float:left;
+	margin-right:20px;
+	margin-bottom:10px;
+}
+
+.imageList img{
+
+	height:90px;	
+	width: 150px;
+
+}
+
+.pageListItem{
+
+	margin:0;
+	padding:0;
+	margin-left:10px;
+	margin-bottom:10px;
+	padding-left:20px;
+	padding-right:10px;
+	background-repeat:no-repeat;
+	background-position: 0px 5px;
+	background-image: url(../images/redQot.jpg);
+
+}
+
+.pageListItem h3{
+
+	margin:0;
+	padding:0;
+
+}
+
+.pageHeader{
+
+	float:left;
+	margin-top: 2px;
+	margin-right: 5px;
+
+
+}
+
+.pageIcons{
+	float:left;
+	margin-top:-1px;
+}
+
+.pdf
+{
+	border:0;
+	height:16px;
+	padding-left: 20px;
+	font-weight: bold;
+	text-decoration: none; 
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-image: url(../images/pdf.gif);
+}
+
+.close{
+
+	margin-left: 10px;
+}
+
+.pageFunctions{
+	float:none;
+	clear:both;
+	display:block;
+	border:solid 0px;
+	padding-top:12px;
+	padding-right:10px;
+	text-align:right;
+}
+
+.pageFunctions input[type="submit"]{
+
+	padding-left: 20px;
+	background-image: url(../images/redArrow.gif);
+
+}
+
+.pageFunctions ul {
+	padding-top: 0px;
+	margin: 0;
+	float:right;
+	list-style: none;
+}
+
+.pageFunctions ul li {
+	float: left;
+	display: block;
+	background:white;
+	margin-top:0px;
+	margin-left:2px;
+	margin-right:2px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.pageFunctions ul li.active a{
+	color: #660000;
+}
+
+.pageFunctions ul li a.active{
+	color: #660000;
+}
+
+.pageFunctions .control{
+	background:white;
+	margin-left:8px;
+	margin-right:8px;
+}
+
+.newsList{
+	float:none;
+	clear:both;
+	padding-top:7px;
+	padding-bottom:7px;
+	height: 80px;
+	width:740px;
+}
+
+.newsBox{
+	margin-right:16px;
+	height: 80px;
+	float:left;
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	background-image: url(../images/newsBox.gif);
+}
+
+.newsBoxLast{
+	float:left;
+	height: 80px;
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	background-image: url(../images/newsBox.gif);
+}
+
+.newsBoxHeader{
+	/*font-weight: bold;*/
+	font-size: 11px;
+	letter-spacing: 3px;
+	color: #660000;
+	border:solid 1px #660000;
+	background: #e0c1c1;
+	text-align:left;
+	margin-bottom:3px;
+	padding-top:2px;
+	padding-left:3px;
+	padding-bottom:1px;
+}
+
+.newsBoxItem
+{
+	font-size: 11px;
+	text-align:left;
+	width:151px;	
+	padding-left:15px;
+	padding-right:7px;
+	background-repeat:no-repeat;
+	background-position:6px 5px;
+	background-image: url(../images/redQot.jpg);
+}
+
+.newsBoxItemDate{
+	float:right;text-align:right;font-size: 9px;padding-top:2px;
+}
+
+.footer{
+	border:solid 0px;
+	float:none;
+	clear:both;
+	width: 740px;
+	height:15px;
+	padding-top:12px;
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-image: url(../images/footer.jpg);
+	color:silver;
+	text-align:left;
+	font-size: 9px;
+}
+
+/* Menu */
+.topNavigation {
+	float:right;
+	height:25px;
+	width:420px;
+	background-repeat:repeat-x;
+	background-image: url(../images/nav_blank.gif);
+}
+
+#ajaxmenu ul {
+	padding-top: 10px;
+	margin: 0;
+	float:right;
+	list-style: none;
+}
+
+#ajaxmenu ul l
+i {
+	position: relative;
+	float: left;
+	display: block;
+	height:14px;
+	background-color: White;
+	border-left: solid 1px #660000;
+	border-bottom: solid 1px #660000;
+	border-right: solid 0px #660000;
+}
+
+#ajaxmenu ul li.navActive {
+	background-color: #E0C1C1;
+}
+
+#ajaxmenu ul li a {
+	position: relative;
+	display: block;
+	height:13px;
+	padding-top:1px;
+	padding-left:5px;
+	padding-right:5px;
+	font-weight: bold;
+	font-size: 10px;
+	letter-spacing: 3px;
+	color: #660000;
+}
+
+#ajaxmenu ul li a:hover {
+	background-color: #E0C1C1;
+}
+
+
+
+.leftNavigation
+{
+	float:left;
+	width:319px;
+	height:261px;
+	padding-top:18px;
+	border-left: #660000 1px solid;
+	border-bottom: #660000 1px solid;
+	font-size:12px;
+	letter-spacing: 1px;
+}
+
+.leftNavigation .leftImages{
+        max-width: 300px;
+	height:239px;
+
+}
+
+
+.leftNavigation .text {
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+	margin-right: 10px;
+	text-align:left;
+	height:145px;
+}
+
+.leftNavigation h2 {
+	margin: 0;
+	padding: 0;
+	height: 20px;
+	text-align:left;
+}
+
+.leftNavigation p {
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+}
+
+.leftNavigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align:left;
+	height:145px;
+}
+
+.leftNavigation ul li
+{
+	position:relative;
+	width: 220px;
+	left: -1px;
+	background-color: white;
+	padding-top:1px;
+	padding-bottom:2px;
+	border-left: #660000 1px solid;
+}
+
+.leftNavigation ul li.navActive
+{
+	padding-top:0px;
+	padding-bottom:1px;
+	border-right: #660000 1px solid;
+	border-top: #660000 1px solid;
+	border-left: white 1px solid;
+	border-bottom: #660000 1px solid;
+}
+.leftNavigation ul li a
+{
+	padding-left:50px;
+	color: silver;
+}
+
+.leftNavigation ul li.navActive a
+{
+	color: #660000;
+}
+
+.leftNavigation ul li a:hover
+{
+	color: #660000;
+}
+
+.BottomInformation{
+	position:absolute;
+	right:5px;
+	bottom:5px;
+}
+
+
+
+/* common styling */
+/* set up the overall width of the menu div, the font and the margins */
+
+.menu {
+float:right;
+width:420px; 
+height: 25px;
+border-right: solid 1px #660000;
+margin:0;
+padding-top: 10px;
+z-index:100;
+background-repeat:repeat-x;
+background-image: url(../images/nav_blank.gif);
+}
+/* remove the bullets and set the margin and padding to zero for the unordered list */
+.menu ul {
+float:right;
+padding:0; 
+margin:0;
+list-style-type: none;
+}
+/* float the list so that the items are in a line and their position relative so that the drop down list will appear in the right place underneath each list item */
+.menu ul li {
+float:left; 
+position:relative;
+}
+/* style the links to be 104px wide by 30px high with a top and right border 1px solid white. Set the background color and the font size. */
+.menu ul li a, .menu ul li a:visited {
+display:block; 
+text-align:center; 
+text-decoration:none; 
+color: #660000;
+background-color: White;
+border-left: solid 1px #660000;
+border-bottom: solid 1px #660000;
+border-right: solid 0px #660000;
+padding-top:1px;
+padding-bottom:1px;
+padding-left:5px;
+padding-right:5px;
+font-weight: bold;
+font-size: 12px;
+letter-spacing: 3px;
+}
+/* make the dropdown ul invisible */
+.menu ul li ul {
+display: none;
+width:150px;
+background:white;
+border-left: solid 1px #660000;
+border-bottom: solid 1px #660000;
+/*
+border-top: solid 1px #660000;
+border-right: solid 1px #660000;
+*/
+
+}
+
+/* specific to non IE browsers */
+/* set the background and foreground color of the main menu li on hover */
+.menu ul li:hover a {
+background-color: #E0C1C1;
+}
+.menu ul li a.active{
+background-color: #E0C1C1;
+}
+
+.menu ul li.active a{
+background-color: #E0C1C1;
+}
+
+
+/* make the sub menu ul visible and position it beneath the main menu list item */
+.menu ul li:hover ul {
+display:block; 
+position:absolute; 
+}
+/* style the background and foreground color of the submenu links */
+.menu ul li:hover ul li a {
+text-align: left;
+display:block; 
+float:none;
+clear:both;
+width:140px;
+border: 0;
+color:gray;
+padding: 5px;
+font-weight: normal;
+font-size: 12px;
+letter-spacing: 0px;
+background-color: white;
+}
+/* style the background and forground colors of the links on hover */
+.menu ul li:hover ul li a:hover {
+	background-color: #E0C1C1;
+}
+
+
+
+.fancybox-title-inside{
+	background: white;
+
+}
+
+.fancybox-title-inside span{
+	font-weight: bold;
+}

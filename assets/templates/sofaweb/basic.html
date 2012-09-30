@@ -1,0 +1,17 @@
+[[$bx-head-open]]
+[[$bx-head-append]]
+[[$bx-head-close]]
+[[$bx-container-open]]
+<div id="header">
+  <div id="siteName"><a href="[[~0]]" title="Home">[[++site_name]]</a></div>
+</div>
+[[BreadCrumbs? &titleField=`menutitle` ]]
+<div id="content">
+    <h1>[[*pagetitle]]</h1>
+    [[*content]]
+</div>
+<div id="footer">[[$footer]]</div>
+<div id="toTop">^ Back to Top</div>
+[[$bx-container-close]]
+[[$bx-bottom-open]]
+[[$bx-bottom-close]]

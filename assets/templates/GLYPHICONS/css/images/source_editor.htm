@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>HTML Source Editor</title>
+	<script type="text/javascript" src="source_editor_files/tiny_mce_popup.js"></script><link href="source_editor_files/dialog.css" rel="stylesheet">
+	<script type="text/javascript" src="source_editor_files/source_editor.js"></script><script type="text/javascript" src="source_editor_files/en_dlg.js"></script>
+</head>
+<body spellcheck="false" class="forceColors" onresize="resizeInputs();" style="overflow: hidden;">
+	<form name="source" onsubmit="saveContent();return false;" action="#">
+		<div style="float: left" class="title"><label for="htmlSource">HTML Source Editor</label></div>
+
+		<div id="wrapline" style="float: right">
+			<input checked="checked" name="wraped" id="wraped" onclick="toggleWordWrap(this);" class="wordWrapCode" type="checkbox"><label for="wraped">Word Wrap</label>
+		</div>
+
+		<br style="clear: both">
+
+		<textarea name="htmlSource" id="htmlSource" rows="15" cols="100" style="width: 700px; height: 515px; font-family: 'Courier New',Courier,monospace; font-size: 12px;" dir="ltr" wrap="soft" class="mceFocus">&lt;p&gt;&lt;img
+ src="[[*image]]" class="thumbnail" alt="" /&gt;&lt;/p&gt;
+&lt;h2&gt;WWW-Artist&lt;/h2&gt;
+&lt;div class="address"&gt;&lt;strong&gt;Kilian 
+Bohnenblust&lt;/strong&gt;&lt;br /&gt; Phuket - Thailand&lt;br /&gt; 
+&lt;abbr title="Phone"&gt;P:&lt;/abbr&gt;+66 (0)86 277 35 40&lt;br /&gt;
+ &lt;a href="mailto:"&gt;kib@sofasurfer.ch&lt;/a&gt;&lt;/div&gt;
+&lt;!-- Linked In --&gt;
+&lt;p&gt;&lt;a style="text-decoration: none;" 
+href="http://th.linkedin.com/in/sofasurfer"&gt;&lt;span style="font: 80%
+ Arial,sans-serif; color: #0783b6;"&gt;&lt;img style="vertical-align: 
+middle;" src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" 
+alt="View Kilian  Bohnenblust's LinkedIn profile" width="20" height="15"
+ border="0" /&gt;View Kilian Bohnenblust's 
+profile&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;!-- Twitter --&gt;
+&lt;p&gt;&lt;a class="twitter-mention-button" 
+href="https://twitter.com/intent/tweet?screen_name=SofaBits&amp;amp;text=%23MODXWS"&gt;Tweet
+ to @SofaBits&lt;/a&gt;
+&lt;script type="text/javascript"&gt;// &lt;![CDATA[
+!function(d,s,id){var 
+js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//
+ ]]&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- Skype --&gt;
+&lt;p&gt;
+&lt;script type="text/javascript" 
+src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"&gt;&lt;/script&gt;
+&lt;a
+ href="skype:sofasurfer.ch?chat"&gt;&lt;img style="border: none;" 
+src="http://mystatus.skype.com/smallclassic/sofasurfer%2Ech" alt="My 
+status" width="114" height="20" /&gt;&lt;/a&gt;&lt;/p&gt;</textarea>
+
+		<div class="mceActionPanel">
+			<input role="button" name="insert" value="Update" id="insert" type="submit">
+			<input role="button" name="cancel" value="Cancel" onclick="tinyMCEPopup.close();" id="cancel" type="button">
+		</div>
+	</form>
+
+
+</body></html>

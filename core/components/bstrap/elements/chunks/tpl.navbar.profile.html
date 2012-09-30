@@ -1,0 +1,23 @@
+	[[!+modx.user.id:isequal=`0`:then=`
+		<li class="[[+wf.classnames]] dropdown" >
+			<a href="[[+wf.link]]" title="[[+wf.title]]" class="dropdown-toggle" data-toggle="dropdown" ><b class="icon-signin icon-large"></b> Login <b class="caret visible-desktop"></b></a>
+			<form class="form-inline dropdown-menu well span3"  action="[[~[[+loginId]]]]" method="post">
+				<input class="input-small" type="text" name="username" placeholder="username">
+				<input class="input-small" type="password" name="password" placeholder="Password">
+				<input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />		
+				<button type="submit" class="btn btn-small btn-primary" name="Login" >Login</button>	
+				<label class="checkbox">
+					<input type="checkbox"> Remember me
+				</label>
+				<input type="hidden" name="service" value="login" />
+			</form>			
+		</li>	
+	`:else=`
+		<li class="[[+wf.classnames]] dropdown">
+			<a href="[[+wf.link]]" title="[[+wf.title]]" class="dropdown-toggle" data-toggle="dropdown" >
+				<img src="http://www.gravatar.com/avatar/[[!+email:md5]]?s=25" /> [[!+modx.user.username]] <b class="caret visible-desktop"></b>
+			</a>		
+			[[!+wf.wrapper]]
+		</li>	
+	`]]
+

@@ -1,0 +1,44 @@
+/**************************************************************
+Page Styles
+**************************************************************/
+body{
+    margin:0 auto; font-family:Verdana,Arial, sans-serif;
+    color: #000000; background-color:#ffffff;
+    }
+a, a:link, a:active, a:visited, a img,
+a:link img, a:active img, a:visited img {
+    color:#0896FF; cursor:pointer; text-decoration:none;
+    }
+a:hover, a:hover img{
+    text-decoration:underline; cursor:pointer; border:0px;
+    }
+#site{
+    margin:0 auto; width:80%;
+    }
+#header{
+    height:50px;
+    }
+#content{
+    clear:both; padding:20px; border: solid 1px #000000;
+    }
+#footer{
+    clear:both; margin:0px; padding:0px; text-align:left;
+    }
+
+/**************************************************************
+Top Main Navigation
+**************************************************************/
+.topNavigation {
+    display:block; margin: 0; padding:0; list-style: none;
+    }
+.topNavigation li {
+    float:left; margin: 0; padding:0;
+    }
+.topNavigation a, .topNavigation a:link, .topNavigation a:active,
+.topNavigation a:visited {
+    color: #0896FF; display:block; padding: 10px;
+    font-size: large; font-weight:bold;
+    }
+.topNavigation a:hover, .topNavigation .active a{
+    text-decoration: none; color: #ffffff; background: #0896FF;
+    }

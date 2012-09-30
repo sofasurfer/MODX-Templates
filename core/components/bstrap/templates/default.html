@@ -1,0 +1,12 @@
+[[$tpl.header]]
+<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
+    <div class="[[*sidebar:isnot=``:then=`span9`:else=`span12`]]">       
+	<header class="jumbotron subhead" id="overview">
+	    <h1>[[*menutitle:isnot=``:then=`[[*menutitle]]`:else=`[[*pagetitle]]`]]</h1>
+	</header> 
+	[[*introtext:notempty=`<div class="lead">[[*introtext]]</div>`]]
+	[[*content]]
+    </div>
+    [[*sidebar:isnot=``:then=`<div class="span3">[[*sidebar]]</div>`]]
+</div>
+[[$tpl.footer]]

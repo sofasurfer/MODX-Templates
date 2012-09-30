@@ -1,0 +1,39 @@
+[[!FormIt? 
+	&hooks=`spam,FormItLog,email,redirect` 
+	&logfile=`[[++formitlog.logfile]]` 
+	&emailTpl=`ContactEmail` 
+	&emailFrom=`site@sofasurfer.org` 
+	&emailFromName=`[[++site_name]]` 
+	&emailTo=`[[++emailsender]]` 
+	&redirectTo=`187` 
+	&emailHtml=`true` 
+	&emailUseFieldForSubject=`true` 
+	&validate=`name:required, 
+		email:email:required, 
+		subject:required, 
+		text:required:stripTags, 
+		validate=`workemail:blank`
+]]
+<form id="formContact" class="form" action="[[~[[*id]]]]" method="post" name="formContact">
+	<div class="contactForm">
+		<div class="errorField">[[+fi.error.error_message]]</div>
+		<input type="hidden" name="subject" value="[[++http_host]] - ContactForm" /> <input type="hidden" name="workemail" value="" />
+
+		<label for="name">Name:</label> 
+		<div class="errorField">[[+fi.error.name]]</div>		
+		<input id="name" type="text" name="name" value="[[+fi.name]]" />
+
+		<label for="email">E-Mail:</label>
+		<div class="errorField">[[+fi.error.email]]</div>		
+		<input id="email" type="text" name="email" value="[[+fi.email]]" />
+
+		<label for="message">Nachricht:</label> 
+		<div class="errorField">[[+fi.error.text]]</div>
+		<textarea id="text" name="text" rows="5">[[+fi.text]]</textarea>
+		
+		<div class="form-buttons">
+			<input type="submit" value="Send Contact Inquiry" />
+		</div>
+	</div>
+</form>
+<p style="clear: both;"> </p>

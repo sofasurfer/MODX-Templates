@@ -1,0 +1,39 @@
+[[$tpl.header]]
+    <header class="jumbotron subhead" id="overview">
+	    <h1>[[*pagetitle]]</h1>
+	    [[*introtext:notempty=`<div class="lead well">[[*introtext]]</div>`]]
+	    <div class="subnav">
+		    [[!Wayfinder?
+			    &outerClass=`nav nav-pills`
+			    &innerClass=`dropdown-menu`
+			    &rowTpl=`@CODE: <li><a href="#[[+wf.alias]]" title="[[+wf.title]]">[[+wf.linktext]]</a></li>`
+			    &startId=`[[*id]]`
+			    &level=`2`
+			    &limit=`10` 
+			    &sortBy=`menuindex`
+		    ]]	
+	    </div>
+	<div id="[[+alias]]">[[*content]]</div>		
+    </header>
+    <div class="row">
+        <!--div class="span12">
+	    [[!Wayfinder? 
+		    &outerClass=`thumbnails`
+		    &startId=`[[*id]]` 
+		    &limit=`10`  
+		    &sortBy=`menuindex` 
+		    &width=`360` 
+		    &height=`268` 
+		    &rowTpl=`tpl.thumb.item`				
+		    &rowClass=`span3`
+		    &href=`[[+wf.link]]`
+		    &title=`[[+wf.linktext]]`
+		    &caption=`[[+introtext]] - [[+pageimage]]` 
+		    &rel=`[[+filename]]`
+		    &image=`[[!+pageimage]]`
+		    &imagecrop=`0`			
+	    ]]
+	</div-->
+	[[$tpl.resource.list]]
+    </div>
+[[$tpl.footer]]

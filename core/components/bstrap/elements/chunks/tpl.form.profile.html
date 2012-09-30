@@ -1,0 +1,52 @@
+[[!Profile]]
+[[!UpdateProfile]]
+[[+error.message:notempty=`
+	<div class="alert alert-block alert-error fade in">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<h4 class="alert-heading">Oh snap! You got an error!</h4>
+		<p>[[+error.message]]</p>
+	</div>
+`]]	
+[[+login.update_success:if=`[[+login.update_success]]`:is=`1`:then=`
+	<div class="alert alert-block fade in">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		[[%login.profile_updated? &amp;namespace=`login` &topic=`updateprofile`]]
+	</div>
+`]]
+<form class="form-horizontal" action="[[~[[*id]]]]" method="post" name="formProfile">
+<input type="hidden" name="nospam:blank" value="" />
+<div class="control-group">
+	<label class="control-label" for="fullname">[[!%login.fullname? &amp;namespace=`login` &topic=`updateprofile`]] </label>
+	<div class="controls"><input id="fullname" type="text" name="fullname" value="[[+fullname]]" /><span class="error">[[+error.fullname]]</span></div>
+</div>
+<div class="control-group">
+	<label class="control-label" for="email">[[!%login.email]] </label>
+	<div class="controls"><input id="email" type="text" name="email:required:email" value="[[+email]]" /><span class="error">[[+error.email]]</span></div>
+</div>
+<div class="control-group">
+	<label class="control-label" for="phone">[[!%login.phone]] </label>
+	<div class="controls"><input id="phone" type="text" name="phone" value="[[+phone]]" /><span class="error">[[+error.phone]]</span></div>
+</div>
+<div class="control-group">
+	<label class="control-label" for="address">[[!%login.address]] </label>
+	<div class="controls"><input id="address" type="text" name="address" value="[[+address]]" /><span class="error">[[+error.address]]</span></div>
+</div>
+<div class="control-group">
+	<label class="control-label" for="country">[[!%login.country]] </label>
+	<div class="controls"><input id="country" type="text" name="country" value="[[+country]]" />
+	<span class="error">[[+error.country]]</span></div>
+</div>
+<div class="control-group">
+	<label class="control-label" for="city">[[!%login.city]] </label>
+	<div class="controls"><input id="city" type="text" name="city" value="[[+city]]" /><span class="error">[[+error.city]]</span></div>
+</div>
+<div class="control-group">
+	<label class="control-label" for="zip">[[!%login.zip]] </label>
+	<div class="controls"><input id="zip" type="text" name="zip" value="[[+zip]]" /><span class="error">[[+error.zip]]</span></div>
+</div>
+<div class="form-actions">
+	<input class="btn btn-primary" type="submit" value="[[!%login.update_profile]]" />
+	<a class="btn" href="[[~307]]">Change password</a>
+</div>
+</form>
+

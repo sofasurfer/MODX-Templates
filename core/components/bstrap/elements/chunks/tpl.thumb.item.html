@@ -1,0 +1,16 @@
+<li [[+wf.classes]] class="[[+class]]" id="[[+alias]]">
+	<div class="thumbnail" style="width:[[+width]]px;overflow:hidden;">					
+		<a href="[[+href:default=`[[~[[+id]]]]`]]" title="[[+title]]" [[+rel:notempty=`rel="[[+rel]]"`]] [[+data-target:notempty=`data-target="[[+data-target]]"`]] [[+data-toggle:notempty=`data-toggle="[[+data-toggle]]"`]] >
+			[[+title:notempty=`<h5>[[+title]]</h5>`]]
+			[[+image:isnot=``:then=`
+				<img src="[[+image:phpthumbof=`w=[[+width]]&h=[[+height]]&zc=1`]]" width="[[+width]]" height="[[+height]]" style="width:[[+width]]px;height:[[+height]]px;" alt="[[+title]]"  />
+			`:else=``]]
+		</a>	
+		[[+caption:notempty=`	
+			<div class="[[+caption-class:default=`caption`]]">
+				[[+caption]]			
+			</div>		
+		`]]
+		[[+debug]]
+	</div>
+</li>

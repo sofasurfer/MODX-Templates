@@ -1,0 +1,378 @@
+
+
+/**************************************************************
+
+	Default Page Styles
+ 
+    @author	Kilian Bohnenblust (sofasurfer.org)
+
+**************************************************************/
+
+body{
+	margin:0;
+	padding:0;
+	font-family:Arial, sans-serif;
+	font-size:medium;
+	color: #6b6b6b;
+	background-color:#ffffff;
+	background-attachment:fixed;
+	background-position: center top;
+	background-image: url(./images/bg.png);
+}
+
+h1, h2, h3,h1 a, h2 a, h3 a{
+	color: #4b4b4b !important;
+}
+
+a, a:link, a:active, a:visited, a img,
+a:link img, a:active img, a:visited img {
+	border:0;
+	padding:0;
+	margin:0;
+	color:#6b6b6b;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+a:hover, a:hover img{
+	color: #0896FF;
+	/*text-decoration:underline;*/
+	cursor:pointer;
+	border:0px;
+}
+
+.space{
+	float:none;
+	clear:both;
+	height:10px;
+}
+
+.left{
+	float:left;
+	padding-right:20px;
+}
+
+.clear{
+	float:none;
+	clear:both;
+}
+
+.rounded, .menu ul{
+	/*background:#E5E5E5;*/
+	background:#f6f3fa;
+	border:1px solid gray;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius:  10px 10px 10px 10px;
+}
+
+.site{
+	display: block;
+	width:80%;
+    min-width:1000px;  
+	border:0px solid #0a246a;
+	margin:0 auto;
+	padding-bottom: 20px;
+}
+
+
+.header{
+	position:relative;
+	display:block;
+	height: 100px;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-repeat: no-repeat;
+	background-image:url(./images/logo.png);
+}
+
+
+.menu{
+	float: right; 
+	border:0px;
+	z-index:4;
+	width: 24%;
+}
+
+.menu ul{
+	margin:0;
+	margin-bottom: 10px;
+	padding:20px;
+	padding-top: 10px;
+	list-style: none;
+}
+.menu ul li{
+	margin:0;
+	padding:0;
+	font-size: large;
+}
+.menu ul li h2, .menu ul li h3{
+	margin-bottom:0;
+}
+.menu ul li p{
+	padding-left:20px;
+}
+.menu ul ul{
+	border:0;
+	padding:0;
+	margin: 10px;
+	padding-left: 15px; 	
+	list-style: disc;	
+}
+.menu ul li ul li{
+	font-size: medium;
+	margin-bottom: 10px;
+}
+
+.menu ul li ul .navActive a{
+	font-weight:bold;
+	color: #0896FF;
+}
+
+.content{
+	float: left;
+	padding:25px;
+	padding-top:10px;
+	width: 70%;
+}
+
+
+
+.footer{
+    clear:both;
+    margin:0px;
+    padding:0px;
+    padding-left: 10px;
+    font-size: small;
+    color: #f6f3fa;
+    text-align:left; 
+}
+
+.footer a{
+    color: #f6f3fa;
+}
+.footer a:hover, a:hover img{
+	color: #0896FF;
+}
+
+.footer span{
+
+    float:left;
+
+}
+
+
+/**************************************************************
+
+	Forms
+
+**************************************************************/
+
+.error{
+		text-align:right;
+        display:block;
+		width: 95%;
+}
+.error.error{
+		margin-top: 10px;
+        color: red;
+}
+
+label {
+	font-size:1.2em;
+	width: 30%;
+	display: inline-block;
+	clear:both;
+	float:none;
+
+}
+
+input[type="text"], input[type="password"]{
+	width: 60%;
+	color:#6b6b6b;
+}
+textarea{
+	width: 91%;
+}
+
+
+button, input[type="submit"],input[type="text"],input[type="password"], textarea{
+	border: 1px solid #6b6b6b;
+	font-size:16px;
+	margin-bottom: 10px;
+	padding:5px 10px 5px 10px;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius:  10px 10px 10px 10px;
+
+}
+
+button, input[type="submit"]{
+
+	font-weight:bold;
+	font-size:18px;
+	background-clip: padding-box;
+	background-color: #0896FF;
+	border: 3px solid white;
+	color: white;
+	cursor: pointer;
+	padding:5px 10px 5px 10px;
+}
+
+.syntaxhighlighter{
+	font-size:small !important;
+	padding: 10px 0px 10px 0px;
+	border: 1px solid #6b6b6b;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius:  10px 10px 10px 10px;
+}
+
+
+/**************************************************************
+
+	Article
+
+**************************************************************/
+
+.mdws-comment-alt, .entry{
+	padding:20px;
+    background: white;
+    border:1px solid gray;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius:  10px 10px 10px 10px;
+}
+
+.menu  .tl-tag{
+	float:left;
+	padding-right: 0.5em;
+}
+
+
+
+
+
+/**************************************************************
+
+	Top Main Navigation
+
+**************************************************************/
+
+.quickLinks {
+
+    position:absolute;
+	right:0;
+    display:block;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 20px;
+    padding-right:30px;
+    background: white;
+    border-left:1px solid gray;
+    border-bottom:1px solid gray;
+	border-radius: 0px 10px 0px 10px;
+	-moz-border-radius: 0px 10px 0px 10px;
+	-webkit-border-radius:  0px 10px 0px 10px;
+
+}
+
+.quickLinks .search{
+	display: inline;
+	float: right;
+	padding:0;
+	margin:0;
+	font-size:12px;
+}
+
+.topNavigation {
+    clear:both;
+    float:right;
+    display:inline-block;
+    width: 60%;
+    margin-top:60px;
+    margin-right:20px;
+    border:0px solid aqua;
+}
+
+.topNavigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topNavigation ul li {
+    float:left;
+    padding: 10px;
+}
+
+
+.topNavigation a, .topNavigation a:link, .topNavigation a:active, .topNavigation a:visited {
+	color: #4b4b4b;
+    display:block;
+    font-size: large;
+}
+
+.topNavigation .navActive a{
+	/*font-weight:bold;*/
+	color: #0896FF;
+}
+
+
+
+/**************************************************************
+
+	List Slider
+
+**************************************************************/
+.listBox .back{
+	float:left;
+	margin-top:30px;
+	height: 100px;
+}
+
+.listBox .next{
+	float:left;
+	margin-top:30px;
+	height: 100px;
+}
+
+.listWrapper{
+	position:relative;
+	width: 620px;
+	float:left;
+	overflow:hidden;
+	margin-left:20px;
+	margin-right:20px;
+	padding:5px;
+}
+
+
+.listSlider{
+	display:block;
+	width: 7000px;
+}
+
+.listSlider ul{
+	float:left;
+	list-style: none;
+	border-right: 1px solid;
+	margin:0;
+	margin-right:20px;
+	padding:0;
+	padding-right:20px;
+}
+.listSlider li{
+	width:160px;
+	padding-bottom:5px;
+}
+.listSlider a{
+	font-weight:bold;
+}
+.listSlider span{
+	float:right;
+}
+.listSlider b{
+	font-weight:bold;
+	font-size:14px;
+}

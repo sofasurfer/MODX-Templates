@@ -1,0 +1,16 @@
+
+jQuery HTML5 Uploader Release Notes
+===================================
+
+
+1.1, released 2011-12-06
+------------------------
+- Added "onSuccess" callback
+
+1.0, released 2011-05-02
+------------------------
+- Beta version released
+
+
+Igloo Snc
+http://www.igloolab.com

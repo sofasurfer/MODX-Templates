@@ -1,11 +1,10 @@
 [[!Profile]]
 <li class="dropdown">
     <a class="dropdown-toggle" rel="tooltip" title="[[!+modx.user.username]]" data-toggle="dropdown" href="#menu1"><img src="http://www.gravatar.com/avatar/[[!+email:md5]]?s=21" /> <b class="caret"></b></a>	
-	[[!Wayfinder?
-		&outerClass=`dropdown-menu`
-		&rowTpl=`tpl.navbar.row.inner`
-		&startId=`[[++unauthorized_page]]`
-		&level=`1`
-	]]	
+	<ul class="dropdown-menu">
+		<li class="first"><a href="[[~[[+id]]]]" title="My Profile"><i class="icon-edit"></i> My Profile</a></li>
+		<li class="divider"></li>
+		<li><a href="[[~[[*id]]]]?service=logout" title="Logout"><i class="icon-off"></i> Logout</a></li>
+	</ul>
 </li>
 

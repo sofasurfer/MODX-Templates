@@ -10,6 +10,10 @@ $sort = $modx->getOption('sort',$scriptProperties,'title');
 $dir = $modx->getOption('dir',$scriptProperties,'DESC');
 $tpl = $modx->getOption('tpl',$scriptProperties,false);
 
+$source = $modx->getOption('source',$scriptProperties,1);
+$width = $modx->getOption('width',$scriptProperties,160);
+$height = $modx->getOption('height',$scriptProperties,120);
+
 $bytestotal=0;
 $nbfiles=0;
 $pathName = $directory;

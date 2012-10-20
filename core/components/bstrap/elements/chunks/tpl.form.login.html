@@ -1,24 +1,37 @@
-	
-    <form class="form-inline" action="[[~[[*id]]]]" method="post">
-        [[+errors:notempty=`
-            <div class="alert alert-block alert-error fade in">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <h4 class="alert-heading"><b class="icon-thumbs-down"></b> Oh snap! You got an error!</h4>
-                <p>[[+errors]]</p>
-            </div>
-        `]]
-        
-        <label>[[%login.username]]:</label>
-        <input class="loginUsername" type="text" name="username" />
+     <form class="form-horizontal" action="[[~[[*id]]]]" method="post"> 
 
-        <label>[[%login.password]]:</label>
-        <input class="loginPassword" type="password" name="password" />
+		<legend><h1>Login</h1></legend>
 
-        <input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />
+		[[+errors:notempty=`
+		    <div class="alert alert-block alert-error fade in">
+		        <button type="button" class="close" data-dismiss="alert">×</button>
+		        <h4 class="alert-heading"><b class="icon-thumbs-down"></b> Oh snap! You got an error!</h4>
+		        <p>[[+errors]]</p>
+		    </div>
+		`]]   
+		
+		<div class="control-group">
+			<label class="control-label" for="username">[[%login.username]]</label>
+			<div class="controls">
+			  <input type="text" id="username" name="username" placeholder="username">
+			</div>
+		</div>
 
-        <input type="hidden" name="service" value="login" />
-        <input type="submit" class="btn btn-primary" name="Login" value="[[+actionMsg]]" />
-
+		<div class="control-group">
+			<label class="control-label" for="password">[[%login.password]]</label>
+			<div class="controls">
+			  <input type="password" id="password" name="password" placeholder="password">
+			</div>
+		</div>
+		<div class="form-actions">
+        	<input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />
+	    	<input type="hidden" name="service" value="login" />
+	    	<input type="submit" class="btn btn-primary" name="Login" value="[[+actionMsg]]" />
+    		<a href="[[~[[*id]]]]?action=ForgotPassword" class="btn">Forgot password</a>
+		</div>
     </form>
     
-    <p><a href="[[~324]]">Forgot password</a> | <a href="[[~296]]">Register</a></p>
+
+
+
+

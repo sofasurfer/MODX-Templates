@@ -1,6 +1,6 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top navbar-inverse2">
   <div class="navbar-inner">
-	<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
+	<div class="container">
 		<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 			<span class="icon-bar"></span>
@@ -8,14 +8,14 @@
 			<span class="icon-bar"></span>
 		</a>
  		<!-- Be sure to leave the brand out there if you want it shown -->
-		<a class="brand" href="[[~[[++SiteStart]]]]">[[++site_name]]</a>		  
-					
+		<a class="brand" href="[[~[[++SiteStart]]]]"><i class="icon-home"></i> [[++site_name]]</a>		  
 		<!-- Everything you want hidden at 940px or less, place within here -->
 		<div class="nav-collapse">			
 			[[!Wayfinder?
 				&outerClass=`nav`
-				&innerTpl=`@CODE [[+wf.wrapper]]`
+				&innerClass=`dropdown-menu`
 				&rowTpl=`tpl.navbar.row`
+				&innerTpl=`tpl.navbar.inner`
 				&innerRowTpl=`tpl.navbar.row.inner`
 				&startId=`0`
 				&level=`3`

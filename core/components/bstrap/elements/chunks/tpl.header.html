@@ -1,40 +1,45 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-[[!isLoggedIn]]
-[[!BootstrapTheme]]
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[[*longtitle:isnotempty:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]] | [[++site_name]]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""> 
+    <meta name="author" content="">
+    <base href="[[++site_url]]" id="site_url" />
+    
+    <!-- 
+    Debugging Info
+    Number of queries: [^q^].
+    Query time: [^qt^].
+    Parser time: [^p^].
+    Data source (either cache or database): [^s^].
+    Total load time: [^t^].
+    Link to Error Log: [[!++site_url]]core/cache/logs/error.log
 
-	<title>[[*longtitle:isnotempty:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]] | [[++site_name]]</title>
-	[[+description:notempty=`<meta name="description" content="[[+description]]">`]]
-	<meta name="author" content="">
-	<base href="[[++site_url]]" id="site_url" />
-	<meta name="viewport" content="width=device-width">
-	
-	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/bootstrap.min.css">
-	<!--link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/fontawesome/css/font-awesome.css" -->			
-	
-	<style>
-	body {
-	  padding-top: 60px;
-	  padding-bottom: 40px;
-	}
+    Version: [[!++settings_version]]
+    -->
+    
+    <!-- Le styles -->
+    <!--link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"-->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css" rel="stylesheet">	
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">  
+    <link href="[[++site_url]]assets/templates/sofaweb/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Video -->
+    <link href="/assets/templates/mediaelement/build/mediaelementplayer.min.css" rel="stylesheet">
+    <link href="/assets/templates/mediaelement/build/mejs-skins.css" rel="stylesheet">
+
+	<!--link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/style.css"-->
+	<style type="text/css">
+    html, body {
+      height: 100%;
+    }    
 	</style>
-	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/css/bootstrap-responsive.min.css">
-	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/default/css/docs.css">
-	<link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/style.css">
-
-	<script src="[[++site_url]]assets/templates/bootstrap/themes/default/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
-	
-    <link rel="stylesheet" href="/assets/templates/mediaelement/build/mediaelementplayer.min.css">
-    <link rel="stylesheet" href="/assets/templates/mediaelement/build/mejs-skins.css">
-    	
 </head>
-<body data-spy="scroll" data-target=".subnav" data-offset="50">
+<body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 [[$tpl.navbar]]
+<div id="wrap" >
 <div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">

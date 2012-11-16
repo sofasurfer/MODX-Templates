@@ -1,36 +1,31 @@
 [[!FormIt?
-   &hooks=`spam,FormItLog,email`
+   &hooks=`recaptcha,spam,FormItLog,email`
    &logfile=`[[++formitlog.logfile]]`
    &emailTpl=`ContactEmail`
    &emailFrom=`[[++emailsender]]`
    &emailFromName=`[[++site_name]]`
    &emailTo=`kib@sofasurfer.ch`
    &successMessage=`1`
-   &language=`[[++fe_editor_lang]]`
    &emailHtml=`true`
-   &emailUseFieldForSubject=`true`
    &validate=`name:required,
       email:email:required,
       subject:required,
-      text:required:stripTags,
-      validate=`workemail:blank`
+      text:required:stripTags
 ]]
 
-[[+fi.successMessage:isnot=``:then=`
+[[!+fi.error_message:notempty=`<div class="alert alert-block alert-error fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading"><i class="icon-thumbs-down" /> Oh snap! You got an error!</h4>
+            <p>[[!+fi.error_message]]</p>
+        </div>`]]
+
+[[!+fi.successMessage:isnot=``:then=`
     <legend><h1>Thank You!</h1></legend>
 	<div class="alert alert-success">
 		I will response to your inquiry as soon as possible.	
 	</div>
 `:else=`
-<form class="form-horizontal" name="formContact" action="[[~[[*id]]]]?action=Contact" method="post">
-    <legend><h1>Contact</h1></legend>
-    [[+errors:notempty=`
-        <div class="alert alert-block alert-error fade in">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <h4 class="alert-heading"><i class="icon-thumbs-down" /> Oh snap! You got an error!</h4>
-            <p>[[+fi.error.error_message]]</p>
-        </div>
-    `]]	
+<form class="form-horizontal" name="formContact" action="[[~[[*id]]]]" method="post">
 	
 	<input name="subject" value="[[++http_host]] - ContactForm" type="hidden" />
 	<input name="workemail" value="" type="hidden" />

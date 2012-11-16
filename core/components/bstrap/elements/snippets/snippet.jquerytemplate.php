@@ -1,0 +1,12 @@
+<?php
+$chunk = $modx->getObject('modChunk',array('name' => $tpl));
+	
+	if ($chunk) {
+		$content = $chunk->getContent();
+		// Replaceplaceholder for jQuery
+		$content = str_replace('[[+','${',$content);
+		$content = str_replace(']]','}',$content);
+		return '<script id="'.$tpl.'" type="text/x-jquery-tmpl">' . $content . '</script>';
+	}else{
+		return "Invalid template name [" . $tpl . "]";
+	}

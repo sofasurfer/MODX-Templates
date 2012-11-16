@@ -1,7 +1,5 @@
      <form class="form-horizontal" action="[[~[[*id]]]]" method="post"> 
 
-		<legend><h1>Login</h1></legend>
-
 		[[+errors:notempty=`
 		    <div class="alert alert-block alert-error fade in">
 		        <button type="button" class="close" data-dismiss="alert">×</button>
@@ -27,7 +25,7 @@
         	<input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />
 	    	<input type="hidden" name="service" value="login" />
 	    	<input type="submit" class="btn btn-primary" name="Login" value="[[+actionMsg]]" />
-    		<a href="[[~[[*id]]]]?action=ForgotPassword" class="btn">Forgot password</a>
+    		<a href="[[~[[++login_forgotpassword_page]]]]" class="btn">Forgot password</a>
 		</div>
     </form>
     

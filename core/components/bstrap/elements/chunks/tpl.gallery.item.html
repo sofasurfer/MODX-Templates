@@ -1,0 +1,8 @@
+<li class="[[+cls]]">
+    <a class="thumbnail" title="[[+name]])" rel="lightbox[ [[+album]] ]" href="[[+linkToImage:if=`[[+linkToImage]]`:is=`1`:then=`[[+image_absolute]]`:else=`[[~[[*id]]?
+            &[[+imageGetParam]]=`[[+id]]`
+            &[[+albumRequestVar]]=`[[+album]]`
+            &[[+tagRequestVar]]=`[[+tag]]` ]]`]]">
+        <img src="[[+image_absolute:phpthumbof=`[[+thumbProperties]]`]]" alt="[[+name]]" />
+    </a>
+</li>

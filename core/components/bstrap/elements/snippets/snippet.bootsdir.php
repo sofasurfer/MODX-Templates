@@ -1,7 +1,14 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
+
+include_once( MODX_CORE_PATH . 'components/bstrap/elements/snippets/functions.php');
+
 $output = "";
 
 $total = 0;
+if( !empty($_GET) ){
+	$scriptProperties = array_merge($scriptProperties,$_GET);	
+}
 $limit = $modx->getOption('limit',$scriptProperties,10);
 $offset = $modx->getOption('offset',$scriptProperties,0);
 $totalVar = $modx->getOption('totalVar', $scriptProperties, 'total');
@@ -9,61 +16,28 @@ $totalVar = $modx->getOption('totalVar', $scriptProperties, 'total');
 $sort = $modx->getOption('sort',$scriptProperties,'title');
 $dir = $modx->getOption('dir',$scriptProperties,'DESC');
 $tpl = $modx->getOption('tpl',$scriptProperties,false);
-
-$source = $modx->getOption('source',$scriptProperties,1);
 $width = $modx->getOption('width',$scriptProperties,160);
 $height = $modx->getOption('height',$scriptProperties,120);
 
+$path = $modx->getOption('path',$scriptProperties,false);
+$source = $modx->getOption('source',$scriptProperties,1);
+$modx->loadClass('sources.modMediaSource');
+$mediaSource = $modx->getObject('sources.modMediaSource',$source );
+
+if( !empty($mediaSource) ){
+	$mediaSourceArray = $mediaSource->get('properties');
+	$mediaSourceId = $mediaSource->get('id');
+	$basePath = $mediaSourceArray['basePath']['value'];
+	$baseUrl = $mediaSourceArray['baseUrl']['value'];
+}
+
+$directory = $basePath . $path;
 $bytestotal=0;
 $nbfiles=0;
 $pathName = $directory;
 $ignore = $modx->getOption('ignore',$scriptProperties,".,..,._");
 $ignoreArray = explode(",",$ignore);
 
-/**
- * Function to Sort Array
- * @param $a The Array to Sort
- * @param &b The Fields to Sort
- */
-function array_sort_func($a,$b=NULL) { 
-   static $keys; 
-   if($b===NULL) return $keys=$a; 
-   foreach($keys as $k) { 
-      if(@$k[0]=='!') { 
-         $k=substr($k,1); 
-         if(@$a[$k]!==@$b[$k]) { 
-            return strcmp(@$b[$k],@$a[$k]); 
-         } 
-      } 
-      else if(@$a[$k]!==@$b[$k]) { 
-         return strcmp(@$a[$k],@$b[$k]); 
-      } 
-   } 
-   return 0; 
-} 
-
-function array_sort(&$array) { 
-   if(!$array) return $keys; 
-   $keys=func_get_args(); 
-   array_shift($keys); 
-   array_sort_func($keys); 
-   usort($array,"array_sort_func");        
-}
-
-function cmp($a, $b)
-{
-    if ($a == $b) {
-        return 0;
-    }
-    return ($a < $b) ? -1 : 1;
-}
-function cmp2($a, $b)
-{
-    if ($a == $b) {
-        return 0;
-    }
-    return ($a > $b) ? -1 : 1;
-}
 
 
 $listArray = array();
@@ -88,23 +62,28 @@ if( file_exists($directory) == false ){
 			}else{
 				
 				// Get filename info
-				$time = filemtime(basename($filename));
-				$pathName = str_replace($directory,$path,$cur->getPath());
-				if( strpos($pathName,"/") == 0 ){	
-						$pathName = substr($pathName,1);
-				}
+				$fileName = basename($filename);
+				$pathName = dirname($filename);
+				$pathName = str_replace($basePath,"",$pathName );
+				$pathTitle = str_replace($path,"",$pathName );
 
 				$stat = stat( $cur->getPathname() );
 				$info = pathinfo($filename);	
 				$type = $info['extension'];	
 				$key = md5($pathName);
-				$listArray[$key]['path'] = $pathName;			
+
+				if( $type == "html" ){
+					
+				}
+				
+				$listArray[$key]['time'] = $stat['mtime'];
+				$listArray[$key]['title'] = $pathTitle;
 				$listArray[$key]['directory'] = $info['dirname'];			
-				$listArray[$key]['time'] =$stat['mtime'];
-				$listArray[$key]['title'] = basename($pathName,'.'.$info['extension']);
+				$listArray[$key]['path'] = $baseUrl . $pathName;			
+				$listArray[$key]['baseurl'] = $baseUrl . $pathName;			
 				
 				// Get file details
-				$listArray[$key][$type] = $cur->getFilename();
+				$listArray[$key][$type] = $fileName;
 				$listArray[$key][$type.'.time'] 		= $stat['mtime'];				
 				$listArray[$key][$type.'.extension'] 	= $info['extension'];	
 				$listArray[$key][$type.'.type'] 	= filetype($cur);
@@ -133,8 +112,8 @@ foreach( $listArray as $itemArray ){
 			$properties = $itemArray;
 
 			// Get additional info
-			if( !empty($properties['txt']) ){
-				$infoFile = $properties['directory'] . "/" . $properties['txt'];
+			if( !empty($properties['json']) ){
+				$infoFile = $properties['directory'] . "/" . $properties['json'];
 				$handle = @fopen( $infoFile , "r");
 				if ($handle) {
 				    while (($buffer = fgets($handle, 4096)) !== false) {
@@ -160,12 +139,18 @@ foreach( $listArray as $itemArray ){
 
 			// Get Image
 			if( !empty($properties['jpg']) ){
-				$properties['image'] = $properties['path'] . "/" . $properties['jpg'];
+				$properties['image'] = $properties['path'] . '/' . $properties['jpg'];
 			}else if( !empty($properties['png']) ){
-				$properties['image'] = $properties['path'] . "/" . $properties['png'];				
+				$properties['image'] = $properties['path'] . '/' . $properties['png'];				
 			}else{
-				$properties['image'] = "assets/templates/bootstrap/themes/default/img/sad.jpg";
+				$properties['image'] = $baseUrl . "_build/blank.jpg";								
 			}
+			
+			// Set Link
+			if( !empty($properties['html']) ){
+				$properties['href'] = $properties['path'] . '/' . $properties['html'];						
+			}
+
 			$properties['count'] = $count;
 			
 			if( !empty($_REQUEST['debug']) ){

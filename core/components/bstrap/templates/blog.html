@@ -1,25 +1,20 @@
 [[$tpl.header]]
-<header class="jumbotron subhead" id="overview">
-<h1>[[*pagetitle]]</h1>
-<div class="subnav"><div class="container">
-	<p>Posted on [[*publishedon:strtotime:date=`%b %d, %Y`]] by <a href="[[~[[*parent]]]]author/[[*publishedby:userinfo=`username`]]">[[*publishedby:userinfo=`username`]]</a>
-	[[*articlestags:notempty=`<span class="tags">&nbsp;| Tags: [[+article_tags]]</span>`]]
-	[[+comments_enabled:is=`1`:then=`&nbsp;| <a href="[[~[[*id]]]]#comments" class="comments">Comments ([[+comments_count]])</a>`]]
-	</p>
-</div></div>
-</header>	    
-<div class="row">
-<div class="span12">
-	[[*introtext:notempty=`<div class="lead">[[*introtext]]</div>`]]
-	[[*content]]
-	<hr />
-	<div class="post-comments" id="comments">
-		[[+comments]]
-		<br />
-		<h3>Add a Comment</h3>
-		[[+comments_form]]
+<div class="page-header jumbotron">
+	<h1>[[*pagetitle]]</h1>
+	<div class="subnav">
+		<p>Posted on [[*publishedon:strtotime:date=`%b %d, %Y`]] by <a href="[[~[[*parent]]]]author/[[*publishedby:userinfo=`username`]]">[[*publishedby:userinfo=`username`]]</a>
+		[[*articlestags:notempty=`<span class="tags">&nbsp;| Tags: [[+article_tags]]</span>`]]
+		[[+comments_enabled:is=`1`:then=`&nbsp;| <a href="[[~[[*id]]]]#comments" class="comments">Comments ([[+comments_count]])</a>`]]
+		</p>
 	</div>
-</div>
+</div>	    
+[[*introtext:notempty=`<div class="lead">[[*introtext]]</div>`]]
+[[*content]]
+<hr />
+<div class="post-comments" id="comments">
+	[[+comments]]
+	<br />
+	<h3>Add a Comment</h3>
+	[[+comments_form]]
 </div>
 [[$tpl.footer]]
-

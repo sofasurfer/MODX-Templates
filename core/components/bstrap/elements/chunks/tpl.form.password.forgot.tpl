@@ -1,6 +1,4 @@
 	<form class="form-horizontal" action="[[~[[*id]]]]?action=ForgotPassword" method="post"> 
-		<legend><h1>[[%login.forgot_password]]</h1></legend>
-
 		[[+loginfp.errors:notempty=`
 		    <div class="alert alert-block alert-error fade in">
 		        <button type="button" class="close" data-dismiss="alert">×</button>

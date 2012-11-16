@@ -1,16 +1,12 @@
-<li [[+wf.classes]] class="[[+class]]" id="[[+alias]]">
-	<div class="thumbnail" style="width:[[+width]]px;overflow:hidden;">					
-		<a href="[[+href:default=`[[~[[+id]]]]`]]" title="[[+title]]" [[+rel:notempty=`rel="[[+rel]]"`]] [[+data-target:notempty=`data-target="[[+data-target]]"`]] [[+data-toggle:notempty=`data-toggle="[[+data-toggle]]"`]] >
-			[[+title:notempty=`<h5>[[+title]]</h5>`]]
+<li class="[[+class]]" id="[[+alias]]">
+	<div class="thumbnail">					
+		<a href="[[+href:default=`[[~[[+id]]]]`]]" title="[[+title]]" [[+rel:notempty=`rel="[[+rel]]"`]] [[+data-target:notempty=`data-target="[[+data-target]]"`]] data-content="[[+data-content]]" [[+data-toggle:notempty=`data-toggle="[[+data-toggle]]"`]] >
+			[[+tv.pageimage:isnot=``:then=`<img src="[[+tv.pageimage]]" />`:else=``]]
 			[[+image:isnot=``:then=`
-				<img src="[[+image:phpthumbof=`w=[[+width]]&h=[[+height]]&zc=1`]]" width="[[+width]]" height="[[+height]]" style="width:[[+width]]px;height:[[+height]]px;" alt="[[+title]]"  />
-			`:else=``]]
+				<img src="[[+image:phpthumbof=`w=[[+width]]&h=[[+height]]&zc=1&source=[[+source]]`]]" 
+				style="width:[[+width]]px;height:[[+height]]px;" width="[[+width]]" height="[[+height]]" alt="[[+title]]"  />
+			`:else=`<h5>[[+title:ellipsis=`12`]]</h5>`]]
 		</a>	
-		[[+caption:notempty=`	
-			<div class="[[+caption-class:default=`caption`]]">
-				[[+caption]]			
-			</div>		
-		`]]
-		[[+debug]]
+		[[+caption:notempty=`<div class="[[+caption-class:default=`caption`]]">[[+caption]]</div>`]]
 	</div>
 </li>

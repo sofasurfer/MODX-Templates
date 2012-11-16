@@ -1,0 +1,35 @@
+<?php
+
+if(!class_exists('GalleryItemListOutputRender')) {
+
+    class GalleryItemListOutputRender extends modTemplateVarOutputRender {
+        public function process($value,array $params = array()) {
+
+        return "<div class=\"lead pull-left\">Page: [[+page]] / [[+pageCount]] of total [[+total-teens]]</div>
+                <div class=\"pagination pagination-right pagination-small\"><ul>[[!+page.nav]]</ul></div>
+
+                <ul class=\"thumbnails\">
+                [[!getPage?   
+                    &pageActiveTpl=`<li class=\"active\"><a [[+title]] href=\"[[+href]]\">[[+pageNo]]</a></li>`              
+                    &elementClass=`modSnippet`  
+                    &element=`Gallery`
+                    &totalVar=`total-teens`
+                    &limit=`360`
+                    &album=`".$value."` 
+                    &itemCls=`span2` 
+                    &imgCls=`thumbnail` 
+                    &thumbTpl=`tpl.gallery.item` 
+                    &thumbWidth=`160` 
+                    &thumbHeight=`120` 
+                    &plugin=`slimbox` 
+                    &loop=`1` 
+                    &slimboxRenderJsOnStartup=`0` 
+                ]]</ul>
+
+                <div class=\"lead pull-left\">Page: [[+page]] / [[+pageCount]] of total [[+total-teens]]</div>
+                <div class=\"pagination pagination-right pagination-small\"><ul>[[!+page.nav]]</ul></div>
+                ";
+        }
+    }
+}
+return 'GalleryItemListOutputRender';

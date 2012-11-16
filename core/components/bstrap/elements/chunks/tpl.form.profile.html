@@ -13,6 +13,8 @@
 		[[%login.profile_updated? &amp;namespace=`login` &topic=`updateprofile`]]
 	</div>
 `]]
+<div class="row">
+<div class="span8">
 <form class="form-horizontal" action="[[~[[*id]]]]" method="post" name="formProfile">
 <input type="hidden" name="nospam:blank" value="" />
 <div class="control-group">
@@ -46,7 +48,11 @@
 </div>
 <div class="form-actions">
 	<input class="btn btn-primary" type="submit" value="[[!%login.update_profile]]" />
-	<a class="btn" href="[[~307]]">Change password</a>
+	<a class="btn" href="[[~324]]">Change password</a>
 </div>
 </form>
-
+</div>
+<div class="span4">
+<img src="http://www.gravatar.com/avatar/[[!+email:md5]]?s=250" class="thumbnail pull-right" /> 
+</div>
+</div>

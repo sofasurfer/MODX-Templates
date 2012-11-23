@@ -1,9 +1,20 @@
     body{
         background-color: #F5F5F5 !important;                
     }
+    .breadcrumb2 {
+        list-style: none;
+    }
+    .breadcrumb2 {
+        display: inline-block;
+    }
+    .breadcrumb {
+        margin-top:0px;
+        padding-top:0px;
+        background-color: #FFF !important;   
+    }
     #wrap {
-        padding-top: 60px;
-        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-bottom: 0px;
         height: auto !important;        
         height: 100%;
         background-color: #FFF !important;        
@@ -13,17 +24,40 @@
     abbr{
         margin-right:5px;
     }
-
-    @font-face{
-        font-family:SofaFont;
-        src:
-        url(https://raw.github.com/sofasurfer/MODX-Templates/master/assets/templates/sofaweb/img/sofafont.ttf) format('truetype'),
-        url(https://raw.github.com/sofasurfer/MODX-Templates/master/assets/templates/sofaweb/img/sofafont.svg#FontAwesome) format('svg');
-        font-weight:400;font-style:normal;
+    /*
+    @import url(http://fonts.googleapis.com/css?family=Armata);
+    .brand{
+        font-family: 'Armata', sans-serif;
     }
-    .icon-sofaicon{
-        font-family: 'SofaFont' !important;          
-        content: 's';  
+    */
+    /*https://raw.github.com/sofasurfer/MODX-Templates/master/*/
+    /*
+    @font-face {
+        font-family: 'sofafontregular';
+        src: url('/assets/templates/sofaweb/fonts/sofafont/sofafont.eot');
+        src: url('/assets/templates/sofaweb/fonts/sofafont/sofafont.eot?#iefix') format('embedded-opentype'),
+             url('/assets/templates/sofaweb/fonts/sofafont/sofafont.woff') format('woff'),
+             url('/assets/templates/sofaweb/fonts/sofafont/sofafont.ttf') format('truetype'),
+             url('/assets/templates/sofaweb/fonts/sofafont/sofafont.svg#sofafontregular') format('svg');
+        font-weight: 400;
+        font-style: normal;
+    }
+    [class^="sicon-"]:before, [class*=" sicon-"]:before {
+        display: inline-block;
+        font-family: sofafontregular;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: inherit;
+    }    
+    .brand .sicon-logo:before{
+        color:#660000;
+        content: "s";
+        font-size: 18px;
+    }
+    */
+
+    .brand{
+        /*color: #660000 !important;*/
     }
     .navbar-inner{
       background-color: #BF2323 !important;
@@ -31,10 +65,9 @@
     .navbar .nav > li > a{
         font-size: 14px;
     }    
-    .navbar .navbar-icon{
-        padding-top: 3px;
-        margin-left:15px;
-        line-height:40px;
+    .navbar-icon {
+        padding-top: 3px !important;
+        padding-left:15px;
     }
     .page-header {
 			text-align: center;
@@ -118,6 +151,13 @@
     }
     .connect i:hover{
         color: #333333;
+    }
+    #back-top{        
+        position:fixed;
+        right:10px;
+        bottom:10px;
+        display: block;
+        font-size: 24px;
     }
     /* Sidenav for Docs
     -------------------------------------------------- */

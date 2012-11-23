@@ -126,7 +126,11 @@ foreach( $listArray as $itemArray ){
 						}
 						if( strpos($lineArray[0],"Duration") !== false ){
 							$properties['duration'] =  trim($lineArray[1]) ;
-						}				    }
+						}
+						if( strpos($lineArray[0],"File Name") !== false ){
+							$properties['title'] =  trim($lineArray[1]) ;
+						}										     
+					}
 				    if (!feof($handle)) {
 				        echo "Error: unexpected fgets() fail\n";
 				    }

@@ -1,3 +1,25 @@
-<div class="[[+cls]] [[+idx:isequalto=`0`:then=` active`:else=``]]">
-	<img src="[[+image]]" alt="[[+name]]" />
+<li class="span6">
+<div id="carousel[[+tv.gallery]]" class="carousel slide">	
+	<div class="carousel-inner">
+	[[!Gallery? 
+	    &useCss=`0`
+	    &totalVar=`total`
+	    &start=`0`
+	    &limit=`100`
+	    &sort=`[[+sort]]`
+	    &album=`[[+tv.gallery]]`
+	    &itemCls=`item`
+	    &activeCls=`active`
+	    &title=`<a href="[[~[[+id]]]]" title="[[+pagetitle]]">[[+menutitle:isnot=``:then=`[[+menutitle]]`:else=`[[+pagetitle]]`]]</a>	`
+	    &thumbFar=`T`
+	    &thumbZoomCrop=`1`
+	    &thumbWidth=`720`
+	    &thumbHeight=`540`
+	    &thumbCls=``
+	    &thumbTpl=`tpl.gallery.carousel.item`
+	]]
+	</div>
+	<a class="carousel-control left" href="#carousel[[+tv.gallery]]" data-slide="prev">&lsaquo;</a>
+	<a class="carousel-control right" href="#carousel[[+tv.gallery]]" data-slide="next">&rsaquo;</a>
 </div>
+</li>

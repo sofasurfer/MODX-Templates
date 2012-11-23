@@ -15,9 +15,9 @@
 	&limit=`10`
 	&depth=`0`
 	&sortby=`{"menuindex":"ASC"}`
-    &showHidden=`1`
+    &showHidden=`0`
 	&includeTVs=`1`
-	&processTVs=`1`
+	&processTVs=`0`
 	&includeContent=`1`
     &tpl=`tpl.resource.row`  
 ]]

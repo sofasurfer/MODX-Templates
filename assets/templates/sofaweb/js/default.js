@@ -75,6 +75,7 @@ if( $('#gMap').length > 0 ){
 // Focuses on first input textbox after it loads the window.
 $('a[data-toggle="modal"]').popover({
 	trigger: 'hover'
+	,placement: 'bottom'
 });
 $('a[data-toggle="modal"]').click(function(e) {
     e.preventDefault();
@@ -101,6 +102,8 @@ $('a[data-toggle="modal"]').click(function(e) {
 	        $(target).on('hide', function () {
 	            $(this).empty();
 	        });
+	        $(target).on('show', function () {
+			});
 			$(target).modal('show');
         }).success(function() {
 			$('audio,video').mediaelementplayer({

@@ -29,17 +29,9 @@
 
     <!-- HTML5 Video -->
     <link href="/assets/templates/mediaelement/build/mediaelementplayer.min.css" rel="stylesheet">
-    <link href="/assets/templates/mediaelement/build/mejs-skins.css" rel="stylesheet">
-
-	<!--link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/style.css"-->
-	<style type="text/css">
-    html, body {
-      height: 100%;
-    }    
-	</style>
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 [[$tpl.navbar]]
 <div id="wrap" >
-<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
+<div id="main" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">

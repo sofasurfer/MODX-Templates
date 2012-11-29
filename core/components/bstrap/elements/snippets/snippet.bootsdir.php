@@ -94,6 +94,11 @@ if( file_exists($directory) == false ){
 	}
 }
 
+$total = $limit;
+if($total > count($listArray) ){
+	$total = count($listArray);
+}
+
 array_sort($listArray,$sort);
 
 if(  $dir == 'DESC' ){
@@ -154,13 +159,15 @@ foreach( $listArray as $itemArray ){
 			if( !empty($properties['html']) ){
 				$properties['href'] = $properties['path'] . '/' . $properties['html'];						
 			}
-
+			$properties['total'] = $total;
 			$properties['count'] = $count;
+			$properties['idx'] = $count;
 			
 			if( !empty($_REQUEST['debug']) ){
 				echo "<pre>" . print_r($properties,true)  . "</pre>";
 				//$properties['debug'] = "<pre>" . print_r($properties,true)  . "</pre>";
 			}			
+
 			$properties = array_merge($scriptProperties, $properties);
 			
             // get list chunk

@@ -1,25 +1,41 @@
-<li class="span6">
-<div id="carousel[[+tv.gallery]]" class="carousel slide">	
-	<div class="carousel-inner">
-	[[!Gallery? 
-	    &useCss=`0`
-	    &totalVar=`total`
-	    &start=`0`
-	    &limit=`100`
-	    &sort=`[[+sort]]`
-	    &album=`[[+tv.gallery]]`
-	    &itemCls=`item`
-	    &activeCls=`active`
-	    &title=`<a href="[[~[[+id]]]]" title="[[+pagetitle]]">[[+menutitle:isnot=``:then=`[[+menutitle]]`:else=`[[+pagetitle]]`]]</a>	`
-	    &thumbFar=`T`
-	    &thumbZoomCrop=`1`
-	    &thumbWidth=`720`
-	    &thumbHeight=`540`
-	    &thumbCls=``
-	    &thumbTpl=`tpl.gallery.carousel.item`
-	]]
+<center><h2><a href="[[~[[+id]]]]" title="[[+pagetitle]]">[[+longtitle:isnot=``:then=`[[+longtitle]]`:else=`[[+pagetitle]]`]]</a></h2></center>
+<div id="carousel[[+tv.gallery]]" class="carousel slide">
+	<div class="carousel-inner" id="gallery-[[+tv.gallery]]" data-toggle="modal-[[+tv.gallery]]" data-target="#modal-[[+tv.gallery]]">
+		<div class="item active"><ul class="thumbnails">
+		[[!Gallery? 
+		    &useCss=`0`
+		    &totalVar=`total[[+tv.gallery]]`
+		    &start=`0`
+		    &limit=`120`
+		    &sort=`[[+sort]]`
+		    &album=`[[+tv.gallery]]`
+		    &itemCls=`span2`
+		    &activeCls=`active`
+		    &thumbFar=`T`
+		    &thumbZoomCrop=`1`
+		    &thumbWidth=`260`
+		    &thumbHeight=`180`
+		    &thumbCls=`thumbnail`
+		    &thumbTpl=`tpl.gallery.item`
+			&pageSliderContent=`</ul></div><div class="item"><ul class="thumbnails">`
+			&pageSlider=`[[+pageSlider]]`	    
+		]]
+		</ul></div>
 	</div>
 	<a class="carousel-control left" href="#carousel[[+tv.gallery]]" data-slide="prev">&lsaquo;</a>
 	<a class="carousel-control right" href="#carousel[[+tv.gallery]]" data-slide="next">&rsaquo;</a>
 </div>
-</li>
+<!-- modal-gallery is the modal dialog used for the image gallery -->
+<div id="modal-[[+tv.gallery]]" class="modal modal-gallery modal-fullscreen modal-fullscreen-stretch hide fade" tabindex="-1">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">&times;</a>
+        <h3 class="modal-title"></h3>
+    </div>
+    <div class="modal-body"><div class="modal-image"></div></div>
+    <div class="modal-footer">
+        <a class="btn modal-download" target="_blank"><i class="icon-download"></i> Download</a>
+        <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+        <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+        <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+    </div>
+</div>

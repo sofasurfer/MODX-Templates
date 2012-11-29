@@ -1,5 +1,10 @@
-<li class="[[+cls]]">
-    <a class="thumbnail" title="[[+name]])" rel="lightbox[[[+album]]]" href="[[+image_absolute]]">
+<li class="[[+cls]]  gallery-item">
+    <a class="thumbnail [[+idx:mpy=`[[+cls:stripString=`span`]]`:mod=`12`:gt=`0`:and:gte=`6`:then=`popover-left`:else=`popover-right`]]" rel="gallery" title="[[+name]]" href="[[+image_absolute:phpthumbof=`[[+imageProperties]]`]]" data-content="
+    	<label>Size:</label>[[+filesize:escape]]<br/>
+    	<label>Date:</label>[[+createdon:escape]]<br/>
+    	[[+tags:notempty=`<label>Tags:</label><ul class=&quot;tagList&quot;>[[+tags:escape]]</ul>`]]
+    " >
         <img src="[[+image_absolute:phpthumbof=`[[+thumbProperties]]`]]" alt="[[+name]]" />
     </a>
 </li>
+[[+idx:add:lt=`[[+total]]`:and:mod=`[[+pageSlider]]`:isequal=`0`:then=`[[+pageSliderContent]]`]]

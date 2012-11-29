@@ -72,11 +72,12 @@ if (!empty($plugin)) {
 $imageProperties = $modx->getOption('imageProperties',$scriptProperties,'');
 $imageProperties = !empty($imageProperties) ? $modx->fromJSON($imageProperties) : array();
 $imageProperties = array_merge(array(
-    'w' => (int)$modx->getOption('imageWidth',$scriptProperties,500),
-    'h' => (int)$modx->getOption('imageHeight',$scriptProperties,500),
+    'w' => (int)$modx->getOption('imageWidth',$scriptProperties,1024),
+    'h' => (int)$modx->getOption('imageHeight',$scriptProperties,728),
     'zc' => (boolean)$modx->getOption('imageZoomCrop',$scriptProperties,0),
     'far' => (string)$modx->getOption('imageFar',$scriptProperties,false),
-    'q' => (int)$modx->getOption('imageQuality',$scriptProperties,90),
+    'q' => (int)$modx->getOption('imageQuality',$scriptProperties,95),
+    'f' => (string)$modx->getOption('thumbFormat',$scriptProperties,'jpeg'),
 ),$imageProperties);
 
 $thumbProperties = $modx->getOption('thumbProperties',$scriptProperties,'');
@@ -105,10 +106,16 @@ $activeCls = $modx->getOption('activeCls',$scriptProperties,'gal-item-active');
 $highlightItem = $modx->getOption($imageGetParam,$_REQUEST,false);
 $totalVar = $modx->getOption('totalVar',$scriptProperties,'total');
 $modx->toPlaceholders(array($totalVar => $data['total']));
+$pageNo = $modx->getOption('pageNo',$scriptProperties,1);
+$modx->toPlaceholders(array('pageNo' => $pageNo));
+
+$albumTags = array();
 
 /** @var galItem $item */
 foreach ($data['items'] as $item) {
     $itemArray = $item->toArray();
+    $itemArray = array_merge($scriptProperties,$itemArray);
+
     $itemArray['idx'] = $idx;
     $itemArray['total'] = $data['total'];
     $itemArray['cls'] = $itemCls;
@@ -119,6 +126,8 @@ foreach ($data['items'] as $item) {
     $itemArray['thumbHeight'] = $thumbHeight;
 
     $itemArray['thumbProperties'] = http_build_query($thumbProperties);
+    $itemArray['imageProperties'] = http_build_query($imageProperties);
+
     $itemArray['filename'] = basename($item->get('filename'));
     $itemArray['image_absolute'] = $filesUrl.$item->get('filename');
     $itemArray['fileurl'] = $itemArray['image_absolute'];
@@ -135,11 +144,19 @@ foreach ($data['items'] as $item) {
     $itemArray['imageGetParam'] = $imageGetParam;
     $itemArray['albumRequestVar'] = $albumRequestVar;
     $itemArray['tagRequestVar'] = $tagRequestVar;
-    $itemArray['tag'] = '';
+
+    if( !empty($itemArray['tags']) ){
+        $itemTags = explode(',', $itemArray['tags'] );
+        foreach($itemTags as $itemTag ){
+            if( !in_array($itemTag, $albumTags) ){
+                array_push($albumTags,$itemTag);
+            }
+        }
+    }
+
     if ($plugin) {
         $plugin->renderItem($itemArray);
     }
-    $itemArray = array_merge($scriptProperties,$itemArray);
     $output[] = $gallery->getChunk($modx->getOption('thumbTpl',$scriptProperties,'galItemThumb'),$itemArray);
     $idx++;
 }
@@ -167,6 +184,7 @@ if (!empty($toPlaceholder)) {
         $toPlaceholder.'.name' => $data['album']['name'],
         $toPlaceholder.'.description' => $data['album']['description'],
         $toPlaceholder.'.total' => $data['total'],
+        $toPlaceholder.'.albumTags' => implode(",", $albumTags 
     ));
 } else {
     $placeholderPrefix = $modx->getOption('placeholderPrefix',$scriptProperties,'gallery.');
@@ -175,6 +193,7 @@ if (!empty($toPlaceholder)) {
         $placeholderPrefix.'name' => $data['album']['name'],
         $placeholderPrefix.'description' => $data['album']['description'],
         $placeholderPrefix.'total' => $data['total'],
+        $placeholderPrefix.'.albumTags' => implode(",", $albumTags         
     ));
     return $output;
 }

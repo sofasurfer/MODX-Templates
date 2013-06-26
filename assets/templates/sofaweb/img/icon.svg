@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="/var/git/MODX-Templates/assets/templates/sofaweb/img/logo-square.png"
+   inkscape:export-xdpi="6.2326875"
+   inkscape:export-ydpi="6.2326875">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2701172"
+     inkscape:cx="235.64278"
+     inkscape:cy="596.5038"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="99.990773,662.14363"
+       id="guide3087" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="500.7412,682.61418"
+       id="guide3089" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="385.00384,800.71352"
+       id="guide3093" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="265.32985,399.96309"
+       id="guide3095" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       style="fill:#660000;fill-opacity:1"
+       d="m 427.3496,609.37243 c 77.85144,-32.03475 78.80357,-125.86034 17.57516,-170.63647 -26.41358,-19.31615 -65.57443,-32.15389 -86.40618,-35.12029 -51.96168,-7.3992 -105.56135,-19.97393 -105.56135,-40.40778 0,-22.72045 89.73005,-21.82412 157.88321,1.5772 48.92836,16.80015 54.47096,14.10061 54.47096,-26.53025 0,-108.08058 -302.21017,-86.34545 -332.85944,23.93941 -14.82252,53.33583 61.30607,99.68384 129.63924,110.73414 53.38137,8.63242 67.22929,23.67356 67.22929,44.1074 0,22.81445 -81.11192,7.03932 -149.30479,-16.3756 -49.10044,-16.85926 -54.47097,4.33639 -54.47097,45.85879 0,27.74405 10.52046,65.5838 32.90285,70.86621 73.42539,17.32899 215.32977,14.03144 268.90202,-8.01276 z"
+       id="path3072"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssssssssss"
+       inkscape:export-filename="/var/git/MODX-Templates/assets/templates/sofaweb/img/logo-square.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

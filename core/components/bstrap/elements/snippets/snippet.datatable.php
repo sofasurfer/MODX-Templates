@@ -18,7 +18,7 @@
 	/* Database connection information */
 	$gaSql['user']       = "root";
 	$gaSql['password']   = "home@sql";
-	$gaSql['db']         = "ibinafuchs";
+	$gaSql['db']         = "sofaweb";
 	$gaSql['server']     = "localhost";
 
 

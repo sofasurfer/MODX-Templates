@@ -1,32 +1,40 @@
-<center><h2><a href="[[~[[+id]]]]" title="[[+pagetitle]]">[[+longtitle:isnot=``:then=`[[+longtitle]]`:else=`[[+pagetitle]]`]]</a></h2></center>
 <div id="carousel[[+tv.gallery]]" class="carousel slide">
 	<div class="carousel-inner" id="gallery-[[+tv.gallery]]" data-toggle="modal-[[+tv.gallery]]" data-target="#modal-[[+tv.gallery]]">
 		<div class="item active"><ul class="thumbnails">
-		[[!Gallery? 
-		    &useCss=`0`
-		    &totalVar=`total[[+tv.gallery]]`
-		    &start=`0`
-		    &limit=`120`
-		    &sort=`[[+sort]]`
-		    &album=`[[+tv.gallery]]`
-		    &itemCls=`span2`
-		    &activeCls=`active`
-		    &thumbFar=`T`
-		    &thumbZoomCrop=`1`
-		    &thumbWidth=`260`
-		    &thumbHeight=`180`
-		    &thumbCls=`thumbnail`
+		[[!getPage?
+		    &pageActiveTpl=`<li class="active"><a [[+title]] href="[[+href]]">[[+pageNo]]</a></li>`              
+		    &elementClass=`modSnippet`  
+		    &element=`[[+element:default=`Gallery`]]`
+		    &limit=`[[+limit:default=`900`]]`
+		    &album=`[[*gallery]]`
+		    &path=`[[+path]]`
+		    &rel=`[[+rel:default=`gallery`]]`     
+		    &data-target=`[[+data-target]]`   
+		    &source=`[[+source:default=`4`]]`
+		    &sort=`[[+sort:default=`name`]]`
+		    &dir=`[[+dir:default=`DESC`]]`
+		    &pageLimit=`[[+pageSlider]]`
+		    &cache_expires=`[[+cache_expires:default=`0`]]`
+		    &cache_resource_key=`gallery`
+		    &pageVarKey=`page-[[+tv.gallery]]`
+		    &pageNavVar=`page.[[+tv.gallery]]`
+		    &totalVar=`total.[[+tv.gallery]]`
+		    &placeholderPrefix=`[[+tv.gallery]]`
+		    &itemCls=`[[+itemCls:default=`span2`]]`
+		    &imageWidth=`1024`
+		    &imageHeight=`1024`
 		    &thumbTpl=`tpl.gallery.item`
-			&pageSliderContent=`</ul></div><div class="item"><ul class="thumbnails">`
-			&pageSlider=`[[+pageSlider]]`	    
+		    &thumbWidth=`[[+width:default=`160`]]`
+		    &thumbHeight=`[[+height:default=`120`]]`
+		    &pageSliderContent=`</ul></div><div class="item"><ul class="thumbnails">`
+		    &pageSlider=`[[+pageSlider:default=`12`]]`	    		    
 		]]
 		</ul></div>
 	</div>
 	<a class="carousel-control left" href="#carousel[[+tv.gallery]]" data-slide="prev">&lsaquo;</a>
 	<a class="carousel-control right" href="#carousel[[+tv.gallery]]" data-slide="next">&rsaquo;</a>
 </div>
-<!-- modal-gallery is the modal dialog used for the image gallery -->
-<div id="modal-[[+tv.gallery]]" class="modal modal-gallery modal-fullscreen modal-fullscreen-stretch hide fade" tabindex="-1">
+<div id="modal-gallery" class="modal modal-gallery modal-fullscreen modal-fullscreen-stretch hide fade" tabindex="-1">
     <div class="modal-header">
         <a class="close" data-dismiss="modal">&times;</a>
         <h3 class="modal-title"></h3>

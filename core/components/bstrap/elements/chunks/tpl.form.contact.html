@@ -1,21 +1,4 @@
-[[!FormIt?
-   &hooks=`recaptcha,spam,FormItLog,email`
-   &logfile=`[[++formitlog.logfile]]`
-   &emailTpl=`ContactEmail`
-   &emailFrom=`[[++emailsender]]`
-   &emailFromName=`[[++site_name]]`
-   &emailTo=`kib@sofasurfer.ch`
-   &successMessage=`1`
-   &emailHtml=`true`
-   &validate=`name:required,
-      email:email:required,
-      subject:required,
-      text:required:stripTags
-]]
-
 [[!+fi.error_message:notempty=`<div class="alert alert-block alert-error fade in">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <h4 class="alert-heading"><i class="icon-thumbs-down" /> Oh snap! You got an error!</h4>
             <p>[[!+fi.error_message]]</p>
         </div>`]]
 
@@ -27,7 +10,7 @@
 `:else=`
 <form class="form-horizontal" name="formContact" action="[[~[[*id]]]]" method="post">
 	
-	<input name="subject" value="[[++http_host]] - ContactForm" type="hidden" />
+	<input name="subject" value="ContactForm - [[++http_host]]" type="hidden" />
 	<input name="workemail" value="" type="hidden" />
 	
 	<div class="control-group [[+fi.error.name:notempty=`error`]]">
@@ -51,6 +34,10 @@
 			<span class="help-inline">[[+fi.error.text]]</span>
 		</div>				
 	</div>
+    
+    [[!+formit.recaptcha_html]]
+    [[!+fi.error.recaptcha]]
+
 	[[+hidebutton:isempty=`
 		<div class="form-actions">
 			<button type="submit" class="btn btn-primary">Send Contact Inquiry</button>

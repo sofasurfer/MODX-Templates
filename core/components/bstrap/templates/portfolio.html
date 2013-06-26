@@ -1,4 +1,5 @@
 [[$tpl.header]]
+<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
 <div class="page-header jumbotron">
 	<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
 	[[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
@@ -23,6 +24,7 @@
 <div class="span4">
   <img src="[[*pageimage]]" class="thumbnail" title="[[*pagetitle]]" />
   <p>[[*tags]]</p>
+</div>
 </div>
 </div>
 [[$tpl.footer]]

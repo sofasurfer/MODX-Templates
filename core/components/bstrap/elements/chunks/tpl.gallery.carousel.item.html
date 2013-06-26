@@ -1,6 +1,6 @@
-<li class="[[+cls]]">
-    <a class="thumbnail" title="[[+name]]" rel="gallery" href="[[+image_absolute:phpthumbof=`[[+imageProperties]]`]]" >
-		<img src="[[+image_absolute:phpthumbof=`[[+thumbProperties]]`]]" title="[[+thumbProperties]]" alt="[[+name]]" />
-	</a>
+<li class="[[+cls]] [[+id:isequal=`[[+activeItem]]`:=`[[+activeCls]]`]]">
+    <a class="thumbnail" title="[[+name]]" href="[[+url]]" rel="[[+rel]]" [[+data-target:notempty=`data-target="[[+data-target]]"`]]  >
+        <img src="[[+thumbnail]]" alt="[[+name]]" />
+    </a>
 </li>
-[[+idx:add:lt=`[[+total]]`:and:mod=`[[+pageSlider]]`:isequal=`0`:then=`[[+pageSliderContent]]`]]
+[[+idx:add:gt=`[[+total]]`:and:mod=`[[+pageSlider]]`:isequal=`0`:then=`[[+pageSliderContent]]`]]

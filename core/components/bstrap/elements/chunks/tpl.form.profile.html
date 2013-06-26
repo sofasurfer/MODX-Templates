@@ -1,20 +1,24 @@
+<div class="row">
+<div class="span8">
+	
 [[!Profile]]
 [[!UpdateProfile]]
+[[!getQuery?pName=`newuser`&toPh=`newuser`]]
+[[+newuser:notempty=`
+	<div class="alert alert-block fade in">
+		<p>Your account is now active, use the form below to add additioal profile information.</p>
+	</div>
+`]]
 [[+error.message:notempty=`
 	<div class="alert alert-block alert-error fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<h4 class="alert-heading">Oh snap! You got an error!</h4>
 		<p>[[+error.message]]</p>
 	</div>
 `]]	
 [[+login.update_success:if=`[[+login.update_success]]`:is=`1`:then=`
 	<div class="alert alert-block fade in">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		[[%login.profile_updated? &amp;namespace=`login` &topic=`updateprofile`]]
+		<p>[[%login.profile_updated? &amp;namespace=`login` &topic=`updateprofile`]]</p>
 	</div>
 `]]
-<div class="row">
-<div class="span8">
 <form class="form-horizontal" action="[[~[[*id]]]]" method="post" name="formProfile">
 <input type="hidden" name="nospam:blank" value="" />
 <div class="control-group">
@@ -53,6 +57,7 @@
 </form>
 </div>
 <div class="span4">
-<img src="http://www.gravatar.com/avatar/[[!+email:md5]]?s=250" class="thumbnail pull-right" /> 
+	<img class="thumbnail" src="http://www.gravatar.com/avatar/[[!+email:md5]]?s=200" />
+	<i class="icon-external-link"></i> <a href="http://en.gravatar.com/" rel="tooltip" title="Manage profile image via gravatar.com" target="_blank">Change image</a>
 </div>
 </div>

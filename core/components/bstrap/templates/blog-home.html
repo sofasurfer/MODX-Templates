@@ -1,20 +1,26 @@
 [[$tpl.header]]
 <div class="page-header jumbotron">
 <h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
-[[*introtext:isnot=``:then=`<p class="lead">[[*introtext]]</p>`]]
+[[*description:isnot=``:then=`<p class="lead">[[*description]]</p>`]]
 </div>
-<div class="subnav">
-[[!Wayfinder?
-	&outerClass=`nav nav-pills`
-	&innerClass=`dropdown-menu`
-	&rowTpl=`@CODE: <li><a href="[[~[[*id]]]]#[[+wf.alias]]" title="[[+wf.linktext]]">[[+wf.linktext:limit=`12`]]</a></li>`
-	&startId=`[[*id]]`
-	&level=`0`
-	&limit=`10` 
-	&sortBy=`publishedon`
-	&sortOrder=`DESC`
-	&titleOfLinks=``
-]]	
+<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
+	<div class="span8">
+		[[*content]]
+	</div>
+	<div class="span4">
+		<h3>Categories</h3>
+		<ul class="tagList">[[+tags]]</ul>
+		<ul class="nav nav-list">					  				
+			<li class="nav-header">Latest Posts</li>
+			[[+latest_posts]]
+
+			[[+comments_enabled:is=`1`:then=`
+			<li class="nav-header">Latest Comments</li>
+			[[+latest_comments]]
+			`]]
+			<li class="nav-header">Archives</li>
+  			[[+archives]]
+		</ul>
+	</div>
 </div>
-[[*content]]
 [[$tpl.footer]]

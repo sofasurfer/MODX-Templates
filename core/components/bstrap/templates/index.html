@@ -4,165 +4,96 @@
     <meta charset="utf-8">
     <title>[[*longtitle:isnotempty:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]] | [[++site_name]]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="[[+description:notags]]"> 
+    <meta name="author" content="[[++site_ownwer:notags]]">
     <base href="[[++site_url]]" id="site_url" />
-
+    
     <!-- Le styles -->
-	<!--link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"-->
-	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css" rel="stylesheet">	
+    <!--link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet"-->    
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css" rel="stylesheet">  
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">  
 
-	<!--link rel="stylesheet" href="[[++site_url]]assets/templates/bootstrap/themes/[[+site_theme]]/css/style.css"-->
-	<style type="text/css">
-      body {
-        	padding-top: 60px;
-        	padding-bottom: 40px;
-     	}
-		.page-header {
-			text-align: center;
-		}
-		.tagList li
-		{
-			display: inline;
-			list-style-type: none;
-			padding-right: 10px;
-		}		
-	</style>
+    <link href="[[++site_url]]assets/templates/sofaweb/css/style.css" rel="stylesheet">
+
+    <script src="http://api.html5media.info/1.1.5/html5media.min.js"></script>
+    <style>
+
+        #main{
+            margin-top: 50px;
+            height:100%;
+            min-height:100%;
+        }
+        #footer{
+            height:250px;
+            border-top: 1px solid #E5E5E5;
+            background-color: #F5F5F5;
+            color: #777777;
+            margin: 50px 0px 0px 0px;            
+            padding: 20px 0px 50px 0px;
+        }   
+        .jumbotron{
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom:50px;
+        }
+   </style>
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top navbar-inverse2">
   <div class="navbar-inner">
-	<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
-		<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
- 		<!-- Be sure to leave the brand out there if you want it shown -->
-		<a class="brand" href="[[~[[++SiteStart]]]]">[[++site_name]]</a>		  
-					
-		<!-- Everything you want hidden at 940px or less, place within here -->
-		<div class="nav-collapse">			
-			[[!Wayfinder?
-				&outerClass=`nav`
-				&rowTpl=`tpl.navbar.row`
-				&innerTpl=`tpl.navbar.inner`
-				&startId=`0`
-				&level=`2`
-			]]
-		</div>
+    <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+        <!-- Be sure to leave the brand out there if you want it shown -->
+        <a class="brand" href="[[~[[++site_start]]]]" title="[[++site_name]]">[[++site_name]]</a>  
+
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <div class="nav-collapse">          
+            [[!Wayfinder?
+                &outerClass=`nav`
+                &innerClass=`dropdown-menu`
+                &startId=`0`
+                &level=`2`
+            ]]
+        </div>
     </div>
   </div>
 </div>
-<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
-	<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
-		<div class="page-header jumbotron">
-		<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
-		[[*introtext:isnot=``:then=`<p class="lead">[[*introtext]]</p>`]]
-		</div>
-	</div>
-	<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
-		[[*content]]
-	</div>
-	<footer>
-		<hr/>
-		<small class="span4 offset4" style="text-align:ceter;font-size:x-small;">Designed and built by [[++site_owner]] © 2012</small>
-	</footer>
-	<div id="back-top"><a href="#">Back to top</a></div> 
-</div> <!-- /container --> 
+<div id="main" class="container">
+
+    <div class="page-header jumbotron">
+        <h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
+        [[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
+        [[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+    </div>
+
+    <div class="row"><div class="span12">[[*content]]</div></div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="12">                 
+                <center>
+                    <p>Built by [[++site_owner]] © 2012</p>
+                    <small>Page loaded [^t^] ([^s^])</small>
+                </center>               
+            </div>
+        </div>
+    </div>
+</footer>
+
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
-<img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100541593ns.gif" />    	
-
-<script type="text/javascript">
-/* 
-* Load dynamic CSS files 
-* If not already exists
-*/
-if( jQuery && !jQuery.getCSS ){
-	jQuery.getCSS = function( url, media ) {
-		if( $("link[href$='"+url+"']").length > 0 ){
-			return true;
-		}else{
-			jQuery( document.createElement('link') ).attr({
-				href: url,
-				media: media || 'screen',
-				type: 'text/css',
-				rel: 'stylesheet'
-			}).appendTo('head');
-		}
-	}
-}
-
-
-// tooltip demo
-$("a[rel=tooltip]").tooltip();
-$("a[rel=popover]").popover();
-
-if( $("gMap").length > 0 ) {
-
-}
-
-// Back to top
-$('#back-top').hide();
-$(function () {
-$(window).scroll(function () {
-	if ($(this).scrollTop() > 280) {
-		$('#back-top').fadeIn();
-	} else {
-		$('#back-top').fadeOut();
-	}
-});
-});
-$('#back-top a').click(function () {
-	$('body,html').animate({
-		scrollTop: 0
-	}, 800, 'easeOutExpo');
-	return false;
-});
-
-// Support for AJAX loaded modal window.
-// Focuses on first input textbox after it loads the window.
-$('a[data-toggle="modal"]').click(function(e) {
-    e.preventDefault();
-
-    var href = $(this).attr('href');
-    var rel = $(this).attr('rel');
-    var target = $(this).attr('data-target');
-
-    if ( href.indexOf('#') == 0) {
-        $(target).modal('show');							
-    } else {
-        $.get(href, function(data) {
-            $(target).empty();
-            $(target).html(data);
-            $(target).on('hide', function () {
-                $(this).empty();
-            });			
-            						$(target).modal('show');	
-        }).success(function() {
-			if( $('video').length > 0 ){
-			    $.getCSS('/assets/templates/mediaelement/build/mediaelementplayer.min.css');
-			    $.getScript("/assets/templates/mediaelement/build/mediaelement-and-player.min.js", function(){
-				$(target).modal('show');
-				$('video').mediaelementplayer({
-					enableAutosize: true,
-					success: function(player, node) {
-						$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-					}
-				});
-			    });
-			}
-        });
-    }	
-    return false;
-})
-
-</script>
-<!-- End Piwik Tracking Code -->
+<script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+<script src="[[++site_url]]assets/templates/sofaweb/js/default.js"></script>
+ <img src="http://piwik.sofasurfer.org/piwik.php?idsite=3&amp;rec=1" style="border:0" alt="" />
 </body>
 </html>

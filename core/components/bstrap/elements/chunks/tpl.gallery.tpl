@@ -1,26 +1,32 @@
-[[$tpl.gallery.paging?album=`[[+album:lcase]]`]]
-<ul class="thumbnails" id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+<ul class="thumbnails" id="[[*gallery]]" [[+rel:isequal=`gallery`:then=`data-toggle="modal-gallery" data-target="#modal-gallery"`]] >
 [[!getPage?
     &pageActiveTpl=`<li class="active"><a [[+title]] href="[[+href]]">[[+pageNo]]</a></li>`              
     &elementClass=`modSnippet`  
-    &element=`Gallery`
-    &limit=`[[+limit:default=`360`]]`
-    &album=`[[+album]]`
-    &cache=`cache-[[+album]]`
-    &sort=`name`
-    &pageVarKey=`page[[+album:lcase]]`
-    &pageNavVar=`page.[[+album:lcase]]`    
-    &totalVar=`total.[[+album:lcase]]`
-    &placeholderPrefix=`[[+album:lcase]]`
-    &itemCls=`[[+itemCls:default=`span2`]]` 
-    &imgCls=`thumbnail`
-    &thumbTpl=`tpl.gallery.item` 
-    &thumbWidth=`160` 
-    &thumbHeight=`120`
+    &element=`[[+element:default=`Gallery`]]`
+    &limit=`[[+limit:default=`450`]]`
+    &album=`[[*gallery]]`
+    &path=`[[+path]]`
+    &rel=`[[+rel:default=`gallery`]]`     
+    &data-target=`[[+data-target]]`   
+    &data-content=`[[+data-content]]`   
+    &source=`[[+source:default=`4`]]`
+    &sort=`[[+sort:default=`name`]]`
+    &dir=`[[+dir:default=`ASC`]]`
+    &pageLimit=`10`
+    &cache_expires=`0`
+    &cache_resource_key=`gallery`
+    &pageVarKey=`page-[[*gallery:lcase]]`
+    &pageNavVar=`page.[[*gallery:lcase]]`
+    &totalVar=`total.[[*gallery:lcase]]`
+    &placeholderPrefix=`[[*gallery:lcase]]`
+    &itemCls=`[[+itemCls:default=`span2`]]`
+    &imageWidth=`1024`
+    &imageHeight=`1024`
+    &thumbTpl=`tpl.gallery.item`
+    &thumbWidth=`[[+width:default=`160`]]`
+    &thumbHeight=`[[+height:default=`120`]]`
 ]]</ul>
-
-<div class="pagination pagination-centered pagination-mini"><ul>[[+page.[[+album:lcase]]]]</ul></div>
-
+<div class="pagination pagination-centered"><ul>[[+page.[[*gallery:lcase]]]]</ul></div>
 <!-- modal-gallery is the modal dialog used for the image gallery -->
 <div id="modal-gallery" class="modal modal-gallery modal-fullscreen modal-fullscreen-stretch hide fade" tabindex="-1">
     <div class="modal-header">

@@ -1,10 +1,8 @@
-<li class="[[+cls]]  gallery-item">
-    <a class="thumbnail [[+idx:mpy=`[[+cls:stripString=`span`]]`:mod=`12`:gt=`0`:and:gte=`6`:then=`popover-left`:else=`popover-right`]]" rel="gallery" title="[[+name]]" href="[[+image_absolute:phpthumbof=`[[+imageProperties]]`]]" data-content="
-    	<label>Size:</label>[[+filesize:escape]]<br/>
-    	<label>Date:</label>[[+createdon:escape]]<br/>
-    	[[+tags:notempty=`<label>Tags:</label><ul class=&quot;tagList&quot;>[[+tags:escape]]</ul>`]]
-    " >
-        <img src="[[+image_absolute:phpthumbof=`[[+thumbProperties]]`]]" alt="[[+name]]" />
-    </a>
+<li class="[[+cls]]">
+	    <a class="thumbnail" title="[[+name]]" href="[[+url]]" rel="[[+rel]]" [[+data-target:notempty=`data-target="[[+data-target]]"`]] [[+data-content:notempty=`data-content="[[+data-content]]"`]]  >
+	        [[+thumbnail:notempty=`<img src="[[+thumbnail]]" alt="[[+name]]" />`]]
+	        [[+tv.pageimage:notempty=`<img src="[[+tv.pageimage:phpthumbof=`w=360&h=280&zc=1`]]" alt="[[+name]]" />`]]	        
+	    </a>
+	    [[+caption:notempty=`<div class="[[+caption-class:default=`caption`]]">[[+caption]]</div>`]]	    
 </li>
 [[+idx:add:lt=`[[+total]]`:and:mod=`[[+pageSlider]]`:isequal=`0`:then=`[[+pageSliderContent]]`]]

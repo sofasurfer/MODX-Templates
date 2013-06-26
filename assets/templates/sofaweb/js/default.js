@@ -17,28 +17,23 @@ if( jQuery && !jQuery.getCSS ){
 	}
 }
 
+/* Fix for iPAd */
+$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+
 window.prettyPrint && prettyPrint();
 
-$('#site-search').typeahead({
-    source: function (query, process) {
-        return $.get('/system/search.js', { query: query }, function (data) {    	
-            return process(data.options);
-        });
-    }
-	,updater: function (obj) {
-		var link = $(obj);
-		document.location = link.attr('href');
-    }    
-});
-
 // tooltip demo
-$("a[rel=tooltip]").tooltip();
-$("a[rel=tooltip-bottom]").tooltip({
+$('a[rel=tooltip]').tooltip();
+$("a[rel=gallery]").tooltip();
+$('a[rel=tooltip-bottom],a[data-toggle="modal"]').tooltip({
 	placement: 'bottom'
 });
 
-$("a[rel=popover]").popover();
-$("a[rel=gallery]").popover({
+$("a[rel=popover]").popover({
+	html: true,
+	'trigger': 'click'
+});
+$("a[rel=modal-video]").popover({
 	html: true,
 	placement: function (tip, element) {
         var offset = $(element).offset();
@@ -55,23 +50,11 @@ $("a[rel=gallery]").popover({
 	'trigger': 'hover'
 });
 
-/*
-$("a.popover-right").popover({
-	'html': true,
-	'placement': 'right',
-	'trigger': 'hover'
-});
-$("a.popover-left").popover({
-	'html': true,
-	'placement': 'left',
-	'trigger': 'hover'
-});
-*/
 
 $('#modTab a').click(function (e) {
   e.preventDefault();
   $(this).tab('show');
-})
+});
 
 // Thumbnail hoover
 $('.hover-group').mouseover(function(){
@@ -82,13 +65,13 @@ $('.hover-group').mouseout(function(){
 // Back to top
 $('#back-top').hide();
 $(function () {
-$(window).scroll(function () {
-	if ($(this).scrollTop() > 280) {
-		$('#back-top').fadeIn();
-	} else {
-		$('#back-top').fadeOut();
-	}
-});
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 280) {
+			$('#back-top').fadeIn();
+		} else {
+			$('#back-top').fadeOut();
+		}
+	});
 });
 $('#back-top a').click(function () {
 	$('body,html').animate({
@@ -105,6 +88,9 @@ if( $('#gMap').length > 0 ){
 	});
 }
 
+/* 
+ * Include Gallery when exist 
+ */
 if( $('a[rel="gallery"]').length > 0 ){
 	$.getScript("http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js", function() {
 		$.getScript("https://raw.github.com/blueimp/Bootstrap-Image-Gallery/master/js/bootstrap-image-gallery.min.js", function() {
@@ -113,51 +99,87 @@ if( $('a[rel="gallery"]').length > 0 ){
 	});
 }
 
+/* 
+ * Include Media Elements when exist 
+ */
+if( 1==2 &&  $('audio,video').length > 0 ){
+    $.getCSS("[[++site_url]]assets/templates/mediaelement/build/mediaelementplayer.min.css", function() {
+		$.getScript("/assets/templates/mediaelement/build/mediaelement-and-player.min.js", function() {
+			$('audio,video').mediaelementplayer({
+				success: function(player, node) {
+					$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+		   		}
+			});
+		});
+	});
+}
+
+$('#site-search').typeahead({
+    source: function (query, process) {
+        return $.get('/system/search.js', { query: query }, function (data) {    	
+            return process(data.options);
+        });
+    }
+	,updater: function (obj) {
+		var link = $(obj);
+		document.location = link.attr('href');
+    }    
+});
+
 // Support for AJAX loaded modal window.
 // Focuses on first input textbox after it loads the window.
-$('a[data-toggle="modal"]').click(function(e) {
+//$('a[rel="modal-video"]').tooltip();
+$('a[rel="modal-video"]').click(function(e) {
     e.preventDefault();
 
     var href = $(this).attr('href');
-    var rel = $(this).attr('rel');
     var title = $(this).attr('data-original-title');
-    var target = $(this).attr('data-target');
+    var rel = $(this).attr('data-target');
+    var target = $('#modal-gallery');
+    
 
-    if ( rel.indexOf('#') >= 0 ) {
-        $(target + '-inner .item.active').removeClass('active');							
-        $(rel).addClass('active');									
-        $(target).modal('show');							
-    } else {
-    	if( $(target).length == 0 ){
-    		$("<div/>").attr('id',target.replace('#','')).attr('tabindex','-1').addClass('modal modal-gallery fade').appendTo('body');
-    	}    	
-        $.get(href, function(data) {
-	        $(target).empty();
-	        
-	        var videoHtml = data.replace(/src="/g,'src="' + rel + '/');
-	        videoHtml = videoHtml.replace('poster="','poster="' + rel + '/');
+	if( $(target).length == 0 ){
+		$("<div/>").attr('id',target.replace('#','')).attr('tabindex','-1').addClass('modal modal-gallery fade').appendTo('body');
+	}    	
+    $.get(href, function(data) {
 
-	        var dataHtml = '<div class="modal-header"><button type="button" class="close" data-dismiss="modal">×</button><h3> '+title+'</h3></div><div id="modal-body" class="modal-body"><div class="modal-video">' + videoHtml + '</div></div></div>';
-	        $(target).html(dataHtml);
-	        $(target).on('hide', function () {
-	            $(this).empty();
-	        });
-	        $(target).on('show', function () {
-	        	var player = $(this).find('video')[0];
-				$(this).find('.modal-body').css({
-                	width: player.width,
-                	height: player.height
-       		    });
-       		    $(this).find('.modal-footer').html( player.width + '/' + player.height );	        	
-			});
-        }).success(function() {			
-			$('audio2,video2').mediaelementplayer({
-				success: function(player, node) {
-					//$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-	       		}
-			});
-			$(target).modal('show');
+        //$(target).removeClass('.full-fullscreen');
+        
+        var videoHtml = data.replace(/src="/g,'src="' + rel + '/');
+        videoHtml = videoHtml.replace('poster="','poster="' + rel + '/');
+		videoHtml = '<div class="modal-video">' + videoHtml + '</div>';
+
+        $(target).find('.modal-title').html(title);
+        $(target).find('.modal-body').html(videoHtml);
+
+
+        $(target).on('hide', function () {
+            $(this).find('.modal-body').empty();
         });
-    }	
+        $(target).on('show', function () {
+        	var player = $(this).find('video');
+        	var playerWidth =  player.attr('width');
+        	var playerHeight = player.attr('height');
+			/*
+			$(this).find('.modal-body').css({
+            	'width': playerWidth,
+            	'height': playerHeight
+   		    });
+			*/
+			$(this).css({
+            	'margin-left': -(playerWidth/2),
+            	'margin-top': -(playerHeight/2)
+   		    });       		    
+   		    $(this).find('.modal-download').attr('href', href.replace('html','mp4') );	        	
+   		    $(this).find('.modal-download').hide();	        	
+   		    $(this).find('.modal-prev').hide();	        	
+   		    $(this).find('.modal-next').hide();	        	
+   		    $(this).find('.modal-play').hide();	        	
+
+		});
+    }).success(function() {			
+		$(target).modal('show');
+    });
+
     return false;
-})
+});

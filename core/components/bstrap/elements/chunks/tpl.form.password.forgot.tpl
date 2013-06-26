@@ -1,8 +1,6 @@
 	<form class="form-horizontal" action="[[~[[*id]]]]?action=ForgotPassword" method="post"> 
 		[[+loginfp.errors:notempty=`
 		    <div class="alert alert-block alert-error fade in">
-		        <button type="button" class="close" data-dismiss="alert">×</button>
-		        <h4 class="alert-heading"><b class="icon-thumbs-down"></b> Oh snap! You got an error!</h4>
 		        <p>[[+loginfp.errors]]</p>
 		    </div>
 		`]]     

@@ -12,7 +12,6 @@
 		letter-spacing: .1em;
 		font-weight: normal;
 		font-family: Oswald,helvetica,arial,freesans,clean,sans-serif;
-		background-image: url( ../img/bg.png);
 	}
 	a {
 		color:#D1503D;
@@ -73,8 +72,6 @@
 		border-radius: 10px 10px 10px 10px;
 		-moz-border-radius: 10px 10px 10px 10px;
 		-webkit-border-radius:  10px 10px 10px 10px;
-		
-
 	}
 	textarea{
 		color:#6b6b6b;	

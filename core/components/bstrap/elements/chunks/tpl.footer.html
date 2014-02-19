@@ -4,10 +4,11 @@
 	<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
 		<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
 			<div class="span4">					
-					<p>Built by [[++site_owner]] © 2012</p>	
+					[[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
 			</div>
 			<div class="span4">
 				<center>
+					<p>Built by [[++site_owner]] © 2012</p>
 					<small>Page loaded [^t^] ([^s^])</small>			
 				</center>				
 			</div>

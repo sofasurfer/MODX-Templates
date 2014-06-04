@@ -1,8 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
 body{
   color:#fff9eb;
   margin:0;
   padding:0;
-  text-align:left;	
+  padding-top: 700px;  
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align:center;	
   background-color: #000;
   background-repeat: no-repeat;
   background-position:top center ;
@@ -12,10 +17,6 @@ body{
 .hero-unit{
   background:transparent;
   height: 500px;
-}
-@font-face {
-  font-family: 'Teamspirit';
-  src: url('../fonts/TEAMSPIR.TTF');
 }
 
 h2{
@@ -35,9 +36,6 @@ header{
     font-family:Teamspirit;
     font-size:84px;
 
-}
-
-footer{
 }
 
 
@@ -82,14 +80,25 @@ footer{
   background-color:#fff9eb;
 }
 
-.footer{
-    display: none;
+footer{
     color: #fff9eb;
-    margin:0 auto;
-    text-align:center;
-    position: absolute;
-    bottom:10px;
+    position:fixed;
+    bottom:2px;
+    left:50%;
+    width:500px;
+    margin-left:-220px;
 }
-.footer a{
+footer a,
+footer a:hover{
     color: #fff9eb;
+    letter-spacing: 2px;
 }
+footer span{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+
+
+
+

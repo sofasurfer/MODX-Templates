@@ -4,10 +4,11 @@ body{
   color:#fff9eb;
   margin:0;
   padding:0;
-  padding-top: 700px;  
+  padding-top: 650px;
+  padding-bottom: 200px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  text-align:center;	
+  text-align:center;
   background-color: #000;
   background-repeat: no-repeat;
   background-position:top center ;
@@ -20,7 +21,7 @@ body{
 }
 
 h2{
-  color:#fff9eb;  
+  color:#fff9eb;
 }
 
 header{
@@ -37,7 +38,9 @@ header{
     font-size:84px;
 
 }
-
+.container{
+  margin-bottom: 150px;
+}
 
 #contact {
     color: #FFFFFF;
@@ -65,9 +68,9 @@ header{
 #contact input{
   padding: 10px 20px;
   border:solid 1px #fff9eb;
-  background-color:#fff9eb;  
+  background-color:#fff9eb;
   width:70%;
-  border-radius: 0px 0px 0px 0px;  
+  border-radius: 0px 0px 0px 0px;
 }
 
 #contact button{
@@ -76,17 +79,15 @@ header{
   color:#000;
   font-weight:bold;
   padding: 5px 10px;
-  border:solid 1px #fff9eb;  
+  border:solid 1px #fff9eb;
   background-color:#fff9eb;
 }
 
 footer{
     color: #fff9eb;
-    position:fixed;
-    bottom:2px;
-    left:50%;
-    width:500px;
-    margin-left:-220px;
+    width:100%;
+    margin-top: 300px;
+    text-align: center;
 }
 footer a,
 footer a:hover{

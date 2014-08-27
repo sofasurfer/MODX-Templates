@@ -1,0 +1,31 @@
+body,html{
+	margin:0;
+	padding:0;
+	text-align:left;	
+	background-position:top center ;
+    /*background-image: url(../images/Bruges_UHA-BG-14.jpg);*/
+}
+
+@font-face {
+  font-family: 'Teamspirit';
+  src: url('../fonts/TEAMSPIR.TTF');
+}
+
+header{
+	text-align:left;
+}
+
+.logo{
+	width:200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333333;
+    font-family:Teamspirit;
+    font-size:84px;
+
+}
+
+footer{
+    background-image: url(../images/fabric-grey.png);
+}

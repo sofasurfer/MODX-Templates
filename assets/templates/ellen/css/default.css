@@ -4,11 +4,17 @@ body{
   color:#fff9eb;
   margin:0;
   padding:0;
+<<<<<<< HEAD
   padding-top: 650px;
   padding-bottom: 200px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   text-align:center;
+=======
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align:center;	
+>>>>>>> c8ba999b7dca7a35cbd537ef8196f19adacf6430
   background-color: #000;
   background-repeat: no-repeat;
   background-position:top center ;
@@ -38,9 +44,13 @@ header{
     font-size:84px;
 
 }
+<<<<<<< HEAD
 .container{
   margin-bottom: 150px;
 }
+=======
+
+>>>>>>> c8ba999b7dca7a35cbd537ef8196f19adacf6430
 
 #contact {
     color: #FFFFFF;
@@ -85,9 +95,17 @@ header{
 
 footer{
     color: #fff9eb;
+<<<<<<< HEAD
     width:100%;
     margin-top: 300px;
     text-align: center;
+=======
+    position:fixed;
+    bottom:2px;
+    left:50%;
+    width:500px;
+    margin-left:-220px;
+>>>>>>> c8ba999b7dca7a35cbd537ef8196f19adacf6430
 }
 footer a,
 footer a:hover{
@@ -102,4 +120,7 @@ footer span{
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c8ba999b7dca7a35cbd537ef8196f19adacf6430

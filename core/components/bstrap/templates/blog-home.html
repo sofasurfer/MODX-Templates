@@ -8,17 +8,19 @@
 		[[*content]]
 	</div>
 	<div class="span4">
-		<h3>Categories</h3>
-		<ul class="tagList">[[+tags]]</ul>
+		<ul class="nav tagList">
+                    <li class="nav-header" style="display:block;"><h4>Categories</h4></li>
+                    [[+tags]]
+                </ul>
 		<ul class="nav nav-list">					  				
-			<li class="nav-header">Latest Posts</li>
+			<li class="nav-header"><h4>Latest Posts</h4></li>
 			[[+latest_posts]]
 
 			[[+comments_enabled:is=`1`:then=`
-			<li class="nav-header">Latest Comments</li>
+			<li class="nav-header"><h4>Latest Comments</h4></li>
 			[[+latest_comments]]
 			`]]
-			<li class="nav-header">Archives</li>
+			<li class="nav-header"><h4>Archives</h4></li>
   			[[+archives]]
 		</ul>
 	</div>

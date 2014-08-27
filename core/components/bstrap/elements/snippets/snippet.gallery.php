@@ -32,7 +32,7 @@ if (!($gallery instanceof Gallery)) return '';
 $modx->lexicon->load('gallery:web');
 
 
-$modx->setLogLevel(modX::LOG_LEVEL_INFO);
+$modx->setLogLevel(modX::LOG_LEVEL_ERROR);
 
 
 /* check for REQUEST vars if property set */
@@ -111,6 +111,10 @@ if( empty($cacheData) && $cacheKey !== false ){
 
     $data = $modx->call('galItem','getList',array(&$modx,$scriptProperties));
 
+    if( empty($data) ){
+        return 'Gallery not found';
+    }
+
     /* iterate */
     $imageProperties = $modx->getOption('imageProperties',$scriptProperties,'');
     $imageProperties = !empty($imageProperties) ? $modx->fromJSON($imageProperties) : array();
@@ -151,84 +155,95 @@ if( empty($cacheData) && $cacheKey !== false ){
 
     $albumTags = array();
 
-    /** @var galItem $item */
-    foreach ($data['items'] as $item) {
+    if( empty($data['items']) ){
 
-        if( empty($cacheAlbumData[$item->get('id')]) ){
+        $output[] = "No data found";
 
-            $cacheAlbumIsDirty = true;
-            $itemArray = $item->toArray();
-            //$itemArray = array_merge($scriptProperties,$itemArray);
+    }else{
 
-            $itemArray['idx'] = $idx;
-            $itemArray['total'] = $data['total'];
-            $itemArray['cls'] = $itemCls;
-            if ($itemArray['id'] == $highlightItem || $itemArray['id'] == $activeItem) {
-                $itemArray['cls'] .= ' '.$activeCls;
-            }
-
-            $itemArray['thumbWidth'] = $thumbWidth;
-            $itemArray['thumbHeight'] = $thumbHeight;
-            $itemArray['filename'] = basename($item->get('filename'));
-            $itemArray['image_absolute'] = $filesUrl.$item->get('filename');
-            $itemArray['fileurl'] = $itemArray['image_absolute'];
-            $itemArray['filepath'] = $filesPath.$item->get('filename');
-            $itemArray['filesize'] = $item->get('filesize');
-            
-            $itemArray['pageSlider'] = $pageSlider;
-            $itemArray['pageSliderContent'] = $pageSliderContent;
+        /** @var galItem $item */
+        foreach ($data['items'] as $item) {
 
 
-            //$itemArray['thumbnail'] = $item->get('thumbnail',$thumbProperties);
-            $itemArray['thumbProperties'] = http_build_query($thumbProperties);
-            $itemArray['thumbnail'] = $modx->runSnippet("phpthumbof",array(
-                'input' => $itemArray['filepath'], 
-                'options' => $itemArray['thumbProperties'] 
-            ));
+            if( empty($cacheAlbumData[$item->get('id')]) ){
 
-            $itemArray['image'] = $itemArray['image_absolute'];
-            /*
-            $itemArray['imageProperties'] = http_build_query($imageProperties);
-            $itemArray['image'] = $modx->runSnippet("phpthumbof",array(
-                'input' => $itemArray['image_absolute'], 
-                'options' => $itemArray['imageProperties']
-            ));
-            */
-            $itemArray['url'] = $itemArray['image'];
+                $cacheAlbumIsDirty = true;
+                $itemArray = $item->toArray();
+                //$itemArray = array_merge($scriptProperties,$itemArray);
 
+                $itemArray['idx'] = $idx;
+                $itemArray['total'] = $data['total'];
+                $itemArray['cls'] = $itemCls;
+                if ($itemArray['id'] == $highlightItem || $itemArray['id'] == $activeItem) {
+                    $itemArray['cls'] .= ' '.$activeCls;
+                }
 
-            $itemArray['image_attributes'] = $imageAttributes;
-            $itemArray['link_attributes'] = $linkAttributes;
-            if (!empty($scriptProperties['album'])) $itemArray['album'] = $scriptProperties['album'];
-            if (!empty($scriptProperties['tag'])) $itemArray['tag'] = $scriptProperties['tag'];
-            $itemArray['linkToImage'] = $linkToImage;
-            //$itemArray['url'] = $item->get('url');
-            $itemArray['imageGetParam'] = $imageGetParam;
-            $itemArray['albumRequestVar'] = $albumRequestVar;
-            $itemArray['tagRequestVar'] = $tagRequestVar;
+                $itemArray['thumbWidth'] = $thumbWidth;
+                $itemArray['thumbHeight'] = $thumbHeight;
+                $itemArray['filename'] = basename($item->get('filename'));
+                $itemArray['image_absolute'] = $filesUrl.$item->get('filename');
+                $itemArray['fileurl'] = $itemArray['image_absolute'];
+                $itemArray['filepath'] = $filesPath.$item->get('filename');
+                $itemArray['filesize'] = $item->get('filesize');
+                
+                $itemArray['pageSlider'] = $pageSlider;
+                $itemArray['pageSliderContent'] = $pageSliderContent;
 
 
+                //$itemArray['thumbnail'] = $item->get('thumbnail',$thumbProperties);
+                $itemArray['thumbProperties'] = http_build_query($thumbProperties);
+                $itemArray['thumbnail'] = $modx->runSnippet("phpthumbof",array(
+                    'input' => $itemArray['filepath'], 
+                    'options' => $itemArray['thumbProperties'] 
+                ));
 
-            if( !empty($itemArray['tags']) ){
-                $itemTags = explode(',', $itemArray['tags'] );
-                foreach($itemTags as $itemTag ){
-                    if( !in_array($itemTag, $albumTags) ){
-                        array_push($albumTags,$itemTag);
+                $itemArray['image'] = $itemArray['image_absolute'];
+                
+                $itemArray['imageProperties'] = http_build_query($imageProperties);
+                $itemArray['image'] = $modx->runSnippet("phpthumbof",array(
+                    'input' => $itemArray['image_absolute'], 
+                    'options' => $itemArray['imageProperties']
+                ));
+                
+                $itemArray['url'] = $itemArray['fileurl'];
+
+
+                $itemArray['image_attributes'] = $imageAttributes;
+                $itemArray['link_attributes'] = $linkAttributes;
+                if (!empty($scriptProperties['album'])) $itemArray['album'] = $scriptProperties['album'];
+                if (!empty($scriptProperties['tag'])) $itemArray['tag'] = $scriptProperties['tag'];
+                $itemArray['linkToImage'] = $linkToImage;
+                //$itemArray['url'] = $item->get('url');
+                $itemArray['imageGetParam'] = $imageGetParam;
+                $itemArray['albumRequestVar'] = $albumRequestVar;
+                $itemArray['tagRequestVar'] = $tagRequestVar;
+
+
+
+                if( !empty($itemArray['tags']) ){
+                    $itemTags = explode(',', $itemArray['tags'] );
+                    foreach($itemTags as $itemTag ){
+                        if( !in_array($itemTag, $albumTags) ){
+                            array_push($albumTags,$itemTag);
+                        }
                     }
                 }
-            }
 
-            if ($plugin) {
-                $plugin->renderItem($itemArray);
-            }
-            $itemHtml = $gallery->getChunk($modx->getOption('thumbTpl',$scriptProperties,'galItemThumb'),$itemArray);
-            $cacheAlbumData[$item->get('id')] = $itemHtml;
+                if ($plugin) {
+                    $plugin->renderItem($itemArray);
+                }
+                $itemHtml = $gallery->getChunk($modx->getOption('thumbTpl',$scriptProperties,'galItemThumb'),$itemArray);
+                $cacheAlbumData[$item->get('id')] = $itemHtml;
 
-        }else{
-            $itemHtml = $cacheAlbumData[$item->get('id')];
+
+
+            }else{
+                $itemHtml = $cacheAlbumData[$item->get('id')];
+            }
+            $output[] = $itemHtml;        
+            $idx++;
+
         }
-        $output[] = $itemHtml;        
-        $idx++;
 
     }
 
@@ -274,8 +289,8 @@ if( empty($cacheData) && $cacheKey !== false ){
     $placeholders['sort'] = $sort;
 
     // Set cache result
-    $cacheData['cachetime'] = time();    
-    $cacheData['placeholders'] = $placeholders;       
+    $cacheData['cachetime'] = time();
+    $cacheData['placeholders'] = $placeholders;
     $cacheData['output'] = $output;      
 
     if ($modx->getCacheManager()) {

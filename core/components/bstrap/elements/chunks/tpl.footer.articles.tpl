@@ -3,7 +3,7 @@
 	<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">		
 		<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
 			<div class="span4">					
-				[[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
+			    [[$tpl.share]]
 			</div>
 			<div class="span4">
 				<center>

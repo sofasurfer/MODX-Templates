@@ -91,13 +91,21 @@ if( $('#gMap').length > 0 ){
 /* 
  * Include Gallery when exist 
  */
-if( $('a[rel="gallery"]').length > 0 ){
-	$.getScript("http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js", function() {
-		$.getScript("https://raw.github.com/blueimp/Bootstrap-Image-Gallery/master/js/bootstrap-image-gallery.min.js", function() {
-			//alert('done');
-		});
-	});
-}
+// if( $('a[rel="gallery"]').length > 0 ){
+// 	$.getScript("http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js", function() {
+// 		$.getScript("https://raw.github.com/blueimp/Bootstrap-Image-Gallery/master/js/bootstrap-image-gallery.min.js", function() {
+// 			//alert('done');
+// 		});
+// 	});
+// }
+
+// if( $('a[rel="gallery"]').length > 0 ){
+//     $.getScript("http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js", function() {
+//         $.getScript("https://raw.githubusercontent.com/blueimp/Bootstrap-Image-Gallery/master/js/bootstrap-image-gallery.js", function() {
+//             //alert('done');
+//         });
+//     });
+// }
 
 /* 
  * Include Media Elements when exist 
@@ -137,6 +145,7 @@ $('a[rel="modal-video"]').click(function(e) {
     var rel = $(this).attr('data-target');
     var target = $('#modal-gallery');
     
+    alert('done');
 
 	if( $(target).length == 0 ){
 		$("<div/>").attr('id',target.replace('#','')).attr('tabindex','-1').addClass('modal modal-gallery fade').appendTo('body');

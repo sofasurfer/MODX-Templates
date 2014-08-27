@@ -4,11 +4,12 @@
 	<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
 		<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
 			<div class="span4">					
-					[[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
+			[[$tpl.share]]
+					[[!BreadCrumb_old? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
 			</div>
 			<div class="span4">
 				<center>
-					<p>Built by [[++site_owner]] © 2012</p>
+					<div>Built by [[++site_owner]] © 2012</div>
 					<small>Page loaded [^t^] ([^s^])</small>			
 				</center>				
 			</div>
@@ -32,9 +33,13 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+
+<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="https://raw.githubusercontent.com/blueimp/Bootstrap-Image-Gallery/master/js/bootstrap-image-gallery.js"></script>
+
+
+<!--script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script-->
 <script src="[[++theme_js]]"></script>
-<img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100541593ns.gif" />
 [[$gPlus]]
 [[$piwik]]
 </body>

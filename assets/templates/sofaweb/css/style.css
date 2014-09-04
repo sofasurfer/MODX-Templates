@@ -144,6 +144,10 @@
         margin:10px;
     }
 
+    .postmeta{
+        clear:left;
+    }
+
     /*
     @import url(http://fonts.googleapis.com/css?family=Armata);
     .brand{

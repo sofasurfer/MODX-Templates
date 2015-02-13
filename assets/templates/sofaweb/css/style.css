@@ -1,12 +1,24 @@
+ /*
+ SofaSurfer default CSS
+ */
+    @import url(http://fonts.googleapis.com/css?family=Ubuntu|Oswald|Bevan|Wallpoet|Allerta);
+
     html,
     body{
         background-color: #F5F5F5;        
     }
 
+    .center{
+        text-align: center;
+        margin: 0 auto;
+    }
+
 
     .brand{
         display: inline-block;
-        width:80px;
+        /* width:80px;*/
+        font-family: 'Allerta', sans-serif;
+        padding-right: 10px;
         /*
         margin:0px;
         padding: 5px 2px !important;
@@ -244,6 +256,7 @@
         line-height: .8em;
     }
     .thumbnail .caption{
+        height: 200px;
         margin-bottom:10px;
     }
     /* For Mouse Over Caption */

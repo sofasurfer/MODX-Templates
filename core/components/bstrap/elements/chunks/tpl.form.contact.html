@@ -5,7 +5,7 @@
 [[!+fi.successMessage:isnot=``:then=`
     <legend><h1>Thank You!</h1></legend>
 	<div class="alert alert-success">
-		I will response to your inquiry as soon as possible.	
+		I will get back to you as soon as possible.	
 	</div>
 `:else=`
 <form class="form-horizontal" name="formContact" action="[[~[[*id]]]]" method="post">
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	<div class="control-group [[+fi.error.text:notempty=`error`]]">	
-		<label class="control-label" for="text">Message:</label>
+		<label class="control-label" for="text">What's up:</label>
 		<div class="controls">			
 			<textarea name="text" id="text" rows="5">[[+fi.text]]</textarea>
 			<span class="help-inline">[[+fi.error.text]]</span>
@@ -40,7 +40,7 @@
 
 	[[+hidebutton:isempty=`
 		<div class="form-actions">
-			<button type="submit" class="btn btn-primary">Send Contact Inquiry</button>
+			<button type="submit" class="btn btn-primary">Let's go</button>
 			 <a href="[[~[[*id]]]]" class="btn">Cancel</a>
 		</div>		
 	`]]

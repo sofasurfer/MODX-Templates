@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	
+	<title>Simple infinitive jQuery full width slider</title>
+	
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#slider{
+			position: absolute;
+			width: 100%;
+			height: 800px;
+			overflow: hidden;
+		}
+
+		#slider ul{
+			position: relative;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		#slider ul li{
+			position: relative;
+			width: 100%;
+			float: left;
+		}
+
+		/*
+			Style for back next buttons
+		*/
+	    .back, .next{
+	      position: absolute;
+	      display:block;
+	      top: 40%;
+	      width: 50px;
+	      height: 40px;
+	      z-index: 99;      
+	    }
+	    .back{ left: 10%; }
+	    .next{ right: 10%; }
+
+	    /* Make arrows */
+	    .back:before, .back:after,
+	    .next:before, .next:after {
+	        content: "";
+	        position: absolute;
+	        width: 100%;
+	        top: 10px;
+	        left: 0px;
+	        height: 2px;
+	        background: none repeat scroll 0% 0% #888;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+	    }    
+	    
+	    .back:after,
+	    .next:after{
+	      	top:45px;
+			-webkit-transform: rotate45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+	    }
+	    .next:before{
+	    	top: 47px;
+	    }
+	    .next:after{
+	    	top: 12px;
+	    }
+	    
+
+	</style>
+
+	<script>
+
+
+
+		var slideWidth = 0;
+		var itemWidth = 0;
+		var itemCount = 0;
+		var totalWidt = 0;
+		var leftValue = 0;	
+
+
+		function setSliderSize(){
+
+			slideWidth = $('#slider').width();
+			itemWidth = slideWidth; //$('#slider li').width();
+			itemCount = $('#slider ul li').length;
+			totalWidt = parseInt(slideWidth*itemCount) + 50;
+    		leftValue = itemWidth * (-1);	 
+
+			$('#slider ul').css('width', totalWidt );
+    		$('#slider ul li').css('width',slideWidth);   
+    		$('#slider ul li img').css('width',slideWidth);
+
+			 //move the last item before first item, just in case user click prev button
+			$('#slider li:first').before($('#slider li:last'));
+
+		    //set the default item to the correct position
+		    $('#slider ul').css({'left' : leftValue});	
+		}
+
+		
+		/* Set Slider size new on window resize */
+		$( window ).resize(function() {
+			setSliderSize();
+		});
+
+
+		/*
+			Das script wird erst ausgeführt, 
+			wenn die komplete Seite geladen wurde 
+		*/
+		$( document ).ready(function() {
+
+
+			setSliderSize();		
+
+
+	        // Handler für den back button
+	        $('a.back').click(function(e) {
+				e.preventDefault();
+
+
+		        //get the right position
+		        var left_indent = parseInt($('#slider ul').css('left')) + itemWidth;
+
+		        //slide the item
+		        $('#slider ul').animate({'left' : left_indent}, 500,function(){
+					//move the last item and put it as first item     
+		            $('#slider li:first').before($('#slider li:last'));
+		            //set the default item to correct position
+		            $('#slider ul').css({'left' : leftValue});
+		        
+		        });        
+	        });
+
+	        // Das gleiche wie back einfach für next
+	        $('a.next').click(function(e) {  
+	        	e.preventDefault();
+
+		        //get the right position
+		        var left_indent = parseInt($('#slider ul').css('left')) - itemWidth;
+
+		        //slide the item
+		        $('#slider ul').animate({'left' : left_indent}, 500,function(){
+					//move the last item and put it as first item     
+		            $('#slider li:last').after($('#slider li:first'));
+		            //set the default item to correct position
+		            $('#slider ul').css({'left' : leftValue});
+		        
+		        });         
+	        });
+	    });
+
+	</script>
+
+</head>
+<body>
+	<div id="buttons">
+		<a class="back" href=""></a>
+		<a class="next" href=""></a>	 
+	</div>	
+	<div id="slider">
+		<ul>
+			<li><img title="Image 1" src="http://theme.co/media/x-slider-example-1.jpg" /></li> 
+			<li><img title="Image 2" src="http://theme.co/media/x-slider-example-2.jpg" /></li> 
+			<li><img title="Image 3" src="http://theme.co/media/x-slider-example-3.jpg" /></li> 
+		</ul>		
+	</div>
+
+
+	<!-- Bitte Ignorieren ist bloss für tracking -->
+
+	<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//piwik.sofasurfer.org/";
+	    _paq.push(['setTrackerUrl', u+'piwik.php']);
+	    _paq.push(['setSiteId', 1]);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<noscript><p><img src="//piwik.sofasurfer.org/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+	<!-- End Piwik Code -->
+
+</body>
+</html>

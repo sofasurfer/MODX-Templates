@@ -20,6 +20,6 @@
     &caption-class=`caption caption-fixed`
     &caption=`<p>[[+introtext]]</p>`
     &pageSliderContent=`</div><div class="row">`
-    &pageSlider=`4`	
+    &pageSlider=`20`	
 ]]
 </div>

@@ -2,7 +2,10 @@
 <div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
 <div class="page-header jumbotron">
 	<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
-	[[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+    [[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+    <div>
+        [[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
+    </div>
 </div>
 <div class="row">
 <div class="span8">

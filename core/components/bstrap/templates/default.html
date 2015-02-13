@@ -2,6 +2,9 @@
 <div class="page-header jumbotron">
 	<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
 	[[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+    [[*showbreadcrumb:isnot=``:then=`<div>
+        [[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
+    </div>`]]
 </div>
 [[*content]]
 [[$tpl.footer]]

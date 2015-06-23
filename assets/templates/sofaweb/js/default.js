@@ -20,7 +20,22 @@ if( jQuery && !jQuery.getCSS ){
 /* Fix for iPAd */
 $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
 
-window.prettyPrint && prettyPrint();
+// window.prettyPrint && prettyPrint();
+
+$(document).ready(function() {
+  $('.prettyprint').html(function(i,h){
+    return h.replace(/[<>\"\'\t\n]/g, function(m) { return {
+      '<' : '&lt;',
+      '>' : '&gt;',
+      "'" : '&#39;',
+      '"' : '&quot;',
+      '\t': '  ',
+      '\n': '<br/>' // needed for IE
+    }[m]});
+  });
+
+  prettyPrint();
+});
 
 // tooltip demo
 $('a[rel=tooltip]').tooltip();

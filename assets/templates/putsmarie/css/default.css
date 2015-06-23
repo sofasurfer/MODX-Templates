@@ -1,0 +1,113 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+body{
+  color:#fff9eb;
+  margin:0;
+  padding:0;
+
+  padding-top: 650px;
+  padding-bottom: 200px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align:center;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align:center;	
+
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position:top center ;
+  background-image: url(../images/logo.jpg);
+}
+
+.hero-unit{
+  background:transparent;
+  height: 500px;
+}
+
+h2{
+  color:#fff9eb;
+}
+
+header{
+	text-align:left;
+}
+
+.logo{
+	width:200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333333;
+    font-family:Teamspirit;
+    font-size:84px;
+
+}
+.container{
+  margin-bottom: 150px;
+}
+
+#contact {
+    color: #FFFFFF;
+    padding-bottom: 50px;
+    padding-top: 150px;
+    position: relative;
+}
+#contact ul{
+  list-style: none;
+  padding-left:0;
+  margin-left:0;
+}
+#contact li{
+  list-style: none;
+  padding-left:0;
+  margin-left:0;
+  margin-bottom:2px;
+}
+
+#contact label{
+  display:inline-block;
+  width:95px;
+}
+
+#contact input{
+  padding: 10px 20px;
+  border:solid 1px #fff9eb;
+  background-color:#fff9eb;
+  width:70%;
+  border-radius: 0px 0px 0px 0px;
+}
+
+#contact button{
+  clear:both;
+  float:right;
+  color:#000;
+  font-weight:bold;
+  padding: 5px 10px;
+  border:solid 1px #fff9eb;
+  background-color:#fff9eb;
+}
+
+footer{
+    color: #fff9eb;
+    width:100%;
+    margin-top: 300px;
+    text-align: center;
+    position:fixed;
+    bottom:2px;
+    left:50%;
+    width:500px;
+    margin-left:-220px;
+}
+footer a,
+footer a:hover{
+    color: #fff9eb;
+    letter-spacing: 2px;
+}
+footer span{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+

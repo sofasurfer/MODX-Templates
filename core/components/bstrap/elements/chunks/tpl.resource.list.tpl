@@ -18,7 +18,7 @@
     &tpl=`tpl.resource.item`  
     &title=`[[+pagetitle]]`
     &caption-class=`caption caption-fixed`
-    &caption=`<p>[[+introtext]]</p>`
+    &caption=`[[+introtext]]`
     &pageSliderContent=`</div><div class="row">`
     &pageSlider=`20`	
 ]]

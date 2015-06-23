@@ -5,7 +5,7 @@
 
     html,
     body{
-        background-color: #F5F5F5;        
+        background-color: #FFF;        
     }
 
     .center{
@@ -19,6 +19,7 @@
         /* width:80px;*/
         font-family: 'Allerta', sans-serif;
         padding-right: 10px;
+        font-size: 1.7em;
         /*
         margin:0px;
         padding: 5px 2px !important;
@@ -29,7 +30,15 @@
     .brand  .logo{
         position:absolute;      
         top:-10px;  
-        height:70px;        
+        height:70px;    
+    }
+    .beta{
+        font-size: 0.8em;
+/*        -moz-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);*/
     }
     .navbar{
         background-color: #FFF;
@@ -37,6 +46,9 @@
     .navbar-inner{
         background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
         box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset, 0 1px 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar .nav > li > a {
+        font-size: 1.2em;
     }
     .navbar .nav > li > a i{
         /*
@@ -88,6 +100,30 @@
         padding:0px;
         font-size:small;        
     }
+
+    @media (max-width:767px){
+/*        body{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .wrap{
+            padding-left: 30px;
+        }*/
+        #footer{
+            width: 108%;
+            margin-left: -20px;
+            margin-right: 20px;
+        }
+        #footer .span4{
+            text-align: center;
+            margin-bottom: 1.5em;            
+
+        }
+        #footer .pull-right{
+            float:none;
+        }
+    }
+
     .breadcrumb{
         margin-left:0;
         padding-left:0;
@@ -159,7 +195,40 @@
     .postmeta{
         clear:left;
     }
+    .post .title,
+    .post .entry{
+        overflow: hidden;
+    }
 
+
+    /*
+        Forma and SHIT
+    */
+    .form-horizontal input,
+    input {
+        background-color: #F6F6F6;
+        border: 1px solid #EEE;
+        border-radius: 0px 0px 0px 0px;
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.8) inset;
+    }
+    .quip-add-comment input[type="text"]{
+        border: 1px solid #EEE !important;
+    }
+    input, textarea, .uneditable-input{
+        width: 80%;        
+        border: 1px solid #EEE;
+        border-radius: 0px 0px 0px 0px;        
+        background-color: #F6F6F6;
+    }
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+        /*border-radius: 0px;*/
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;        
+    }
+    .form-actions{
+        border-top: none;
+    }
     /*
     @import url(http://fonts.googleapis.com/css?family=Armata);
     .brand{
@@ -415,6 +484,10 @@
         height: 100%;
     }
 
+
+    ol.quip-comment-list li{
+        margin-bottom:2em;   
+    }
 .modal-gallery{width:auto;max-height:none;outline:none;}
 .modal-gallery .modal-body{max-height:none;}
 .modal-gallery .modal-title{display:inline-block;max-height:54px;overflow:hidden;}

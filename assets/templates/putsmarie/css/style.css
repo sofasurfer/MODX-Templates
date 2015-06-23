@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+
+body,html{
+	background: transparent;
+	/*background-image: url(../img/bg-main.png) ;*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+
+	font-family: 'Arimo', sans-serif;
+
+}
+
+h1{
+	font-family: 'Arimo', sans-serif;
+}
+h1 span{
+	font-weight: normal;
+}
+.navbar-inner {
+	padding-top:25px;
+    background-color: #fff;
+	background-image: url(../img/bg-top.png) ; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+	border:0;
+}
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+	box-shadow: none;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background-color: transparent;
+    box-shadow: none;
+    color: #555555;
+    text-decoration: none;
+}
+
+.container-fluid{
+	padding:0;
+}
+
+.carousel-inner .item img{
+	width:100%;
+}
+
+#lang,
+#asphaltpiloten,
+#peaces,
+#dates,
+#espace
+{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+}
+
+#lang{
+	height: 400px;
+	background-image: url(../img/bg-lang.png) ; 
+}
+
+#asphaltpiloten{
+	height: 1289px;	
+	background-image: url(../img/bg-asphaltpiloten.png) ; 
+}
+#asphaltpiloten h1{
+	padding-top:800px;
+}
+#asphaltpiloten .content{
+	padding-top:825px;
+}
+#peaces{
+	height: 1250px;		
+	background-image: url(../img/bg-peaces.png) ; 
+}
+#peaces h1{
+	padding-top:1030px;
+}
+#peaces .content{
+	padding-top:1030px;
+}
+
+

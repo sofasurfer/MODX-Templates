@@ -54,8 +54,8 @@
         <span class="help-inline">[[+error.comment]]</span>
     </div>     
     <div class="form-actions2">
-        <button type="submit" class="btn btn-info" name="[[+preview_action]]" value="1">[[%quip.preview]]</button>
         [[+can_post:is=`1`:then=`<button type="submit" class="btn btn-primary" name="[[+post_action]]" value="1">[[%quip.post]]</button>`]]
+        <button type="submit" class="btn " name="[[+preview_action]]" value="1">[[%quip.preview]]</button>
     </div> 
     <br class="clear" />
 </div>

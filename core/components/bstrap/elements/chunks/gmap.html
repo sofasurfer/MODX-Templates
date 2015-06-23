@@ -1,0 +1,260 @@
+<p>After making my previous post on how to<a title="Simply store comments via jSon" href="http://blog.sofasurfer.ch/2011/03/04/php-simple-comments-readwrite-json-data-to-text-file/"> simply store comments in a jSon file</a> (and the comment from Brian) I decided to write an additional HOWTO create dynamic markers and store them in a jSon file.</p>
+<p>It also includes an automatic geo data lockup via <a href="http://code.google.com/apis/maps/documentation/geocoding/" target="_blank">Google GeoCoder</a> and generates a detail html file for-each marker created, which then will be loaded dynamic when the marker is clicked.</p>
+<p>Check out the <a href="http://howto.sofasurfer.ch/gmap/" target="_blank">working example</a> or <a href="http://storage.sofasurfer.org/download/gmap.tar.gz" target="_blank">download the code</a>.</p>
+
+<p>So lets get started with the code. First we need to add <a href="http://jquery.com/" target="_blank">jQuery</a> and the <a href="http://code.google.com/apis/maps/index.html" target="_blank">Google map API</a>:</p>
+
+<pre class="prettyprint">
+<head>
+<!-- Include jQuery lib for AJAX requests -->
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script> 
+ 
+<!-- Include google map lib -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+</head>
+</pre>
+
+<p>The HTML code is very basic and contains a Title, Input field for new markers and the placeholder for the map. Make sure to add "loadMap()" to the html body.</p>
+
+<pre class="prettyprint lang-html">
+<!-- Input field for new markers --> 
+<input id="newMarker" type="text" /> 
+<input onclick="newMarker();" type="button" value="add city" /> 
+<br class="clear" /> 
+
+<!-- Map Placeholder -->
+<div id="myMap"></div>
+</pre>
+
+<p>So lets have a look at the JavaScript, first we set some global variables like data path zoom level etc:</p>
+<pre class="prettyprint languague-javascript">// data file with markers (could also be a PHP file for dynamic markers)
+var newDate = new Date;
+var markerFile = 'markers.json?time=' + newDate.getTime();
+
+// set default map properties
+var defaultLatlng = new google.maps.LatLng(49.00,10.00);
+
+// zoom level of the map
+var defaultZoom = 2;
+
+// variable for map
+var map;
+
+// variable for marker info window
+var infowindow
+
+// List with all marker to check if exist
+var markerList = {};
+
+// set error handler for jQuery AJAX requests
+$.ajaxSetup({"error":function(XMLHttpRequest,textStatus, errorThrown) 
+	alert(textStatus);
+	alert(errorThrown);
+	alert(XMLHttpRequest.responseText);
+}});
+
+// option for google map object
+var myOptions = {
+	zoom: defaultZoom,
+	center: defaultLatlng,
+	mapTypeId: google.maps.MapTypeId.HYBRID
+}
+</pre>
+<p>On page load loadMap is fired which which loads the google map to the <strong>myMap</strong>DIV, and then fires loadMarkers:</p>
+<pre class="prettyprint languague-javascript">/**
+ * Load Map
+ */
+function loadMap(){
+
+	// create new map make sure a DIV with id myMap exist on page
+	map = new google.maps.Map(document.getElementById("myMap"), myOptions);
+
+	// create new info window for marker detail pop-up
+	infowindow = new google.maps.InfoWindow();
+
+	// load markers
+	loadMarkers();
+}
+</pre>
+<p>Now we need the markers, loadMarkers loads the existing markers via ajax request directly from the data.json fiel (could of course also be a dynamic PHP files which generates jSon).</p>
+<pre class="prettyprint languague-javascript">/**
+ * Load markers via ajax request from server
+ */
+function loadMarkers(){
+
+	// load marker jSon data
+	$.getJSON(markerFile, function(data) {
+
+		// loop all the markers
+		$.each(data.markers, function(i,item){
+
+			// add marker to map
+			loadMarker(item);
+		});
+	});
+}
+</pre>
+<p>Once the markers are loaded they somehow have to go on the map:</p>
+<pre class="prettyprint languague-javascript">/**
+ * Load marker to map
+ */
+function loadMarker(markerData){
+
+	// create new marker location
+	var myLatlng = new google.maps.LatLng(markerData['lat'],markerData['long']);
+
+	// create new marker
+	var marker = new google.maps.Marker({
+	    id: markerData['id'],
+	    map: map,
+	    title: markerData['name'] ,
+	    position: myLatlng
+	});
+
+	// add marker to list used later to get content and additional marker information
+	markerList[marker.id] = marker;
+
+	// add event listener when marker is clicked
+	// currently the marker data contain a dataurl field this can of course be done different
+	google.maps.event.addListener(marker, 'click', function() {
+
+		// show marker when clicked
+		showMarker(marker.id);
+	});
+
+	// add event when marker window is closed to reset map location
+	google.maps.event.addListener(infowindow,'closeclick', function() {
+		map.setCenter(defaultLatlng);
+		map.setZoom(defaultZoom);
+	});
+}
+</pre>
+<p>Each marker has an onclick event which loads the detail marker html file into a google infowindow.</p>
+<pre class="prettyprint languague-javascript">/**
+ * Show marker info window
+ */
+function showMarker(markerId){
+
+	// get marker information from marker list
+	var marker = markerList[markerId];
+
+	// check if marker was found
+	if( marker ){
+
+		// get marker detail information from server
+		$.get( 'data/' + marker.id + '.html' , function(data) 
+
+			// show marker window
+			infowindow.setContent(data);
+			infowindow.open(map,marker);
+		});
+	}else{
+		alert('Error marker not found: ' + markerId);
+	}
+}
+</pre>
+<p>Here the logic for lockup new markers and post them via AJAX jSon request to the server.</p>
+<pre class="prettyprint languague-javascript"> /**
+ * Adds new marker to list
+ */
+
+function newMarker(){
+
+	// get new city name
+	var markerAddress = $('#newMarker').val();
+
+	// create new geocoder for dynamic map lookup
+	var geocoder = new google.maps.Geocoder();
+
+	geocoder.geocode( { 'address': markerAddress}, function(results, status) {
+
+		// check response status
+		if (status == google.maps.GeocoderStatus.OK) {
+
+			// Fire Google Goal
+			_gaq.push(['_trackPageview', '/tracking/marker-submit']);
+
+			// set new maker id via timestamp
+			var newDate = new Date;
+			var markerId = newDate.getTime();
+
+			// get name of creator
+			var markerCreator = prompt("Please enter your name","");
+
+			// create new marker data object
+			var markerData = {
+				'id': markerId,
+				'lat': results[0].geometry.location.lat(),
+				'long': results[0].geometry.location.lng(),
+				'creator': markerCreator,
+				'name': markerAddress,
+			};
+
+			// save new marker request to server
+			$.ajax({
+				type: 'POST',
+				url: "data.php",
+				data: {
+					marker: markerData
+				},
+
+				dataType: 'json',
+				async: false,
+				success: function(result){
+
+					// add marker to map
+					loadMarker(result);
+
+					// show marker detail
+					showMarker(result['id']);
+				}
+			});
+		}else if( status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT){
+			alert("Marker not found:" + status);
+		}
+	});
+}</pre>
+<p>The PHP code to save the marker is pretty much the same as in my previous post, and returns the newly create marker data:</p>
+<pre class="prettyprint languague-php">/* get markes from file */
+$dataPath = '/var/www/gmap/data/';
+$markerDataFile = 'markers.json';
+$markerText = file_get_contents($markerDataFile);
+
+/* create array list from markers */
+$markerList = json_decode($markerText,true);
+
+/* check if new marker is posted */
+if( !empty($_POST['marker'])  ){
+
+	/* get new marker data */
+	$markerData =  $_POST['marker'];
+
+	/* add additional marker information */
+	$markerData['ip'] = $_SERVER['REMOTE_ADDR'];
+	$markerData['created'] = time();
+
+	/*  create detail marker content file */
+	$markerContent = $markerData['creator'] . "-&gt; " . $markerData['name'];
+
+	$markerContent .= date("D M j G:i:s T Y");
+
+	/* save marker file to server */
+	$markerFile = $dataPath . $markerData['id'] . ".html";
+	file_put_contents($markerFile  , $markerContent);
+
+        /* add new marker to existing list */
+        $markerList['markers'][] = $markerData;
+
+        /* convert comments to string */
+        $markerText = json_encode($markerList);
+
+        /* save comment to file */
+        file_put_contents($markerDataFile, $markerText);
+
+        /* return newly created marker */
+	echo json_encode($markerData);
+}else{
+	echo "Invalid request";
+}
+</pre>
+<p>This should give a good start on how to dynamically add and display markers via Google map. Check out the <a href="http://howto.sofasurfer.ch/gmap/" target="_blank">working example</a> or <a href="http://storage.sofasurfer.org/download/gmap.tar.gz" target="_blank">download the code</a>.</p>

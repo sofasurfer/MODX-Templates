@@ -111,7 +111,6 @@
 		    //set the default item to the correct position
 		    $('#slider ul').css({'left' : leftValue});	
 		}
-
 		
 		/* Set Slider size new on window resize */
 		$( window ).resize(function() {
@@ -124,15 +123,10 @@
 			wenn die komplete Seite geladen wurde 
 		*/
 		$( document ).ready(function() {
-
-
 			setSliderSize();		
-
-
 	        // Handler für den back button
 	        $('a.back').click(function(e) {
 				e.preventDefault();
-
 
 		        //get the right position
 		        var left_indent = parseInt($('#slider ul').css('left')) + itemWidth;

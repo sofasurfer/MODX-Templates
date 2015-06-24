@@ -9,7 +9,7 @@
     &includeTVs=`1`
     &processTVs=`0`
     &includeContent=`0`
-    &cls=`span4`
+    &cls=`col-md-4`
     &clsItem=``
     &clsImage=`[[+clsImage:default=`img-rounded`]]`
     &thumbWidth=`360`

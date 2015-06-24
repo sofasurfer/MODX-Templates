@@ -1,10 +1,10 @@
-[[!+fi.error_message:notempty=`<div class="alert alert-block alert-error fade in">
+[[!+fi.error_message:notempty=`<div class="alert alert-danger" role="alert">
             <p>[[!+fi.error_message]]</p>
         </div>`]]
 
 [[!+fi.successMessage:isnot=``:then=`
     <legend><h1>Thank You!</h1></legend>
-	<div class="alert alert-success">
+	<div class="alert alert-success" role="alert">
 		I will get back to you as soon as possible.	
 	</div>
 `:else=`
@@ -13,24 +13,24 @@
 	<input name="subject" value="ContactForm - [[++http_host]]" type="hidden" />
 	<input name="workemail" value="" type="hidden" />
 	
-	<div class="control-group [[+fi.error.name:notempty=`error`]]">
-		<label class="control-label" for="name">[[%name ]]:</label>
-		<div class="controls">			
-			<input name="name" id="name" value="[[+fi.name]]" type="text">
+	<div class="form-group [[+fi.error.name:notempty=`has-error`]]">
+		<label class="col-sm-2 control-label" for="name">[[%name ]]:</label>
+		<div class="col-sm-6">			
+			<input class="form-control" name="name" id="name" value="[[+fi.name]]" type="text">
 			<span class="help-inline">[[+fi.error.name]]</span>
 		</div>
 	</div>
-	<div class="control-group [[+fi.error.email:notempty=`error`]]">
-		<label class="control-label" for="email">[[%email ]]:</label>
-		<div class="controls">			
-			<input name="email" id="email" value="[[+fi.email]]" type="email" />
+	<div class="form-group [[+fi.error.email:notempty=`has-error`]]">
+		<label class="col-sm-2 control-label" for="email">[[%email ]]:</label>
+		<div class="col-sm-6">			
+			<input class="form-control" name="email" id="email" value="[[+fi.email]]" type="email" />
 			<span class="help-inline">[[+fi.error.email]]</span>
 		</div>
 	</div>
-	<div class="control-group [[+fi.error.text:notempty=`error`]]">	
-		<label class="control-label" for="text">What's up:</label>
-		<div class="controls">			
-			<textarea name="text" id="text" rows="5">[[+fi.text]]</textarea>
+	<div class="form-group [[+fi.error.text:notempty=`has-error`]]">	
+		<label class="col-sm-2 control-label" for="text">What's up:</label>
+		<div class="col-sm-6">			
+			<textarea class="form-control" name="text" id="text" rows="5">[[+fi.text]]</textarea>
 			<span class="help-inline">[[+fi.error.text]]</span>
 		</div>				
 	</div>
@@ -39,9 +39,11 @@
     [[!+fi.error.recaptcha]]
 
 	[[+hidebutton:isempty=`
-		<div class="form-actions">
-			<button type="submit" class="btn btn-primary">Let's go</button>
-			 <a href="[[~[[*id]]]]" class="btn">Cancel</a>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-6">
+				<button type="submit" class="btn btn-primary">Let's go</button>
+				 <a href="[[~[[*id]]]]" class="btn">Cancel</a>
+			</div>
 		</div>		
 	`]]
 </form>

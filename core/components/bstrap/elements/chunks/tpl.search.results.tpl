@@ -1,11 +1,9 @@
-<p>
-<span>[[+resultInfo]]</span>
-<div class="pagination"><ul>[[+paging]]</ul></div>
-</p> 
-<div class="sisea-results-list">
-<table class="table table-striped">
-    [[+results]]
-</table>
+<div class="row">
+	<div class="col-md-12">
+		<div class="lead">[[+resultInfo]]</div>
+		<table class="table table-condense table-hover">
+		    [[+results]]
+		</table>
+		<nav><ul class="pagination">[[+paging]]</ul></nav>
+	</div>
 </div>
-
-<div class="pagination"><ul>[[+paging]]</ul></div>

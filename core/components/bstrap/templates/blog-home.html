@@ -3,26 +3,36 @@
 <h1>[[*pagetitle]]</h1>
 [[*description:isnot=``:then=`<p class="lead">[[*description]]</p>`]]
 </div>
-<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
-	<div class="span8">
-		[[*content]]
-	</div>
-	<div class="span4">
-		<ul class="nav tagList">
-                    <li class="nav-header" style="display:block;"><h4>Categories</h4></li>
-                    [[+tags]]
-                </ul>
-		<ul class="nav nav-list">					  				
-			<li class="nav-header"><h4>Latest Posts</h4></li>
-			[[+latest_posts]]
-
-			[[+comments_enabled:is=`1`:then=`
-			<li class="nav-header"><h4>Latest Comments</h4></li>
-			[[+latest_comments]]
-			`]]
-			<li class="nav-header"><h4>Archives</h4></li>
-  			[[+archives]]
-		</ul>
+<div id="container" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
+	<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
+		<div class="col-md-8">
+			[[*content]]
+		</div>
+		<div class="col-md-4">
+			<ul class="nav tagList">
+	                    <li class="nav-header" style="display:block;"><h4>Categories</h4></li>
+	                    [[+tags]]
+	                </ul>
+			<ul class="list-group">					  				
+				<li class="list-group-item nav-header"><h4>Latest Posts</h4>
+				<ul>
+				[[+latest_posts]]
+				</ul>
+				</li>
+				[[+comments_enabled:is=`1`:then=`
+				<li class="list-group-item nav-header"><h4>Latest Comments</h4>
+				<ul>
+				[[+latest_comments]]
+				</ul>
+				</li>				
+				`]]
+				<li class="list-group-item nav-header"><h4>Archives</h4>
+				<ul>
+	  			[[+archives]]
+				</ul>
+				</li>	  			
+			</ul>
+		</div>
 	</div>
 </div>
 [[$tpl.footer]]

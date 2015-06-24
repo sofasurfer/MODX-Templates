@@ -16,16 +16,9 @@
 
     .brand{
         display: inline-block;
-        /* width:80px;*/
         font-family: 'Allerta', sans-serif;
         padding-right: 10px;
         font-size: 1.7em;
-        /*
-        margin:0px;
-        padding: 5px 2px !important;
-        */
-        /*color: #660000 !important;*/
-        /*color: #660000 !important;*/
     }
     .brand  .logo{
         position:absolute;      
@@ -34,45 +27,10 @@
     }
     .beta{
         font-size: 0.8em;
-/*        -moz-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);*/
     }
-    .navbar{
-        background-color: #FFF;
-    }
-    .navbar-inner{
-        background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
-        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset, 0 1px 10px rgba(0, 0, 0, 0.1);
-    }
-    .navbar .nav > li > a {
-        font-size: 1.2em;
-    }
-    .navbar .nav > li > a i{
-        /*
-        color:white;
-        font-size: 16px;
-        text-shadow:0 0px 0 #FFF;
-        */
-        font-size: large;        
-    }
-    .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle,
-    .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-        background:none;
-        background-color:transparent;
-        box-shadow: none;
-        border-bottom: 2px;
-    }
-    #wrap{
-        height: 100%;
-        min-height: 100%;
-        background-color: #FFF;        
-        /* Negative indent footer by it's height */
-    }
-    #main{
-        padding: 50px 0px 50px 0px;        
+    .list-group ul.list-group-child {
+        padding-left: 0px;
+        margin-left: 0px;
     }
     #footer{
         border-top: 1px solid #E5E5E5;
@@ -110,17 +68,17 @@
             padding-left: 30px;
         }*/
         #footer{
-            width: 108%;
+/*            width: 108%;
             margin-left: -20px;
-            margin-right: 20px;
+            margin-right: 20px;*/
         }
-        #footer .span4{
+        #footer .col-md-4{
             text-align: center;
             margin-bottom: 1.5em;            
 
         }
         #footer .pull-right{
-            float:none;
+            float:none!important;
         }
     }
 
@@ -198,82 +156,6 @@
     .post .title,
     .post .entry{
         overflow: hidden;
-    }
-
-
-    /*
-        Forma and SHIT
-    */
-    .form-horizontal input,
-    input {
-        background-color: #F6F6F6;
-        border: 1px solid #EEE;
-        border-radius: 0px 0px 0px 0px;
-        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.8) inset;
-    }
-    .quip-add-comment input[type="text"]{
-        border: 1px solid #EEE !important;
-    }
-    input, textarea, .uneditable-input{
-        width: 80%;        
-        border: 1px solid #EEE;
-        border-radius: 0px 0px 0px 0px;        
-        background-color: #F6F6F6;
-    }
-    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
-        /*border-radius: 0px;*/
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;        
-    }
-    .form-actions{
-        border-top: none;
-    }
-    /*
-    @import url(http://fonts.googleapis.com/css?family=Armata);
-    .brand{
-        font-family: 'Armata', sans-serif;
-    }
-    */
-    /*https://raw.github.com/sofasurfer/MODX-Templates/master/*/
-    /*
-    @font-face {
-        font-family: 'sofafontregular';
-        src: url('/assets/templates/sofaweb/fonts/sofafont/sofafont.eot');
-        src: url('/assets/templates/sofaweb/fonts/sofafont/sofafont.eot?#iefix') format('embedded-opentype'),
-             url('/assets/templates/sofaweb/fonts/sofafont/sofafont.woff') format('woff'),
-             url('/assets/templates/sofaweb/fonts/sofafont/sofafont.ttf') format('truetype'),
-             url('/assets/templates/sofaweb/fonts/sofafont/sofafont.svg#sofafontregular') format('svg');
-        font-weight: 400;
-        font-style: normal;
-    }
-    [class^="sicon-"]:before, [class*=" sicon-"]:before {
-        display: inline-block;
-        font-family: sofafontregular;
-        font-style: normal;
-        font-weight: 400;
-        text-decoration: inherit;
-    }    
-    .brand .sicon-logo:before{
-        color:#660000;
-        content: "s";
-        font-size: 18px;
-    }
-    */
-
-    .dropdown-menu ul {
-      list-style: none;
-    }
-    .dropdown-menu  a{
-        text-align: left;
-        padding-left: 5px;
-    }
-    .dropdown-menu i{
-        padding-right: 10px;
-    }
-    .subnav p{
-      padding-top:10px;
-      padding-left: 10px;
     }
     
     .popover-content label{
@@ -376,96 +258,6 @@
     .text-centered {
         text-align:center;
         margin: 0 auto;
-    }
-    /* Sidenav for Docs
-    -------------------------------------------------- */
-    .container-fluid ul.thumbnails{
-        margin:0 auto;
-    }
- /*
-
-    .row-fluid li.span6:nth-child(2n + 3) { margin-left : 0px; }
-    .row-fluid li.span4:nth-child(3n + 4) { margin-left : 0px; }
-    .row-fluid li.span4:nth-child(4n + 5) { margin-left : 0px; }
-    .row-fluid li.span2:nth-child(6n + 7) { margin-left : 0px; }
-    .row-fluid li.span1:nth-child(12n + 13) { margin-left : 0px; }
- 
-    .row-fluid {
-        ul.thumbnails {
-            li.span12 + li { margin-left : 0px; }
-            li.span6:nth-child(2n + 3) { margin-left : 0px; }
-            li.span4:nth-child(3n + 4) { margin-left : 0px; }
-            li.span3:nth-child(4n + 5) { margin-left : 0px; }
-            li.span2:nth-child(6n + 7) { margin-left : 0px; }
-            li.span1:nth-child(12n + 13) { margin-left : 0px; }
-        }
-    }
-*/
-
-    .bs-docs-sidenav {
-    width: 228px;
-    margin: 30px 0 0;
-    padding: 0;
-    background-color: #fff;
-    -webkit-border-radius: 6px;
-       -moz-border-radius: 6px;
-            border-radius: 6px;
-    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-       -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-            box-shadow: 0 1px 4px rgba(0,0,0,.065);
-    }
-    .bs-docs-sidenav > li > a {
-    display: block;
-    width: 190px \9;
-    margin: 0 0 -1px;
-    padding: 8px 14px;
-    border: 1px solid #e5e5e5;
-    }
-    .bs-docs-sidenav > li:first-child > a {
-    -webkit-border-radius: 6px 6px 0 0;
-       -moz-border-radius: 6px 6px 0 0;
-            border-radius: 6px 6px 0 0;
-    }
-    .bs-docs-sidenav > li:last-child > a {
-    -webkit-border-radius: 0 0 6px 6px;
-       -moz-border-radius: 0 0 6px 6px;
-            border-radius: 0 0 6px 6px;
-    }
-    .bs-docs-sidenav > .active > a {
-    position: relative;
-    z-index: 2;
-    padding: 9px 15px;
-    border: 0;
-    text-shadow: 0 1px 0 rgba(0,0,0,.15);
-    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-       -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-            box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-    }
-    /* Chevrons */
-    .bs-docs-sidenav .icon-chevron-right {
-    float: right;
-    margin-top: 2px;
-    margin-right: -6px;
-    opacity: .25;
-    }
-    .bs-docs-sidenav > li > a:hover {
-    background-color: #f5f5f5;
-    }
-    .bs-docs-sidenav a:hover .icon-chevron-right {
-    opacity: .5;
-    }
-    .bs-docs-sidenav .active .icon-chevron-right,
-    .bs-docs-sidenav .active a:hover .icon-chevron-right {
-    background-image: url(../img/glyphicons-halflings-white.png);
-    opacity: 1;
-    }
-    .bs-docs-sidenav.affix {
-        top: 40px;
-    }
-    .bs-docs-sidenav.affix-bottom {
-        position: absolute;
-        top: auto;
-        bottom: 270px;
     }
 
     .video-container {

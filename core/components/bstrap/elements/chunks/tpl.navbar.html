@@ -1,21 +1,22 @@
-<div class="navbar navbar-fixed-top navbar-inverse2">
-  <div class="navbar-inner">
+<div class="navbar navbar-default navbar-fixed-top">
 	<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
-		<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</a>
- 		<!-- Be sure to leave the brand out there if you want it shown -->
-		<a class="brand" href="[[~[[++site_start]]]]" title="[[++site_name]]"><img src="[[++site_logo]]" class="logo hide" alt="[[++site_name]]" />[[++site_name]] - <span class="beta">BETA</span></a>
-		
-		
-		<!-- Everything you want hidden at 940px or less, place within here -->
-		<div class="nav-collapse">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" href="[[~[[++site_start]]]]" title="[[++site_name]]"><img src="[[++site_logo]]" class="logo hide" alt="[[++site_name]]" />[[++site_name]] - <span class="beta">BETA</span></a>
+			
+		</div>
+			
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			[[!Wayfinder?
-				&outerClass=`nav`
-				&innerClass=`dropdown-menu`
+				&outerClass=`nav navbar-nav`
+				&innerClass=`dropdown`
 				&rowTpl=`tpl.navbar.row`
 				&innerTpl=`tpl.navbar.inner`
 				&innerRowTpl=`tpl.navbar.row.inner`
@@ -23,7 +24,6 @@
 				&level=`1`
 			]]
 		</div>
-    </div>
-  </div>
+	</div>
 </div>
 

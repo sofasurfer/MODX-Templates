@@ -1,214 +1,215 @@
   ||  
-Web Application Icons == 0  || 
-<i class="icon-modx"></i> icon-modx == icon-modx || 
-<i class="icon-adjust"></i> icon-adjust == icon-adjust || 
-<i class="icon-asterisk"></i> icon-asterisk == icon-asterisk || 
-<i class="icon-ban-circle"></i> icon-ban-circle == icon-ban-circle || 
-<i class="icon-bar-chart"></i> icon-bar-chart == icon-bar-chart || 
-<i class="icon-barcode"></i> icon-barcode == icon-barcode || 
-<i class="icon-beaker"></i> icon-beaker == icon-beaker || 
-<i class="icon-bell"></i> icon-bell == icon-bell || 
-<i class="icon-bolt"></i> icon-bolt == icon-bolt || 
-<i class="icon-book"></i> icon-book == icon-book || 
-<i class="icon-bookmark"></i> icon-bookmark == icon-bookmark || 
-<i class="icon-bookmark-empty"></i> icon-bookmark-empty == icon-bookmark-empty || 
-<i class="icon-briefcase"></i> icon-briefcase == icon-briefcase || 
-<i class="icon-bullhorn"></i> icon-bullhorn == icon-bullhorn || 
-<i class="icon-calendar"></i> icon-calendar == icon-calendar || 
-<i class="icon-camera"></i> icon-camera == icon-camera || 
-<i class="icon-camera-retro"></i> icon-camera-retro == icon-camera-retro || 
-<i class="icon-certificate"></i> icon-certificate == icon-certificate || 
-<i class="icon-check"></i> icon-check == icon-check || 
-<i class="icon-check-empty"></i> icon-check-empty == icon-check-empty || 
-<i class="icon-cloud"></i> icon-cloud == icon-cloud || 
-<i class="icon-cog"></i> icon-cog == icon-cog || 
-<i class="icon-cogs"></i> icon-cogs == icon-cogs || 
-<i class="icon-comment"></i> icon-comment == icon-comment || 
-<i class="icon-comment-alt"></i> icon-comment-alt == icon-comment-alt || 
-<i class="icon-comments"></i> icon-comments == icon-comments || 
-<i class="icon-comments-alt"></i> icon-comments-alt == icon-comments-alt || 
-<i class="icon-credit-card"></i> icon-credit-card == icon-credit-card || 
-<i class="icon-dashboard"></i> icon-dashboard == icon-dashboard || 
-<i class="icon-download"></i> icon-download == icon-download || 
-<i class="icon-download-alt"></i> icon-download-alt == icon-download-alt || 
-<i class="icon-edit"></i> icon-edit == icon-edit || 
-<i class="icon-envelope"></i> icon-envelope == icon-envelope || 
-<i class="icon-envelope-alt"></i> icon-envelope-alt == icon-envelope-alt || 
-<i class="icon-exclamation-sign"></i> icon-exclamation-sign == icon-exclamation-sign || 
-<i class="icon-external-link"></i> icon-external-link == icon-external-link || 
-<i class="icon-eye-close"></i> icon-eye-close == icon-eye-close || 
-<i class="icon-eye-open"></i> icon-eye-open == icon-eye-open || 
-<i class="icon-facetime-video"></i> icon-facetime-video == icon-facetime-video || 
-<i class="icon-film"></i> icon-film == icon-film || 
-<i class="icon-filter"></i> icon-filter == icon-filter || 
-<i class="icon-fire"></i> icon-fire == icon-fire || 
-<i class="icon-flag"></i> icon-flag == icon-flag || 
-<i class="icon-folder-close"></i> icon-folder-close == icon-folder-close || 
-<i class="icon-folder-open"></i> icon-folder-open == icon-folder-open || 
-<i class="icon-gift"></i> icon-gift == icon-gift || 
-<i class="icon-glass"></i> icon-glass == icon-glass || 
-<i class="icon-globe"></i> icon-globe == icon-globe || 
-<i class="icon-group"></i> icon-group == icon-group || 
-<i class="icon-hdd"></i> icon-hdd == icon-hdd || 
-<i class="icon-headphones"></i> icon-headphones == icon-headphones || 
-<i class="icon-heart"></i> icon-heart == icon-heart || 
-<i class="icon-heart-empty"></i> icon-heart-empty == icon-heart-empty || 
-<i class="icon-home"></i> icon-home == icon-home || 
-<i class="icon-inbox"></i> icon-inbox == icon-inbox || 
-<i class="icon-info-sign"></i> icon-info-sign == icon-info-sign || 
-<i class="icon-key"></i> icon-key == icon-key || 
-<i class="icon-leaf"></i> icon-leaf == icon-leaf || 
-<i class="icon-legal"></i> icon-legal == icon-legal || 
-<i class="icon-lemon"></i> icon-lemon == icon-lemon || 
-<i class="icon-lock"></i> icon-lock == icon-lock || 
-<i class="icon-unlock"></i> icon-unlock == icon-unlock || 
-<i class="icon-magic"></i> icon-magic == icon-magic || 
-<i class="icon-magnet"></i> icon-magnet == icon-magnet || 
-<i class="icon-map-marker"></i> icon-map-marker == icon-map-marker || 
-<i class="icon-minus"></i> icon-minus == icon-minus || 
-<i class="icon-minus-sign"></i> icon-minus-sign == icon-minus-sign || 
-<i class="icon-money"></i> icon-money == icon-money || 
-<i class="icon-move"></i> icon-move == icon-move || 
-<i class="icon-music"></i> icon-music == icon-music || 
-<i class="icon-off"></i> icon-off == icon-off || 
-<i class="icon-ok"></i> icon-ok == icon-ok || 
-<i class="icon-ok-circle"></i> icon-ok-circle == icon-ok-circle || 
-<i class="icon-ok-sign"></i> icon-ok-sign == icon-ok-sign || 
-<i class="icon-pencil"></i> icon-pencil == icon-pencil || 
-<i class="icon-picture"></i> icon-picture == icon-picture || 
-<i class="icon-plane"></i> icon-plane == icon-plane || 
-<i class="icon-plus"></i> icon-plus == icon-plus || 
-<i class="icon-plus-sign"></i> icon-plus-sign == icon-plus-sign || 
-<i class="icon-print"></i> icon-print == icon-print || 
-<i class="icon-pushpin"></i> icon-pushpin == icon-pushpin || 
-<i class="icon-qrcode"></i> icon-qrcode == icon-qrcode || 
-<i class="icon-question-sign"></i> icon-question-sign == icon-question-sign || 
-<i class="icon-random"></i> icon-random == icon-random || 
-<i class="icon-refresh"></i> icon-refresh == icon-refresh || 
-<i class="icon-remove"></i> icon-remove == icon-remove || 
-<i class="icon-remove-circle"></i> icon-remove-circle == icon-remove-circle || 
-<i class="icon-remove-sign"></i> icon-remove-sign == icon-remove-sign || 
-<i class="icon-reorder"></i> icon-reorder == icon-reorder || 
-<i class="icon-resize-horizontal"></i> icon-resize-horizontal == icon-resize-horizontal || 
-<i class="icon-resize-vertical"></i> icon-resize-vertical == icon-resize-vertical || 
-<i class="icon-retweet"></i> icon-retweet == icon-retweet || 
-<i class="icon-road"></i> icon-road == icon-road || 
-<i class="icon-rss"></i> icon-rss == icon-rss || 
-<i class="icon-screenshot"></i> icon-screenshot == icon-screenshot || 
-<i class="icon-search"></i> icon-search == icon-search || 
-<i class="icon-share"></i> icon-share == icon-share || 
-<i class="icon-share-alt"></i> icon-share-alt == icon-share-alt || 
-<i class="icon-shopping-cart"></i> icon-shopping-cart == icon-shopping-cart || 
-<i class="icon-signal"></i> icon-signal == icon-signal || 
-<i class="icon-signin"></i> icon-signin == icon-signin || 
-<i class="icon-signout"></i> icon-signout == icon-signout || 
-<i class="icon-sitemap"></i> icon-sitemap == icon-sitemap || 
-<i class="icon-sort"></i> icon-sort == icon-sort || 
-<i class="icon-sort-down"></i> icon-sort-down == icon-sort-down || 
-<i class="icon-sort-up"></i> icon-sort-up == icon-sort-up || 
-<i class="icon-star"></i> icon-star == icon-star || 
-<i class="icon-star-empty"></i> icon-star-empty == icon-star-empty || 
-<i class="icon-star-half"></i> icon-star-half == icon-star-half || 
-<i class="icon-tag"></i> icon-tag == icon-tag || 
-<i class="icon-tags"></i> icon-tags == icon-tags || 
-<i class="icon-tasks"></i> icon-tasks == icon-tasks || 
-<i class="icon-thumbs-down"></i> icon-thumbs-down == icon-thumbs-down || 
-<i class="icon-thumbs-up"></i> icon-thumbs-up == icon-thumbs-up || 
-<i class="icon-time"></i> icon-time == icon-time || 
-<i class="icon-tint"></i> icon-tint == icon-tint || 
-<i class="icon-trash"></i> icon-trash == icon-trash || 
-<i class="icon-trophy"></i> icon-trophy == icon-trophy || 
-<i class="icon-truck"></i> icon-truck == icon-truck || 
-<i class="icon-umbrella"></i> icon-umbrella == icon-umbrella || 
-<i class="icon-upload"></i> icon-upload == icon-upload || 
-<i class="icon-upload-alt"></i> icon-upload-alt == icon-upload-alt || 
-<i class="icon-user"></i> icon-user == icon-user || 
-<i class="icon-user-md"></i> icon-user-md == icon-user-md || 
-<i class="icon-volume-off"></i> icon-volume-off == icon-volume-off || 
-<i class="icon-volume-down"></i> icon-volume-down == icon-volume-down || 
-<i class="icon-volume-up"></i> icon-volume-up == icon-volume-up || 
-<i class="icon-warning-sign"></i> icon-warning-sign == icon-warning-sign || 
-<i class="icon-wrench"></i> icon-wrench == icon-wrench || 
-<i class="icon-zoom-in"></i> icon-zoom-in == icon-zoom-in || 
-<i class="icon-zoom-out"></i> icon-zoom-out == icon-zoom-out || 
-Text Editor Icons == 0 || 
-<i class="icon-file"></i> icon-file == icon-file || 
-<i class="icon-cut"></i> icon-cut == icon-cut || 
-<i class="icon-copy"></i> icon-copy == icon-copy || 
-<i class="icon-paste"></i> icon-paste == icon-paste || 
-<i class="icon-save"></i> icon-save == icon-save || 
-<i class="icon-undo"></i> icon-undo == icon-undo || 
-<i class="icon-repeat"></i> icon-repeat == icon-repeat || 
-<i class="icon-paper-clip"></i> icon-paper-clip == icon-paper-clip || 
-<i class="icon-text-height"></i> icon-text-height == icon-text-height || 
-<i class="icon-text-width"></i> icon-text-width == icon-text-width || 
-<i class="icon-align-left"></i> icon-align-left == icon-align-left || 
-<i class="icon-align-center"></i> icon-align-center == icon-align-center || 
-<i class="icon-align-right"></i> icon-align-right == icon-align-right || 
-<i class="icon-align-justify"></i> icon-align-justify == icon-align-justify || 
-<i class="icon-indent-left"></i> icon-indent-left == icon-indent-left || 
-<i class="icon-indent-right"></i> icon-indent-right == icon-indent-right || 
-<i class="icon-font"></i> icon-font == icon-font || 
-<i class="icon-bold"></i> icon-bold == icon-bold || 
-<i class="icon-italic"></i> icon-italic == icon-italic || 
-<i class="icon-strikethrough"></i> icon-strikethrough == icon-strikethrough || 
-<i class="icon-underline"></i> icon-underline == icon-underline || 
-<i class="icon-link"></i> icon-link == icon-link || 
-<i class="icon-columns"></i> icon-columns == icon-columns || 
-<i class="icon-table"></i> icon-table == icon-table || 
-<i class="icon-th-large"></i> icon-th-large == icon-th-large || 
-<i class="icon-th"></i> icon-th == icon-th || 
-<i class="icon-th-list"></i> icon-th-list == icon-th-list || 
-<i class="icon-list"></i> icon-list == icon-list || 
-<i class="icon-list-ol"></i> icon-list-ol == icon-list-ol || 
-<i class="icon-list-ul"></i> icon-list-ul == icon-list-ul || 
-<i class="icon-list-alt"></i> icon-list-alt == icon-list-alt || 
-Directional Icons == 0 || 
-<i class="icon-arrow-down"></i> icon-arrow-down == icon-arrow-down || 
-<i class="icon-arrow-left"></i> icon-arrow-left == icon-arrow-left || 
-<i class="icon-arrow-right"></i> icon-arrow-right == icon-arrow-right || 
-<i class="icon-arrow-up"></i> icon-arrow-up == icon-arrow-up || 
-<i class="icon-chevron-down"></i> icon-chevron-down == icon-chevron-down || 
-<i class="icon-circle-arrow-down"></i> icon-circle-arrow-down == icon-circle-arrow-down || 
-<i class="icon-circle-arrow-left"></i> icon-circle-arrow-left == icon-circle-arrow-left || 
-<i class="icon-circle-arrow-right"></i> icon-circle-arrow-right == icon-circle-arrow-right || 
-<i class="icon-circle-arrow-up"></i> icon-circle-arrow-up == icon-circle-arrow-up || 
-<i class="icon-chevron-left"></i> icon-chevron-left == icon-chevron-left || 
-<i class="icon-caret-down"></i> icon-caret-down == icon-caret-down || 
-<i class="icon-caret-left"></i> icon-caret-left == icon-caret-left || 
-<i class="icon-caret-right"></i> icon-caret-right == icon-caret-right || 
-<i class="icon-caret-up"></i> icon-caret-up == icon-caret-up || 
-<i class="icon-chevron-right"></i> icon-chevron-right == icon-chevron-right || 
-<i class="icon-hand-down"></i> icon-hand-down == icon-hand-down || 
-<i class="icon-hand-left"></i> icon-hand-left == icon-hand-left || 
-<i class="icon-hand-right"></i> icon-hand-right == icon-hand-right || 
-<i class="icon-hand-up"></i> icon-hand-up == icon-hand-up || 
-<i class="icon-chevron-up"></i> icon-chevron-up == icon-chevron-up || 
-Video Player Icons == 0 || 
-<i class="icon-play-circle"></i> icon-play-circle == icon-play-circle || 
-<i class="icon-play"></i> icon-play == icon-play || 
-<i class="icon-pause"></i> icon-pause == icon-pause || 
-<i class="icon-stop"></i> icon-stop == icon-stop || 
-<i class="icon-step-backward"></i> icon-step-backward == icon-step-backward || 
-<i class="icon-fast-backward"></i> icon-fast-backward == icon-fast-backward || 
-<i class="icon-backward"></i> icon-backward == icon-backward || 
-<i class="icon-forward"></i> icon-forward == icon-forward || 
-<i class="icon-fast-forward"></i> icon-fast-forward == icon-fast-forward || 
-<i class="icon-step-forward"></i> icon-step-forward == icon-step-forward || 
-<i class="icon-eject"></i> icon-eject == icon-eject || 
-<i class="icon-fullscreen"></i> icon-fullscreen == icon-fullscreen || 
-<i class="icon-resize-full"></i> icon-resize-full == icon-resize-full || 
-<i class="icon-resize-small"></i> icon-resize-small == icon-resize-small || 
-Social Icons == 0 || 
-<i class="icon-phone"></i> icon-phone == icon-phone || 
-<i class="icon-phone-sign"></i> icon-phone-sign == icon-phone-sign || 
-<i class="icon-facebook"></i> icon-facebook == icon-facebook || 
-<i class="icon-facebook-sign"></i> icon-facebook-sign == icon-facebook-sign || 
-<i class="icon-twitter"></i> icon-twitter == icon-twitter || 
-<i class="icon-twitter-sign"></i> icon-twitter-sign == icon-twitter-sign || 
-<i class="icon-github"></i> icon-github == icon-github || 
-<i class="icon-github-sign"></i> icon-github-sign == icon-github-sign || 
-<i class="icon-linkedin"></i> icon-linkedin == icon-linkedin || 
-<i class="icon-linkedin-sign"></i> icon-linkedin-sign == icon-linkedin-sign || 
-<i class="icon-pinterest"></i> icon-pinterest == icon-pinterest || 
-<i class="icon-pinterest-sign"></i> icon-pinterest-sign == icon-pinterest-sign || 
+Web Application fa fas == 0  || 
+<i class="fa fa-modx"></i> fa fa-modx == fa fa-modx || 
+<i class="fa fa-adjust"></i> fa fa-adjust == fa fa-adjust || 
+<i class="fa fa-asterisk"></i> fa fa-asterisk == fa fa-asterisk || 
+<i class="fa fa-ban-circle"></i> fa fa-ban-circle == fa fa-ban-circle || 
+<i class="fa fa-bar-chart"></i> fa fa-bar-chart == fa fa-bar-chart || 
+<i class="fa fa-barcode"></i> fa fa-barcode == fa fa-barcode || 
+<i class="fa fa-beaker"></i> fa fa-beaker == fa fa-beaker || 
+<i class="fa fa-bell"></i> fa fa-bell == fa fa-bell || 
+<i class="fa fa-bolt"></i> fa fa-bolt == fa fa-bolt || 
+<i class="fa fa-book"></i> fa fa-book == fa fa-book || 
+<i class="fa fa-bookmark"></i> fa fa-bookmark == fa fa-bookmark || 
+<i class="fa fa-bookmark-empty"></i> fa fa-bookmark-empty == fa fa-bookmark-empty || 
+<i class="fa fa-briefcase"></i> fa fa-briefcase == fa fa-briefcase || 
+<i class="fa fa-bullhorn"></i> fa fa-bullhorn == fa fa-bullhorn || 
+<i class="fa fa-calendar"></i> fa fa-calendar == fa fa-calendar || 
+<i class="fa fa-camera"></i> fa fa-camera == fa fa-camera || 
+<i class="fa fa-camera-retro"></i> fa fa-camera-retro == fa fa-camera-retro || 
+<i class="fa fa-certificate"></i> fa fa-certificate == fa fa-certificate || 
+<i class="fa fa-check"></i> fa fa-check == fa fa-check || 
+<i class="fa fa-check-empty"></i> fa fa-check-empty == fa fa-check-empty || 
+<i class="fa fa-cloud"></i> fa fa-cloud == fa fa-cloud || 
+<i class="fa fa-cog"></i> fa fa-cog == fa fa-cog || 
+<i class="fa fa-cogs"></i> fa fa-cogs == fa fa-cogs || 
+<i class="fa fa-comment"></i> fa fa-comment == fa fa-comment || 
+<i class="fa fa-comment-alt"></i> fa fa-comment-alt == fa fa-comment-alt || 
+<i class="fa fa-comments"></i> fa fa-comments == fa fa-comments || 
+<i class="fa fa-comments-alt"></i> fa fa-comments-alt == fa fa-comments-alt || 
+<i class="fa fa-credit-card"></i> fa fa-credit-card == fa fa-credit-card || 
+<i class="fa fa-dashboard"></i> fa fa-dashboard == fa fa-dashboard || 
+<i class="fa fa-download"></i> fa fa-download == fa fa-download || 
+<i class="fa fa-download-alt"></i> fa fa-download-alt == fa fa-download-alt || 
+<i class="fa fa-edit"></i> fa fa-edit == fa fa-edit || 
+<i class="fa fa-envelope"></i> fa fa-envelope == fa fa-envelope || 
+<i class="fa fa-envelope-alt"></i> fa fa-envelope-alt == fa fa-envelope-alt || 
+<i class="fa fa-exclamation-sign"></i> fa fa-exclamation-sign == fa fa-exclamation-sign || 
+<i class="fa fa-external-link"></i> fa fa-external-link == fa fa-external-link || 
+<i class="fa fa-eye-close"></i> fa fa-eye-close == fa fa-eye-close || 
+<i class="fa fa-eye-open"></i> fa fa-eye-open == fa fa-eye-open || 
+<i class="fa fa-facetime-video"></i> fa fa-facetime-video == fa fa-facetime-video || 
+<i class="fa fa-film"></i> fa fa-film == fa fa-film || 
+<i class="fa fa-filter"></i> fa fa-filter == fa fa-filter || 
+<i class="fa fa-fire"></i> fa fa-fire == fa fa-fire || 
+<i class="fa fa-flag"></i> fa fa-flag == fa fa-flag || 
+<i class="fa fa-folder-close"></i> fa fa-folder-close == fa fa-folder-close || 
+<i class="fa fa-folder-open"></i> fa fa-folder-open == fa fa-folder-open || 
+<i class="fa fa-gift"></i> fa fa-gift == fa fa-gift || 
+<i class="fa fa-glass"></i> fa fa-glass == fa fa-glass || 
+<i class="fa fa-globe"></i> fa fa-globe == fa fa-globe || 
+<i class="fa fa-group"></i> fa fa-group == fa fa-group || 
+<i class="fa fa-hdd"></i> fa fa-hdd == fa fa-hdd || 
+<i class="fa fa-headphones"></i> fa fa-headphones == fa fa-headphones || 
+<i class="fa fa-heart"></i> fa fa-heart == fa fa-heart || 
+<i class="fa fa-heart-empty"></i> fa fa-heart-empty == fa fa-heart-empty || 
+<i class="fa fa-home"></i> fa fa-home == fa fa-home || 
+<i class="fa fa-inbox"></i> fa fa-inbox == fa fa-inbox || 
+<i class="fa fa-info-sign"></i> fa fa-info-sign == fa fa-info-sign || 
+<i class="fa fa-key"></i> fa fa-key == fa fa-key || 
+<i class="fa fa-leaf"></i> fa fa-leaf == fa fa-leaf || 
+<i class="fa fa-legal"></i> fa fa-legal == fa fa-legal || 
+<i class="fa fa-lemon"></i> fa fa-lemon == fa fa-lemon || 
+<i class="fa fa-lock"></i> fa fa-lock == fa fa-lock || 
+<i class="fa fa-unlock"></i> fa fa-unlock == fa fa-unlock || 
+<i class="fa fa-magic"></i> fa fa-magic == fa fa-magic || 
+<i class="fa fa-magnet"></i> fa fa-magnet == fa fa-magnet || 
+<i class="fa fa-map-marker"></i> fa fa-map-marker == fa fa-map-marker || 
+<i class="fa fa-minus"></i> fa fa-minus == fa fa-minus || 
+<i class="fa fa-minus-sign"></i> fa fa-minus-sign == fa fa-minus-sign || 
+<i class="fa fa-money"></i> fa fa-money == fa fa-money || 
+<i class="fa fa-move"></i> fa fa-move == fa fa-move || 
+<i class="fa fa-music"></i> fa fa-music == fa fa-music || 
+<i class="fa fa-off"></i> fa fa-off == fa fa-off || 
+<i class="fa fa-ok"></i> fa fa-ok == fa fa-ok || 
+<i class="fa fa-ok-circle"></i> fa fa-ok-circle == fa fa-ok-circle || 
+<i class="fa fa-ok-sign"></i> fa fa-ok-sign == fa fa-ok-sign || 
+<i class="fa fa-pencil"></i> fa fa-pencil == fa fa-pencil || 
+<i class="fa fa-picture"></i> fa fa-picture == fa fa-picture || 
+<i class="fa fa-plane"></i> fa fa-plane == fa fa-plane || 
+<i class="fa fa-plug"></i> fa fa-plug == fa fa-plug || 
+<i class="fa fa-plus"></i> fa fa-plus == fa fa-plus || 
+<i class="fa fa-plus-sign"></i> fa fa-plus-sign == fa fa-plus-sign || 
+<i class="fa fa-print"></i> fa fa-print == fa fa-print || 
+<i class="fa fa-pushpin"></i> fa fa-pushpin == fa fa-pushpin || 
+<i class="fa fa-qrcode"></i> fa fa-qrcode == fa fa-qrcode || 
+<i class="fa fa-question-sign"></i> fa fa-question-sign == fa fa-question-sign || 
+<i class="fa fa-random"></i> fa fa-random == fa fa-random || 
+<i class="fa fa-refresh"></i> fa fa-refresh == fa fa-refresh || 
+<i class="fa fa-remove"></i> fa fa-remove == fa fa-remove || 
+<i class="fa fa-remove-circle"></i> fa fa-remove-circle == fa fa-remove-circle || 
+<i class="fa fa-remove-sign"></i> fa fa-remove-sign == fa fa-remove-sign || 
+<i class="fa fa-reorder"></i> fa fa-reorder == fa fa-reorder || 
+<i class="fa fa-resize-horizontal"></i> fa fa-resize-horizontal == fa fa-resize-horizontal || 
+<i class="fa fa-resize-vertical"></i> fa fa-resize-vertical == fa fa-resize-vertical || 
+<i class="fa fa-retweet"></i> fa fa-retweet == fa fa-retweet || 
+<i class="fa fa-road"></i> fa fa-road == fa fa-road || 
+<i class="fa fa-rss"></i> fa fa-rss == fa fa-rss || 
+<i class="fa fa-screenshot"></i> fa fa-screenshot == fa fa-screenshot || 
+<i class="fa fa-search"></i> fa fa-search == fa fa-search || 
+<i class="fa fa-share"></i> fa fa-share == fa fa-share || 
+<i class="fa fa-share-alt"></i> fa fa-share-alt == fa fa-share-alt || 
+<i class="fa fa-shopping-cart"></i> fa fa-shopping-cart == fa fa-shopping-cart || 
+<i class="fa fa-signal"></i> fa fa-signal == fa fa-signal || 
+<i class="fa fa-signin"></i> fa fa-signin == fa fa-signin || 
+<i class="fa fa-signout"></i> fa fa-signout == fa fa-signout || 
+<i class="fa fa-sitemap"></i> fa fa-sitemap == fa fa-sitemap || 
+<i class="fa fa-sort"></i> fa fa-sort == fa fa-sort || 
+<i class="fa fa-sort-down"></i> fa fa-sort-down == fa fa-sort-down || 
+<i class="fa fa-sort-up"></i> fa fa-sort-up == fa fa-sort-up || 
+<i class="fa fa-star"></i> fa fa-star == fa fa-star || 
+<i class="fa fa-star-empty"></i> fa fa-star-empty == fa fa-star-empty || 
+<i class="fa fa-star-half"></i> fa fa-star-half == fa fa-star-half || 
+<i class="fa fa-tag"></i> fa fa-tag == fa fa-tag || 
+<i class="fa fa-tags"></i> fa fa-tags == fa fa-tags || 
+<i class="fa fa-tasks"></i> fa fa-tasks == fa fa-tasks || 
+<i class="fa fa-thumbs-down"></i> fa fa-thumbs-down == fa fa-thumbs-down || 
+<i class="fa fa-thumbs-up"></i> fa fa-thumbs-up == fa fa-thumbs-up || 
+<i class="fa fa-time"></i> fa fa-time == fa fa-time || 
+<i class="fa fa-tint"></i> fa fa-tint == fa fa-tint || 
+<i class="fa fa-trash"></i> fa fa-trash == fa fa-trash || 
+<i class="fa fa-trophy"></i> fa fa-trophy == fa fa-trophy || 
+<i class="fa fa-truck"></i> fa fa-truck == fa fa-truck || 
+<i class="fa fa-umbrella"></i> fa fa-umbrella == fa fa-umbrella || 
+<i class="fa fa-upload"></i> fa fa-upload == fa fa-upload || 
+<i class="fa fa-upload-alt"></i> fa fa-upload-alt == fa fa-upload-alt || 
+<i class="fa fa-user"></i> fa fa-user == fa fa-user || 
+<i class="fa fa-user-md"></i> fa fa-user-md == fa fa-user-md || 
+<i class="fa fa-volume-off"></i> fa fa-volume-off == fa fa-volume-off || 
+<i class="fa fa-volume-down"></i> fa fa-volume-down == fa fa-volume-down || 
+<i class="fa fa-volume-up"></i> fa fa-volume-up == fa fa-volume-up || 
+<i class="fa fa-warning-sign"></i> fa fa-warning-sign == fa fa-warning-sign || 
+<i class="fa fa-wrench"></i> fa fa-wrench == fa fa-wrench || 
+<i class="fa fa-zoom-in"></i> fa fa-zoom-in == fa fa-zoom-in || 
+<i class="fa fa-zoom-out"></i> fa fa-zoom-out == fa fa-zoom-out || 
+Text Editor fa fas == 0 || 
+<i class="fa fa-file"></i> fa fa-file == fa fa-file || 
+<i class="fa fa-cut"></i> fa fa-cut == fa fa-cut || 
+<i class="fa fa-copy"></i> fa fa-copy == fa fa-copy || 
+<i class="fa fa-paste"></i> fa fa-paste == fa fa-paste || 
+<i class="fa fa-save"></i> fa fa-save == fa fa-save || 
+<i class="fa fa-undo"></i> fa fa-undo == fa fa-undo || 
+<i class="fa fa-repeat"></i> fa fa-repeat == fa fa-repeat || 
+<i class="fa fa-paper-clip"></i> fa fa-paper-clip == fa fa-paper-clip || 
+<i class="fa fa-text-height"></i> fa fa-text-height == fa fa-text-height || 
+<i class="fa fa-text-width"></i> fa fa-text-width == fa fa-text-width || 
+<i class="fa fa-align-left"></i> fa fa-align-left == fa fa-align-left || 
+<i class="fa fa-align-center"></i> fa fa-align-center == fa fa-align-center || 
+<i class="fa fa-align-right"></i> fa fa-align-right == fa fa-align-right || 
+<i class="fa fa-align-justify"></i> fa fa-align-justify == fa fa-align-justify || 
+<i class="fa fa-indent-left"></i> fa fa-indent-left == fa fa-indent-left || 
+<i class="fa fa-indent-right"></i> fa fa-indent-right == fa fa-indent-right || 
+<i class="fa fa-font"></i> fa fa-font == fa fa-font || 
+<i class="fa fa-bold"></i> fa fa-bold == fa fa-bold || 
+<i class="fa fa-italic"></i> fa fa-italic == fa fa-italic || 
+<i class="fa fa-strikethrough"></i> fa fa-strikethrough == fa fa-strikethrough || 
+<i class="fa fa-underline"></i> fa fa-underline == fa fa-underline || 
+<i class="fa fa-link"></i> fa fa-link == fa fa-link || 
+<i class="fa fa-columns"></i> fa fa-columns == fa fa-columns || 
+<i class="fa fa-table"></i> fa fa-table == fa fa-table || 
+<i class="fa fa-th-large"></i> fa fa-th-large == fa fa-th-large || 
+<i class="fa fa-th"></i> fa fa-th == fa fa-th || 
+<i class="fa fa-th-list"></i> fa fa-th-list == fa fa-th-list || 
+<i class="fa fa-list"></i> fa fa-list == fa fa-list || 
+<i class="fa fa-list-ol"></i> fa fa-list-ol == fa fa-list-ol || 
+<i class="fa fa-list-ul"></i> fa fa-list-ul == fa fa-list-ul || 
+<i class="fa fa-list-alt"></i> fa fa-list-alt == fa fa-list-alt || 
+Directional fa fas == 0 || 
+<i class="fa fa-arrow-down"></i> fa fa-arrow-down == fa fa-arrow-down || 
+<i class="fa fa-arrow-left"></i> fa fa-arrow-left == fa fa-arrow-left || 
+<i class="fa fa-arrow-right"></i> fa fa-arrow-right == fa fa-arrow-right || 
+<i class="fa fa-arrow-up"></i> fa fa-arrow-up == fa fa-arrow-up || 
+<i class="fa fa-chevron-down"></i> fa fa-chevron-down == fa fa-chevron-down || 
+<i class="fa fa-circle-arrow-down"></i> fa fa-circle-arrow-down == fa fa-circle-arrow-down || 
+<i class="fa fa-circle-arrow-left"></i> fa fa-circle-arrow-left == fa fa-circle-arrow-left || 
+<i class="fa fa-circle-arrow-right"></i> fa fa-circle-arrow-right == fa fa-circle-arrow-right || 
+<i class="fa fa-circle-arrow-up"></i> fa fa-circle-arrow-up == fa fa-circle-arrow-up || 
+<i class="fa fa-chevron-left"></i> fa fa-chevron-left == fa fa-chevron-left || 
+<i class="fa fa-caret-down"></i> fa fa-caret-down == fa fa-caret-down || 
+<i class="fa fa-caret-left"></i> fa fa-caret-left == fa fa-caret-left || 
+<i class="fa fa-caret-right"></i> fa fa-caret-right == fa fa-caret-right || 
+<i class="fa fa-caret-up"></i> fa fa-caret-up == fa fa-caret-up || 
+<i class="fa fa-chevron-right"></i> fa fa-chevron-right == fa fa-chevron-right || 
+<i class="fa fa-hand-down"></i> fa fa-hand-down == fa fa-hand-down || 
+<i class="fa fa-hand-left"></i> fa fa-hand-left == fa fa-hand-left || 
+<i class="fa fa-hand-right"></i> fa fa-hand-right == fa fa-hand-right || 
+<i class="fa fa-hand-up"></i> fa fa-hand-up == fa fa-hand-up || 
+<i class="fa fa-chevron-up"></i> fa fa-chevron-up == fa fa-chevron-up || 
+Video Player fa fas == 0 || 
+<i class="fa fa-play-circle"></i> fa fa-play-circle == fa fa-play-circle || 
+<i class="fa fa-play"></i> fa fa-play == fa fa-play || 
+<i class="fa fa-pause"></i> fa fa-pause == fa fa-pause || 
+<i class="fa fa-stop"></i> fa fa-stop == fa fa-stop || 
+<i class="fa fa-step-backward"></i> fa fa-step-backward == fa fa-step-backward || 
+<i class="fa fa-fast-backward"></i> fa fa-fast-backward == fa fa-fast-backward || 
+<i class="fa fa-backward"></i> fa fa-backward == fa fa-backward || 
+<i class="fa fa-forward"></i> fa fa-forward == fa fa-forward || 
+<i class="fa fa-fast-forward"></i> fa fa-fast-forward == fa fa-fast-forward || 
+<i class="fa fa-step-forward"></i> fa fa-step-forward == fa fa-step-forward || 
+<i class="fa fa-eject"></i> fa fa-eject == fa fa-eject || 
+<i class="fa fa-fullscreen"></i> fa fa-fullscreen == fa fa-fullscreen || 
+<i class="fa fa-resize-full"></i> fa fa-resize-full == fa fa-resize-full || 
+<i class="fa fa-resize-small"></i> fa fa-resize-small == fa fa-resize-small || 
+Social fa fas == 0 || 
+<i class="fa fa-phone"></i> fa fa-phone == fa fa-phone || 
+<i class="fa fa-phone-sign"></i> fa fa-phone-sign == fa fa-phone-sign || 
+<i class="fa fa-facebook"></i> fa fa-facebook == fa fa-facebook || 
+<i class="fa fa-facebook-sign"></i> fa fa-facebook-sign == fa fa-facebook-sign || 
+<i class="fa fa-twitter"></i> fa fa-twitter == fa fa-twitter || 
+<i class="fa fa-twitter-sign"></i> fa fa-twitter-sign == fa fa-twitter-sign || 
+<i class="fa fa-github"></i> fa fa-github == fa fa-github || 
+<i class="fa fa-github-sign"></i> fa fa-github-sign == fa fa-github-sign || 
+<i class="fa fa-linkedin"></i> fa fa-linkedin == fa fa-linkedin || 
+<i class="fa fa-linkedin-sign"></i> fa fa-linkedin-sign == fa fa-linkedin-sign || 
+<i class="fa fa-pinterest"></i> fa fa-pinterest == fa fa-pinterest || 
+<i class="fa fa-pinterest-sign"></i> fa fa-pinterest-sign == fa fa-pinterest-sign || 

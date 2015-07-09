@@ -8,6 +8,10 @@
         background-color: #FFF;        
     }
 
+    hr.clear{
+        clear:both;
+        margin-top: 10px;
+    }
     .center{
         text-align: center;
         margin: 0 auto;
@@ -59,29 +63,6 @@
         font-size:small;        
     }
 
-    @media (max-width:767px){
-/*        body{
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-        .wrap{
-            padding-left: 30px;
-        }*/
-        #footer{
-/*            width: 108%;
-            margin-left: -20px;
-            margin-right: 20px;*/
-        }
-        #footer .col-md-4{
-            text-align: center;
-            margin-bottom: 1.5em;            
-
-        }
-        #footer .pull-right{
-            float:none!important;
-        }
-    }
-
     .breadcrumb{
         margin-left:0;
         padding-left:0;
@@ -114,6 +95,8 @@
         text-align: center;
         margin: 0 auto;
         margin-bottom:20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .jumbotron h1{
         padding-top:30px;        
@@ -176,7 +159,6 @@
     {
         display: inline-block;
         list-style-type: none;
-        padding:5px;
         margin-bottom: 10px;
 
     }
@@ -280,6 +262,39 @@
     ol.quip-comment-list li{
         margin-bottom:2em;   
     }
+
+
+    @media (max-width:767px){
+/*        body{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .wrap{
+            padding-left: 30px;
+        }*/
+        #footer{
+/*            width: 108%;
+            margin-left: -20px;
+            margin-right: 20px;*/
+        }
+        #footer .col-md-4{
+            text-align: center;
+            margin-bottom: 1.5em;            
+
+        }
+        #footer .pull-right{
+            float:none!important;
+        }
+
+        .caption-fixed{
+            margin-bottom: 50px;
+            height: auto!important;
+            overflow:hidden;
+        }
+
+    }
+
+
 .modal-gallery{width:auto;max-height:none;outline:none;}
 .modal-gallery .modal-body{max-height:none;}
 .modal-gallery .modal-title{display:inline-block;max-height:54px;overflow:hidden;}

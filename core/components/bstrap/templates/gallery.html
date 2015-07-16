@@ -1,8 +1,10 @@
 [[$tpl.header]]
 <div class="page-header jumbotron">
-	<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
-	[[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
-	[[$tpl.gallery.nav?album=`[[*gallery:lcase]]`]]
+	<div class="container">
+		<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
+		[[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+		[[$tpl.gallery.nav?album=`[[*gallery:lcase]]`]]
+	</div>
 </div>
 [[*content]]
 [[$tpl.footer]]

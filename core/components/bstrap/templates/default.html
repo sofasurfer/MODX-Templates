@@ -1,10 +1,12 @@
 [[$tpl.header]]
 <div class="jumbotron">
-	<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
-	[[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
-    [[*showbreadcrumb:isnot=``:then=`<div>
-        [[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
-    </div>`]]
+	<div class="container">
+		<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
+		[[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+	    [[*showbreadcrumb:isnot=``:then=`<div>
+	        [[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
+	    </div>`]]
+	</div>
 </div>
 <div id="container" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
 	[[*content]]

@@ -1,7 +1,9 @@
 [[$tpl.header]]
 <div class="page-header jumbotron">
-<h1>[[*pagetitle]]</h1>
-[[*description:isnot=``:then=`<p class="lead">[[*description]]</p>`]]
+	<div class="container">
+		<h1>[[*pagetitle]]</h1>
+		[[*description:isnot=``:then=`<p class="lead">[[*description]]</p>`]]
+	</div>
 </div>
 <div id="container" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
 	<div class="[[*layout:isequal=`fluid`:then=`row-fluid`:else=`row`]]">
@@ -10,7 +12,7 @@
 		</div>
 		<div class="col-md-4">
 			<ul class="nav tagList">
-	                    <li class="nav-header" style="display:block;"><h4>Categories</h4></li>
+	                    <li class="nav-header"><h4>Categories</h4></li>
 	                    [[+tags]]
 	                </ul>
 			<ul class="list-group">					  				

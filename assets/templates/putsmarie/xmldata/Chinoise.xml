@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<navigation>
+	<section title="Musique Chinoise?" image="/download/mp3/covers/chinoise.jpg">
+		<subsection>
+			<fileTitle><![CDATA[i hate me (bolero)]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/ihatemeBolero.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[interlooper]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/interlooper.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[the preacher]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/thepreacher.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[silvertree]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/Tsilvertree.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[kindski]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/kindski.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[jungle man]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/jungleman.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[i hate you]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/ihateyou.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[sudden death]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/suddenendeath.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[people get funny]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/peoplegetfunny.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[history of sex 2]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/chinoise/historyOfSex2.mp3]]></filePath>
+		</subsection>
+	</section>
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<albums>
+	<section>
+		<title><![CDATA[Le Drame du Pastis/ 2005]]></title>
+		<xmlFile>leDrameDuPastis.xml</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[Is God a Dog?/ 2004]]></title>
+		<xmlFile>IsGodADog.xml</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[Musique Chinoise/ 2001]]></title>
+		<xmlFile>chinoise.xml</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[--------------------------]]></title>
+		<xmlFile></xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[Hip Hop Project]]></title>
+		<xmlFile>HipHopDemo.xml</xmlFile>
+	</section>
+</albums>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<albums>
+	<section>
+		<title><![CDATA[Live Tour 2004 (4.5 MB)]]></title>
+		<xmlFile>/download/videos/live_Roma.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[short film (2.9 MB)]]></title>
+		<xmlFile>/download/videos/roger.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[cd taufe04 dadaz (9.7 MB)]]></title>
+		<xmlFile>/download/videos/dadaz.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[locco club biel (4.6 MB)]]></title>
+		<xmlFile>/download/videos/locco.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[  ]]></title>
+		<xmlFile></xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[handy space Tour04 (665 KB)]]></title>
+		<xmlFile>/download/videos/Clip10.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[bianca Tour04 (421 KB)]]></title>
+		<xmlFile>/download/videos/Clip11.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[bianca 2 Tour04 (434 KB)]]></title>
+		<xmlFile>/download/videos/Clip12.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[nick porsche Tour04 (387 KB)]]></title>
+		<xmlFile>/download/videos/Clip14.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[bedford Tour04 (376 KB)]]></title>
+		<xmlFile>/download/videos/Clip15.flv</xmlFile>
+	</section>
+	<section>
+		<title><![CDATA[sirup Tour04 (406 KB)]]></title>
+		<xmlFile>/download/videos/Clip16.flv</xmlFile>
+	</section>
+</albums>

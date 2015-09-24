@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<navigation>
+	<section title="Is God a dog?" image="/download/mp3/covers/godisadog.jpg">
+		<subsection>
+			<fileTitle><![CDATA[world of puts marie]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track01.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[why are you angry?]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track02.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[cyber head]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track03.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[freaky yagwud]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track04.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[one minute punk]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track05.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[ghost]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track06.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[stranger]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track07.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[happy game]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track08.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[doesn't matter]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track09.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[polnish wonder]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track10.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[sweet sugar honey]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track11.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/godisadog/Track12.mp3]]></filePath>
+		</subsection>
+	</section>
+</navigation>

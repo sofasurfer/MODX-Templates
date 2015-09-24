@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<navigation>
+	<section title="HipHop Demo?" image="/download/mp3/covers/hiphopdemo.jpg">
+		<subsection>
+			<fileTitle><![CDATA[track 01]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/HipHopDemo/001.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[track 02]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/HipHopDemo/002.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[track 03]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/HipHopDemo/003.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[track 04]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/HipHopDemo/004.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[track 05]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/HipHopDemo/005.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[track 06]]></fileTitle>
+			<filePath><![CDATA[/download/mp3/HipHopDemo/006.mp3]]></filePath>
+		</subsection>
+	</section>
+</navigation>

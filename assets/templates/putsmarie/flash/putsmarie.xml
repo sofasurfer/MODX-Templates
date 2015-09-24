@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+	<section title="Le Drame du Pastis" image="../../download/mp3/covers/leDrameDuPastis.jpg">
+		<subsection>
+			<fileTitle><![CDATA[Il Pescivendolo/ M Salvatore]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track01.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Dave the Slave/ Puts Marie]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track02.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Camille/ Germain de Robert]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track03.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Girl/ Los Beatles]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track04.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Sono un Simpatico/ A. Celentano ]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track05.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Jockey full of Bourbon/ T. Waits]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track06.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Azzurro/ P. Conte]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track07.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Alpenflug/ M. Matter]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track08.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Camille/ G. de Robert]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track09.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Chocolate Jesus/ T.Waits]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track10.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Strada/ Puts Marie]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track11.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Lady/ Puts Marie]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track12.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Early Morning People/ Puts Marie]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track13.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[Big Rock Candy moungtan/ C. Moungtan/ H. McClintock]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/LeDrameDuPastis/Track14.mp3]]></filePath>
+		</subsection>
+	</section>
+	<section title="Is God a dog?" image="../../download/mp3/covers/godisadog.jpg">
+		<subsection>
+			<fileTitle><![CDATA[world of puts marie]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track01.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[why are you angry?]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track02.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[cyber head]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track03.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[freaky yagwud]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track04.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[one minute punk]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track05.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[ghost]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track06.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[stranger]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track07.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[happy game]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track08.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[doesn't matter]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track09.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[polnish wonder]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track10.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[sweet sugar honey]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track11.mp3]]></filePath>
+		</subsection>
+		<subsection>
+			<fileTitle><![CDATA[]]></fileTitle>
+			<filePath><![CDATA[../../download/mp3/godisadog/Track12.mp3]]></filePath>
+		</subsection>
+	</section>
+  <section title="Musique Chinoise?" image="/download/mp3/covers/chinoise.jpg">
+    <subsection>
+      <fileTitle><![CDATA[i hate me (bolero)]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/ihatemeBolero.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[interlooper]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/interlooper.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[the preacher]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/thepreacher.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[silvertree]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/Tsilvertree.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[kindski]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/kindski.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[jungle man]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/jungleman.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[i hate you]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/ihateyou.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[sudden death]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/suddenendeath.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[people get funny]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/peoplegetfunny.mp3]]></filePath>
+    </subsection>
+    <subsection>
+      <fileTitle><![CDATA[history of sex 2]]></fileTitle>
+      <filePath><![CDATA[/download/mp3/chinoise/historyOfSex2.mp3]]></filePath>
+    </subsection>
+  </section>  
+</navigation>

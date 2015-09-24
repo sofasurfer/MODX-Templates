@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>[[++site_name]] [[*longtitle]]</title>
+    <meta name="description" content="Nick Porsche - drums, Igor Stepniewski - bass, Sirup Gagavil - guitar, Max Usata - vocal, Beni 06 - Farfisa">
+    <meta name="keywords" content="pop, punk, indie, hip-hop, chanson, rock, folk, swing, rap, surf, yagwud">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        @font-face{
+            font-family: akzidenzGrotesk;
+            src: url('/assets/templates/putsmarie/fonts/akzidenz-grotesk-bold.ttf');
+        }
+        html,body{
+            background:black!important;
+            color:white;
+            text-align: center;
+            /*font-family: 'Finger Paint', cursive;*/
+            font-family: 'akzidenzGrotesk';
+            margin-bottom: 3em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;            
+        }
+        h1{
+            padding:1.5em;
+        }
+        h1.no-padding{
+            padding-bottom: 0px !important;
+        }
+        .jumbotron{
+            text-align: center !important;
+            background: black !important;
+        }
+        .logo{
+            width:100%;
+            max-width:850px;
+        }
+        
+        table{
+        }
+        table td{
+            text-align: left;
+            border-top: 1px solid #7e7e7e !important;
+        }
+        td.location,
+        td.venue{
+            margin-top:20px;
+            font-size: 1.4em;
+            line-height: 47px !important;
+        }
+        .location-small{
+            display: none;
+        }        
+        td.ticket{
+            padding-top: 20px !important;
+        }
+        tr:hover{
+            color: black;
+        }
+        .date span{
+            display:block;
+            text-align: center;
+            line-height: 16px;
+        }
+        span.day{
+            font-size: 1.4em;
+        }
+        span.month{
+            font-size: 1.6em;
+        }
+        .order{
+            margin-top: 1.9em;
+            margin-bottom: 2em;
+        }
+        .buy,
+        .ticket a{
+            color: white;
+            padding: 12px 50px 12px 50px;
+            text-transform: uppercase;
+            background-color: #c82606;
+        }
+        .buy:hover,
+        .ticket a:hover{        
+            color: white;
+        }
+        .buy.france{
+            margin-top: 50px;
+        }
+        @media (max-width: 1000px) {
+            .ticket a{
+                padding: 5px;
+            }           
+        }
+        @media (max-width: 480px) {
+            td.location{
+                display:none;
+            }
+            .location-small{
+                display: block;
+            }
+
+            td.location,
+            td.venue{
+                line-height: 20px !important;
+            }
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=540300949387925";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="jumbotron">
+        <div class="container">
+            <center>
+                <img class="img-responsive logo"  src="/assets/templates/putsmarie/images/pm-logo-new.png" />
+            </center>
+        </div>
+    </div>
+    <div class="container">
+        [[*content]]
+    </div>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.sofasurfer.org/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 12]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.sofasurfer.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        var pmScripts = {
+            data : [],
+            init : function() {
+                console.log( "init!" );
+                pmScripts.initTracking();
+            },
+
+            initTracking : function() {
+                $('.ticket').click(function() {
+                    _paq.push(['trackGoal', 3]);
+                    _paq.push(['trackEvent', 'links', 'linkticket', $(this).attr('href')]);                   
+                    //console.log('track event: ' +  $(this).attr('href'));
+                });
+            },
+        };
+        $(function() {
+            pmScripts.init();
+        });
+    </script>
+</body>
+</html>
+

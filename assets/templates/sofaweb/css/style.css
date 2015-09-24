@@ -9,6 +9,7 @@
 
     html,
     body{
+        font-size: 16px;
         background-color: #FFF;        
     }
     h1{
@@ -23,6 +24,11 @@
         margin: 0 auto;
     }
 
+
+    .form-control input[type="checkbox"] {
+        width: auto;
+        float:left;
+    }
 
     .navbar-brand{
         display: inline-block;
@@ -269,8 +275,48 @@
     }
 
 
-    ol.quip-comment-list li{
-        margin-bottom:2em;   
+    #comments h3{
+        clear: both;
+    }
+    .quip-comment{
+        clear: both;
+    }
+    .quip-comment-list{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .quip-comment-list li{
+        display: block;
+        margin-bottom:20px;   
+    }
+
+    .quip-comment-left{
+        float: left;
+        width: 7%;
+    }
+    .quip-comment-body{
+        float: left;
+        width: 93%;
+        position: relative;
+        margin-bottom: 50px;
+        border: 1px solid #CCC;
+    }
+    .quip-comment-body:before{
+        width: 0; 
+        height: 0; 
+        position:absolute;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent; 
+        
+        border-right:10px solid blue;
+    }    
+    .quip-comment-meta{
+        padding: 10px;
+        background-color: #F5F5F5;
+        border-bottom: 1px solid #CCC;
+    }
+    .quip-comment-text{
+        padding: 10px;
     }
 
 

@@ -3,7 +3,7 @@
     <p class="post-info">[[%articles.posted_by]] <a href="[[~[[*id]]]]author/[[+createdby:userinfo=`username`]]">[[+createdby:userinfo=`username`]]</a> [[+tv.articlestags:notempty=` | <span class="tags">[[%articles.tags]]: [[!tolinks? &items=`[[+tv.articlestags]]` &target=`[[*id]]` &useTagsFurl=`1`]]</span>`]]</p>
     <div class="entry">
 	    <p>[[+introtext:default=`[[+content:ellipsis=`400`]]`]]</p>
-        [[+tv.pageimage:isnot=``:then=`<img src="[[+tv.pageimage]]" />`]]
+        [[+tv.pageimage:isnot=``:then=`<img class="img-responsive" src="[[+tv.pageimage:phpthumbof=`w=400&h=300&zc=1`]]" />`]]
     </div>
     <p class="postmeta">
       <span class="links">

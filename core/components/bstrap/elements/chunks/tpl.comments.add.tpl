@@ -11,7 +11,7 @@
     <div class="form-group">     
         <label class="col-sm-2 control-label" for="quip-comment-notify-[[+idprefix]]">[[%quip.notify_me]]:<span class="quip-error">[[+error.notify]]</span></label>
         <div class="col-sm-10">        
-            <input class="form-control" type="checkbox" value="1" name="notify" id="quip-comment-notify-[[+idprefix]]" [[+notify:if=`[[+notify]]`:eq=`1`:then=`checked="checked"`]] />
+            <input class="form-control text-left" type="checkbox" value="1" name="notify" id="quip-comment-notify-[[+idprefix]]" [[+notify:if=`[[+notify]]`:eq=`1`:then=`checked="checked"`]] />
         </div>
     </div>   
 
@@ -31,13 +31,13 @@
         </div>
     </div>
 
-    <div class="form-group [[+error.website:notempty=`error`]]">
+    <!--div class="form-group [[+error.website:notempty=`error`]]">
         <label class="col-sm-2 control-label" for="quip-comment-website-[[+idprefix]]">[[%quip.website? &namespace=`quip` &topic=`default`]]</label>
         <div class="col-sm-10">
             <input class="form-control" type="text" name="website" id="quip-comment-website-[[+idprefix]]" value="[[+website]]" />
             <span class="help-inline">[[+error.website]]</span>
         </div>
-    </div>
+    </div-->
 
  
     <div class="form-group recaptcha">

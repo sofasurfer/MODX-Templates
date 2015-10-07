@@ -1,35 +1,41 @@
 [[$tpl.header]]
-<div class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
-<div class="page-header jumbotron">
+<div class="jumbotron">
     <div class="container">
-    	<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
-        [[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
-        <div>
+        <h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
+        [[*showbreadcrumb:isnot=`False`:then=`<div>
             [[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
-        </div>
+        </div>`]]
+        [[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+        [[*tags]]
     </div>
 </div>
-<div class="row">
-<div class="span8">
-[[*content]]
-[[*ImageGallery:notempty=`
-    <h2>Screenshots:</h2>
-	<ul class="thumbnails">[[!Gallery? 
-    &album=`[[*ImageGallery]]`
-    &itemCls=`span2`
-    &imgCls=`thumbnail`
-    &thumbTpl=`tpl.gallery.item`
-    &thumbWidth=`160`
-    &thumbHeight=`120`   
-    &plugin=`slimbox`
-    &loop=`1`
-    &slimboxRenderJsOnStartup=`0` ]]</ul>
-`]]
-</div>
-<div class="span4">
-  <img src="[[*pageimage]]" class="thumbnail" title="[[*pagetitle]]" />
-  <p>[[*tags]]</p>
-</div>
-</div>
+<div id="container" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
+    <div class="row">
+        <div class="col-md-6">
+        [[*content]]
+        <h3><a href="[[*siteurl]]" target="_blank">[[*siteurl]]</a></h3>
+        </div>
+        <div class="col-md-6">
+          <img src="[[*pageimage]]" class="thumbnail" title="[[*pagetitle]]" />
+          <p>[[*tags]]</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        [[*ImageGallery:notempty=`
+            <h2>Screenshots:</h2>
+            <ul class="thumbnails">[[!Gallery? 
+            &album=`[[*ImageGallery]]`
+            &itemCls=`span2`
+            &imgCls=`thumbnail`
+            &thumbTpl=`tpl.gallery.item`
+            &thumbWidth=`160`
+            &thumbHeight=`120`   
+            &plugin=`slimbox`
+            &loop=`1`
+            &slimboxRenderJsOnStartup=`0` ]]</ul>
+        `]]   
+        </div>
+    </div>
 </div>
 [[$tpl.footer]]

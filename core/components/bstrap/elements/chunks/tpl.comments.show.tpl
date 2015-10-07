@@ -1,12 +1,10 @@
 <li class="[[+cls]]" id="[[+idprefix]][[+id]]" [[+depth_margin:notempty=`style="padding-left: [[+depth_margin]]px"`]]>
 
-    <div class="quip-comment-left">
-        [[+gravatarUrl:notempty=`<img src="[[+gravatarUrl]]" class="quip-avatar" alt="" />`]]
-    </div>
-
 	<div id="[[+idprefix]][[+id]]-div" class="quip-comment-body [[+alt]]">
 
 	    <p class="quip-comment-meta">
+	        [[+gravatarUrl:notempty=`<img src="[[+gravatarUrl]]" class="quip-avatar" alt="" />`]]
+
 	        <span class="quip-comment-author">[[+authorName]]:</span> 
 	        <span class="quip-comment-createdon"><a href="[[+url]]">[[+createdon]]</a>
 	        [[+approved:if=`[[+approved]]`:is=`1`:then=``:else=`- <em>[[%quip.unapproved? &namespace=`quip` &topic=`default`]]</em>`]]

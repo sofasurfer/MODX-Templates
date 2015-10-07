@@ -5,7 +5,7 @@
 
  
  */
-    @import url(http://fonts.googleapis.com/css?family=Ubuntu|Oswald|Bevan|Wallpoet|Allerta);
+    @import url(//fonts.googleapis.com/css?family=Ubuntu|Oswald|Bevan|Wallpoet|Allerta);
 
     html,
     body{
@@ -280,23 +280,21 @@
     }
     .quip-comment{
         clear: both;
+        overflow: hidden;
     }
     .quip-comment-list{
         display: block;
         margin-bottom: 20px;
+        padding-left: 0px;
     }
     .quip-comment-list li{
         display: block;
         margin-bottom:20px;   
     }
 
-    .quip-comment-left{
-        float: left;
-        width: 7%;
-    }
     .quip-comment-body{
-        float: left;
-        width: 93%;
+/*        float: left;
+        width: 93%;*/
         position: relative;
         margin-bottom: 50px;
         border: 1px solid #CCC;

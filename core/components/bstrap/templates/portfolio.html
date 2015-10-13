@@ -1,3 +1,6 @@
+Searching 83 files for "logo-kb"
+
+0 matches across 0 files
 [[$tpl.header]]
 <div class="jumbotron">
     <div class="container">
@@ -7,17 +10,13 @@
         </div>`]]
         [[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
         [[*tags]]
+        <p><a href="[[*siteurl]]" target="_blank">[[*siteurl]]</a></p>
     </div>
 </div>
 <div id="container" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
     <div class="row">
-        <div class="col-md-6">
-        [[*content]]
-        <h3><a href="[[*siteurl]]" target="_blank">[[*siteurl]]</a></h3>
-        </div>
-        <div class="col-md-6">
-          <img src="[[*pageimage]]" class="thumbnail" title="[[*pagetitle]]" />
-          <p>[[*tags]]</p>
+        <div class="col-md-12">
+            [[*content]]
         </div>
     </div>
     <div class="row">

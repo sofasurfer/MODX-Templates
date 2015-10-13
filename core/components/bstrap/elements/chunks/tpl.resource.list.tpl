@@ -11,7 +11,7 @@
     &includeContent=`0`
     &cls=`col-md-4`
     &clsItem=``
-    &clsImage=`[[+clsImage:default=`img-rounded`]]`
+    &clsImage=`[[+clsImage:default=`img-rounded img-responsive`]]`
     &thumbWidth=`360`
     &thumbHeight=`180`
     &zoomCrop=`0`

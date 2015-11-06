@@ -10,7 +10,7 @@ Searching 83 files for "logo-kb"
         </div>`]]
         [[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
         [[*tags]]
-        <p><a href="[[*siteurl]]" target="_blank">[[*siteurl]]</a></p>
+        [[*siteurl:isnot=`http://`:then=`<p><a href="[[*siteurl]]" target="_blank">[[*siteurl]]</a></p>`]]
     </div>
 </div>
 <div id="container" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">

@@ -12,9 +12,9 @@
     &cls=`col-md-4`
     &clsItem=``
     &clsImage=`[[+clsImage:default=`img-rounded img-responsive`]]`
-    &thumbWidth=`360`
-    &thumbHeight=`180`
-    &zoomCrop=`0`
+    &thumbWidth=`370`
+    &thumbHeight=`250`
+    &zoomCrop=`1`
     &tpl=`tpl.resource.item`  
     &title=`[[+pagetitle]]`
     &caption-class=`caption caption-fixed`

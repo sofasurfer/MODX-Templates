@@ -3,7 +3,7 @@
 	<div id="[[+idprefix]][[+id]]-div" class="quip-comment-body [[+alt]]">
 
 	    <p class="quip-comment-meta">
-	        [[+gravatarUrl:notempty=`<img src="[[+gravatarUrl]]" class="quip-avatar" alt="" />`]]
+	        [[+gravatarUrl:notempty=`<img src="[[+gravatarUrl:replace=`http:==https:`]]" class="quip-avatar" alt="" />`]]
 
 	        <span class="quip-comment-author">[[+authorName]]:</span> 
 	        <span class="quip-comment-createdon"><a href="[[+url]]">[[+createdon]]</a>

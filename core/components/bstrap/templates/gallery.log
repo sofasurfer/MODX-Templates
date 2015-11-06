@@ -1,0 +1,68 @@
+
+
+==> /var/log/nginx/error.log <==
+2015/10/15 13:44:37 [error] 19770#0: *3893 open() "/media/data/stream/gallery/images/266/13626.jpg" failed (2: No such file or directory), client: 37.187.43.84, server: www.sofasurfer.ch, request: "GET /stream/gallery/images/266/13626.jpg HTTP/1.0", host: "www.sofasurfer.org"
+2015/10/15 13:44:37 [error] 19770#0: *3894 open() "/media/data/stream/gallery/images/266/13626.jpg" failed (2: No such file or directory), client: 37.187.43.84, server: www.sofasurfer.ch, request: "GET /stream/gallery/images/266/13626.jpg HTTP/1.0", host: "www.sofasurfer.org"
+2015/10/15 13:44:37 [error] 19770#0: *3895 open() "/media/data/stream/gallery/images/266/13626.jpg" failed (2: No such file or directory), client: 37.187.43.84, server: www.sofasurfer.ch, request: "GET /stream/gallery/images/266/13626.jpg HTTP/1.0", host: "www.sofasurfer.org"
+2015/10/15 13:44:37 [error] 19770#0: *3896 open() "/media/data/stream/gallery/images/266/13626.jpg" failed (2: No such file or directory), client: 37.187.43.84, server: www.sofasurfer.ch, request: "GET /stream/gallery/images/266/13626.jpg HTTP/1.0", host: "www.sofasurfer.org"
+
+==> /media/data/www/sofaweb-beta/core/cache/logs/error.log <==
+[2015-10-15 18:44:37] (ERROR @ /assets/components/gallery/connector.php) [phpThumbOf] Could not generate thumbnail: https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg - Debug: Array
+(
+    [0] => phpThumb() v1.7.13-201406261000 in file "phpthumb.class.php" on line 220
+    [1] => setSourceFilename(https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg) set $this->sourceFilename to "https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg" in file "phpthumb.class.php" on line 271
+    [2] => setSourceFilename(https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg) set $this->sourceFilename to "https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg" in file "phpthumb.class.php" on line 271
+    [3] => CleanUpCacheDirectory() set to purge (NULL days; NULL MB; NULL files) in file "phpthumb.class.php" on line 667
+    [4] => CleanUpCacheDirectory() skipped because "/var/www/sofaweb-beta/assets/components/gallery/cache//phpThumbCacheStats.txt" is recently modified in file "phpthumb.class.php" on line 677
+    [5] => $AvailableImageOutputFormats = array(text;ico;bmp;wbmp;gif;png;jpeg) in file "phpthumb.class.php" on line 925
+    [6] => $this->thumbnailFormat set to $this->config_output_format "jpeg" in file "phpthumb.class.php" on line 936
+    [7] => $this->thumbnailFormat set to $this->f "jpeg" in file "phpthumb.class.php" on line 943
+    [8] => $this->thumbnailQuality set to "75" in file "phpthumb.class.php" on line 953
+    [9] => $this->sourceFilename set to "https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg" in file "phpthumb.class.php" on line 849
+    [10] => SetCacheFilename() _src set from md5($this->sourceFilename) "https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg" = "635c55830a40f79359b1eeaf032b49ad" in file "phpthumb.class.php" on line 3443
+    [11] => SetCacheFilename() _par set from md5(_farC_zc1_h80_w100_dpi150_q75) in file "phpthumb.class.php" on line 3476
+    [12] => starting ExtractEXIFgetImageSize() in file "phpthumb.class.php" on line 3236
+    [13] => GetImageSize(https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg) says image is x in file "phpthumb.class.php" on line 3246
+    [14] => GetImageSize("https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg") failed in file "phpthumb.class.php" on line 3279
+    [15] => $this->useRawIMoutput=true after checking $UnAllowedParameters in file "phpthumb.class.php" on line 1508
+    [16] => ImageMagickThumbnailToGD() aborting because ImageMagickCommandlineBase() failed in file "phpthumb.class.php" on line 2203
+    [17] => ImageMagickThumbnailToGD() failed in file "phpthumb.class.php" on line 3286
+    [18] => SetOrientationDependantWidthHeight() starting with ""x"" in file "phpthumb.class.php" on line 3215
+    [19] => SetOrientationDependantWidthHeight() setting w="100", h="80" in file "phpthumb.class.php" on line 3231
+    [20] => EXIF thumbnail extraction: (size=0; type=""; 0x0) in file "phpthumb.class.php" on line 3343
+    [21] => starting SourceImageToGD() in file "phpthumb.class.php" on line 3603
+    [22] => starting ImageCreateFromFilename(https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg) in file "phpthumb.class.php" on line 3518
+    [23] => empty $filename or GetImageSize(https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg) failed in file "phpthumb.class.php" on line 3567
+    [24] => Populating $rawimagedata in file "phpthumb.class.php" on line 3575
+    [25] => cannot fopen(https://www.sofasurfer.org/stream/gallery/images/266/13626.jpg) in file "phpthumb.class.php" on line 3586
+    [26] => Not using EXIF thumbnail data because $this->exif_thumbnail_data is empty in file "phpthumb.class.php" on line 3674
+    [27] => $this->gdimg_source is still empty in file "phpthumb.class.php" on line 3726
+    [28] => ImageMagickThumbnailToGD() failed in file "phpthumb.class.php" on line 3728
+    [29] => phpThumb() v1.7.13-201406261000
+http://phpthumb.sourceforge.net
+
+Error messages disabled.
+
+edit phpThumb.config.php and (temporarily) set
+$PHPTHUMB_CONFIG['disable_debug'] = false;
+to view the details of this error in file "phpthumb.class.php" on line 4050
+    [30] => SourceImageToGD() failed in file "phpthumb.class.php" on line 351
+)
+
+[2015-10-15 18:44:37] (ERROR @ /var/www/sofaweb-beta/core/components/gallery/processors/web/phpthumb.php : 169) PHP warning: filemtime(): stat failed for /var/www/sofaweb-beta/assets/components/gallery/cache/https___www.sofasurfer.org_stream_gallery_images_266_13626.jpg.04fb9740a00aceb830aed8f03cce2f4e.jpg
+[2015-10-15 18:44:37] (ERROR @ /var/www/sofaweb-beta/core/components/gallery/processors/web/phpthumb.php : 181) PHP warning: file_get_contents(/var/www/sofaweb-beta/assets/components/gallery/cache/https___www.sofasurfer.org_stream_gallery_images_266_13626.jpg.04fb9740a00aceb830aed8f03cce2f4e.jpg): failed to open stream: No such file or directory
+[2015-10-15 18:44:44] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:44:44] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:44:44] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:45:21] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:45:21] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:45:21] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:45:22] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:45:22] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:45:22] (ERROR @ /index.php) `` is not a valid integer and may not be passed to makeUrl()
+[2015-10-15 18:45:46] (ERROR @ /index.php) Could not load class: Product from mysql.product.
+[2015-10-15 18:45:46] (ERROR @ /index.php) Could not load class: Product from mysql.product.
+[2015-10-15 18:45:46] (ERROR @ /index.php) Could not load class: Product from mysql.product.
+[2015-10-15 18:45:46] (ERROR @ /index.php) Could not load class: Product from mysql.product.
+[2015-10-15 18:45:46] (ERROR @ /index.php) Could not load class: Product from mysql.product.
+[2015-10-15 18:45:46] (ERROR @ /index.php) Could not load class: ProductsContainer from mysql.productscontainer.

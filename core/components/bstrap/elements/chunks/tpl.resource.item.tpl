@@ -4,7 +4,7 @@
 	        [[+title:notempty=`<h3>[[+tv.navicon:notempty=`<i class="[[+tv.navicon]]"></i> `]][[+title]]</h3>`]]
 	    </a>
 	    <div class="[[+caption-class:default=`caption`]]">
-	    [[+description:isnot=``:then=`[[+description]]`:else=`[[+caption]]`]]	  
+	    [[+description:isnot=``:then=`[[+description]]`:else=`[[+caption]]`]]
 	    </div>  
 </div>
 [[+idx:add:lt=`[[+total]]`:and:mod=`[[+pageSlider]]`:isequal=`0`:then=`[[+pageSliderContent]]`]]

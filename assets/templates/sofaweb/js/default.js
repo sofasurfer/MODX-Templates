@@ -114,7 +114,11 @@ $(document).ready(function() {
   /*
     Pritty Code 
   */
-  $('.prettyprint').html(function(i,h){
+  $( 'pre' ).each( function(key, value){
+    $(this).text( $(this).html() );
+  });
+
+  $('.prettyprint_old').html(function(i,h){
     return h.replace(/[<>\"\'\t\n]/g, function(m) { return {
       '<' : '&lt;',
       '>' : '&gt;',
@@ -168,6 +172,14 @@ $(document).ready(function() {
           links = this.getElementsByTagName('a');
       blueimp.Gallery(links, options);
   });
+  
+  $( "#links btn" ).text('');
+
+  $('.item-hover').hover( function() {
+      $(this).find('.item-hover-caption').fadeIn(300);
+  }, function() {
+      $(this).find('.item-hover-caption').fadeOut(100);
+  })
 
 
   /*

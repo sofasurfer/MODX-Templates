@@ -15,11 +15,12 @@
     &thumbWidth=`370`
     &thumbHeight=`250`
     &zoomCrop=`1`
-    &tpl=`tpl.resource.item`  
+    &tpl=`[[+tpl:default=`tpl.resource.item`]]`  
     &title=`[[+pagetitle]]`
-    &caption-class=`caption caption-fixed`
+    &caption-class=`[[+caption-class:default=`caption caption-fixed`]]`
     &caption=`[[+introtext]]`
+    &idx=`0`
     &pageSliderContent=`</div><div class="row">`
-    &pageSlider=`20`	
+    &pageSlider=`3`	
 ]]
 </div>

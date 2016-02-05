@@ -112,6 +112,12 @@ if( jQuery && !jQuery.getCSS ){
 $(document).ready(function() {
 
   /*
+    Page load
+  */
+  var loadTime = (Date.now()-timerStart);
+  $('#debuginfo').html('Page loaded ' + loadTime + ' ms (cache)');
+
+  /*
     Pritty Code 
   */
   $( 'pre' ).each( function(key, value){

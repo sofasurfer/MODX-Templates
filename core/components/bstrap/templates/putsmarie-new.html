@@ -29,6 +29,9 @@
         h1.no-padding{
             padding-bottom: 0px !important;
         }
+        a{
+            cursor: pointer;            
+        }
         .jumbotron{
             text-align: center !important;
             background: black !important;
@@ -87,6 +90,13 @@
         .buy.france{
             margin-top: 50px;
         }
+        footer {
+            margin-top: 50px;
+        }
+        footer a{
+            color: white;
+            cursor: pointer!important;
+        }
         @media (max-width: 1000px) {
             .ticket a{
                 padding: 5px;
@@ -126,7 +136,9 @@
     <div class="container">
         [[*content]]
     </div>
-
+    <footer class="container">
+        <center><small>Built by <a href="https://www.sofasurfer.org" title="Sofasurfer.org" target="_blank">sofasurfer.org</a></small></center>
+    </footer>
     <!-- Piwik -->
     <script type="text/javascript">
       var _paq = _paq || [];

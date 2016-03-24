@@ -358,6 +358,21 @@
         padding: 10px;
     }
 
+    @media (min-width:767px) and (max-width: 997px){
+        .navbar-right {
+            padding:0px;
+            margin-left:-10px;
+        }
+        #footer .col-md-4,
+        #footer .col-md-4 div{
+            display: inline;
+            float:left;
+        }
+        #footer .col-md-4 small{
+            display: block;
+        }
+    }
+
     @media (max-width:767px){
 /*        body{
             padding-left: 0px;

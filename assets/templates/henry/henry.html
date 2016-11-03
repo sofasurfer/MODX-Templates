@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>[[*longtitle]] | [[++site_name]]</title>
+    <link href="[[++site_url]]stream/assets/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet"  />   
+    <link href="[[++site_url]]stream/assets/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="[[++site_url]]/assets/templates/henry/css/main.css" rel="stylesheet">
+  </head>
+  <body class="[[*alias]]">  
+    <div class="jumbotron">
+      [[!ShowAtHome? &yesChunk=`hs.top.home` &noChunk=`hs.top.sub`]]
+      <h1>[[*longtitle]]</h1>
+      <p>[[*introtext]]</p>
+    </div>  
+    <div class="container">
+        [[*content]]
+    </div>
+    <footer>
+      <a href="https://www.youtube.com/channel/UC9bEcf_P6fFrCXGtbpkP-qw" title="Youtube"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.facebook.com/henrystrongbox" title="Facebook"><i class="fa fa-facebook-official"></i></a>
+      <p><a href="https://www.sofasurfer.org" target="_blank" title="Built by SofaSurfer">Built by SofaSurfer</a></p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="[[++site_url]]stream/assets/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="[[++site_url]]/assets/templates/henry/js/main.js"></script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.www.henrystrongbox.com"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.sofasurfer.org/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '20']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.sofasurfer.org/piwik.php?idsite=20" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+  </body>
+</html>

@@ -1,0 +1,96 @@
+/*
+
+    CSS Styles for mistermilano.it
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Shadows+Into+Light|Waiting+for+the+Sunrise');
+html { 
+  height:100%;
+}
+
+body{
+  height:100%;
+  text-align: center;
+  background-color: transparent; 
+}
+
+
+body.home{
+
+    /*font-family: 'Just Me Again Down Here', cursive;*/
+    font-family: 'Waiting for the Sunrise', cursive;
+    /*font-family: 'Shadows Into Light', cursive;*/
+
+/*    background-image:  url(/stream/assets/mistermilano/web/background-large.png);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: left top;*/
+    background: url(/stream/mistermilano/web/background-plain.png) repeat-y center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logo{
+/*    position: absolute;
+    top: 0px;
+    left: 0px;*/
+}
+.logo img{
+    width: 400px;
+}
+
+
+.container{
+    /*background: url(/stream/assets/mistermilano/web/overlay.png);*/
+}
+
+.parallax { 
+
+/*    background-image: url("/stream/assets/mistermilano/web/overlay.png");
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+    height: 500px; 
+
+    background: url(/stream/mistermilano/web/overlay.png) repeat-x ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.home{
+    margin-top: 50px;
+    top:0;
+    width:100%;
+    /*
+    -webkit-animation: backgroundScroll 100s linear infinite;
+    animation: backgroundScroll 100s linear infinite;    
+    */
+}
+.about{
+    font-size: 4em;
+}
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -4795px 0;}
+}
+        
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -4795px 0;}
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0px;
+}

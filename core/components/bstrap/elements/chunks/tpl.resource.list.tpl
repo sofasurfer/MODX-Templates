@@ -12,8 +12,8 @@
     &cls=`col-md-4`
     &clsItem=``
     &clsImage=`[[+clsImage:default=`img-rounded img-responsive`]]`
-    &thumbWidth=`370`
-    &thumbHeight=`250`
+    &thumbWidth=`380`
+    &thumbHeight=`270`
     &zoomCrop=`1`
     &tpl=`[[+tpl:default=`tpl.resource.item`]]`  
     &title=`[[+pagetitle]]`

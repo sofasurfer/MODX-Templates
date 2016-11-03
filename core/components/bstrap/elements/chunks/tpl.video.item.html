@@ -1,13 +1,11 @@
-<li class="[[+className]]" id="[[+alias]]">
-	<div class="thumbnail">
-		<a href="[[+url]]"><h3>[[+title]]</h3></a>
-
-		[[+image:notempty=`<img src="[[+filename:phpthumbof=`w=[[+width]]&h=[[+height]]&zc=[[+imagecrop:default=`1`]]`]]" alt="[[+image]]"  />`]]
-		[[+caption:notempty=`	
-			<div class="caption lead">
-				  <p>[[+caption]]</p>
-			</div>
-		`]]		
-	</div>
-</li>
+<div class="[[+className]]" id="[[+alias]]">
+    <a href="[[+url]]" title="[[+title]]">
+    [[+image:notempty=`<img class="img-fluid"src="[[+image:phpthumbof=`w=[[+width:default=`360`]]&h=[[+height:default=`180`]]&zc=[[+zoomCrop:default=`1`]]`]]" alt="[[+image]]"  />`]]
+    [[+caption:notempty=`	
+    	<div class="caption lead">
+    		  <p>[[+caption]]</p>
+    	</div>
+    `]]		
+    </a>
+</div>
 

@@ -1,88 +1,118 @@
-@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
-
-body,html{
-	background: transparent;
-	/*background-image: url(../img/bg-main.png) ;*/
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;	
-
-	font-family: 'Arimo', sans-serif;
-
+@font-face{
+    font-family: akzidenzGrotesk;
+    src: url('/assets/templates/putsmarie/fonts/akzidenz-grotesk-bold.ttf');
 }
-
+html,body{
+    background:black!important;
+    color:white;
+    text-align: center;
+    /*font-family: 'Finger Paint', cursive;*/
+    font-family: 'akzidenzGrotesk';
+    margin-bottom: 3em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;            
+}
 h1{
-	font-family: 'Arimo', sans-serif;
+    padding:1.5em;
 }
-h1 span{
-	font-weight: normal;
+h1.no-padding{
+    padding-bottom: 0px !important;
 }
-.navbar-inner {
-	padding-top:25px;
-    background-color: #fff;
-	background-image: url(../img/bg-top.png) ; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;	
-	border:0;
+a{
+    cursor: pointer;            
 }
-.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
-	box-shadow: none;
+.jumbotron{
+    text-align: center !important;
+    background: black !important;
 }
-
-.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    background-color: transparent;
-    box-shadow: none;
-    color: #555555;
-    text-decoration: none;
+.logo{
+    width:100%;
+    max-width:850px;
 }
-
-.container-fluid{
-	padding:0;
+table{
 }
-
-.carousel-inner .item img{
-	width:100%;
+table td{
+    text-align: left;
+    border-top: 1px solid #7e7e7e !important;
 }
-
-#lang,
-#asphaltpiloten,
-#peaces,
-#dates,
-#espace
-{
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;	
+td.location,
+td.venue{
+    margin-top:20px;
+    font-size: 1.4em;
+    line-height: 47px !important;
 }
-
-#lang{
-	height: 400px;
-	background-image: url(../img/bg-lang.png) ; 
+.location-small{
+    display: none;
+}        
+td.ticket{
+    padding-top: 20px !important;
 }
-
-#asphaltpiloten{
-	height: 1289px;	
-	background-image: url(../img/bg-asphaltpiloten.png) ; 
+tr:hover{
+    color: black;
 }
-#asphaltpiloten h1{
-	padding-top:800px;
+.date span{
+    display:block;
+    text-align: center;
+    line-height: 16px;
 }
-#asphaltpiloten .content{
-	padding-top:825px;
+span.day{
+    font-size: 1.4em;
 }
-#peaces{
-	height: 1250px;		
-	background-image: url(../img/bg-peaces.png) ; 
+span.month{
+    font-size: 1.6em;
 }
-#peaces h1{
-	padding-top:1030px;
+.order{
+    margin-top: 1.9em;
+    margin-bottom: 2em;
 }
-#peaces .content{
-	padding-top:1030px;
+.button,
+.buy,
+.ticket a{
+    color: white;
+    padding: 12px 50px 12px 50px;
+    text-transform: uppercase;
+    background-color: #c82606;
+    border: 0;
+}
+.buy:hover,
+.ticket a:hover{        
+    color: white;
+}
+.buy.france{
+    margin-top: 50px;
 }
 
+.mc-field-group input{
+	margin: 20px;
+	color: black;
+	font-size: 18px;
+	line-height: 24px;
+	padding: 10px 20px;
+    width: 80%;
+    text-align: center;	
+}
 
+footer {
+    margin-top: 50px;
+}
+footer a{
+    color: white;
+    cursor: pointer!important;
+}
+@media (max-width: 1000px) {
+    .ticket a{
+        padding: 5px;
+    }           
+}
+@media (max-width: 480px) {
+    td.location{
+        display:none;
+    }
+    .location-small{
+        display: block;
+    }
+    td.location,
+    td.venue{
+        line-height: 20px !important;
+    }
+}

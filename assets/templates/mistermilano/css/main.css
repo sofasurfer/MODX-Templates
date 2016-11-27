@@ -10,6 +10,7 @@ html {
 
 body{
   height:100%;
+  font-size: 3.5em;  
   text-align: center;
   background-color: transparent; 
 }
@@ -32,10 +33,17 @@ body.home{
     background-size: cover;
 }
 
+h1{
+    font-weight: bolder;
+    font-size: 4em;    
+    margin-top: 200px;    
+}
+
 .logo{
 /*    position: absolute;
     top: 0px;
     left: 0px;*/
+    margin-bottom: 200px;
 }
 .logo img{
     width: 400px;
@@ -75,7 +83,14 @@ body.home{
     */
 }
 .about{
-    font-size: 4em;
+    font-size: 3.5em;
+}
+
+.tourlist{
+    list-style: none;
+}
+.tourlist li{
+    list-style: none;
 }
 
 @-webkit-keyframes backgroundScroll {
@@ -91,6 +106,7 @@ to {background-position: -4795px 0;}
 
 
 footer{
+    display: none;
     position: fixed;
     bottom: 0px;
 }

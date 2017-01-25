@@ -1,8 +1,16 @@
 <?php
 
 
+$bandId = $modx->getOption('bandId',$scriptProperties,413);
+$showPast = $modx->getOption('showPast',$scriptProperties,false);
 
-$url = 'http://tourdate.twogentlemen.net/json.php?id=413';
+$url = 'http://tourdate.twogentlemen.net/json.php?id=' . $bandId;
+
+if($showPast){
+    $url .=  "&past";
+}
+
+
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 

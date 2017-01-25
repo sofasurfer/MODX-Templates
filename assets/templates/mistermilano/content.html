@@ -1,22 +1,91 @@
-<div class="container">
+<div id="videos" class="container-fluid">
     <div class="row">
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tCMMMyOh7JA"></iframe>
         </div>    
     </div>
-    <div class="row">
-        <h1>Plattenrelease Tour</h1>
-        <ul class="tourlist">
-            <li>25. November: Helsinki Klub – Zürich</li>
-            <li>26. November: Café du soleil – Saignelégier</li>
-            <li>02. Dezember: Gärbi Breihaus – Biel-Bienne</li>
-            <li>21. Dezember: Progr Turnhalle Beeflat – Bern</li>
-            <li>22. Dezember: Les Docks – Lausanne</li>
-            <li>26. Dezember: Postremise – Chur</li>
-        </ul>
-        <h1>Mister Milano</h1>
-        <p>Die Band Mister Milano aus Biel und Zürich räumt mit alten Disco Klischées auf und entwickelt daraus nichts weniger als einen neuen Musikstil: Fazzoletti-Pop, Musik für anspruchsvolle Romantiker. Mister Milano sind Max Usata Frontmann von Puts Marie, einem der momentan erfolgreichsten Schweizer Musikexporte, Igor Stepniewski, ebenfalls von Puts Marie, und der Zürcher Schlagzeuger Lou Caramella. Das Trio produziert kitschigen italienischen 80er-Jahre Elektro-Pop mit treibenden obskuren Hip-Hop-Beats und ostdeutschen Siebzigerjahre-Orgeln. Das klingt unerhört böse, basslastig und ist trotzdem eine helle Freude. Nach Aufnahmen und Konzerttourneen in New York, Portland und St.Petersburg tourt das Trio jetzt durch die Schweiz und bringt sein neues Album mit. Eine ernstgemeinte musikalische Parodie an die traurige, verlorene italienische Pop-, TV und Nachtkultur. Eine Hommage an unsere südlichen Nachbarn, pink und hellblau, RAI Uno und grossbusig, kitschig, glamourös, dunkel, romantisch, verliebt und verlogen. Mister Milano singen von Italien, von bestochenen Fussballern und korrupten Redaktionen, von reichen grau gekleideten Fernsehbaronen, welche junge und schöne Mädchen verführen oder von Migranten auf Grenzzäunen verblutend oder orientierungslos in kleinen Holzbooten im Mittelmeer treibend. Die drei Italo-Schweizer führten 2012 in New York ein weitgereistes und erfolgreiches Musiktheater auf, welches sie bis ans Fringe Festival in Edinburgh brachte. Als Folgeprojekt entstand daraus Mister Milano und zwei Jahre später veröffentlichten sie auf dem amerikanischen Label Voodoo doughnut recording ihre erste Single “Il Collezionista”. In Zusammenarbeit mit dem Produzenten Jeff Stuart Saltzman aus Portland Oregon und dem Lausanner Label Two Gentlemen (Sofie Hunger, Anna Aron, Young Gods...) bringen Mister Milano jetzt ihr Debut-Album raus. Wer das Video zur neusten Single „Zecchino d’Oro“ gesehen hat, wird mit Bestimmtheit der neuen Italienischen Welle verfallen sein und keines der Konzerte von Mister Milano auslassen. Das Trio ist demnächst live in Zürich, Basel, Bern, Lausanne, Luzern, Chur, Schaffhausen, Biel und Saignelégier zu sehen. Ascolta!</p>
-    </div>
-
 </div>
-<div class="container-fluid parallax home"> </div>
+<div id="tourdates" class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <h1>Plattenrelease Tour</h1>
+        <div class="tablewrap">
+        <table class="table">[[!pmGetTours?bandId=`574`&itemTpl=`tour.item.table`]]</table>
+        </div>
+        <h1>Past Shows</h1>
+        <div class="tablewrap">
+        <table class="table">[[!pmGetTours?bandId=`574`&itemTpl=`tour.item.table`&showPast=`1`]]</table>
+        </div>
+        </div>
+    </div>
+    <!--div class="row">
+        <div class="col-md-6">
+        <img src="/stream/mistermilano/web/cover.png" class="img-responsive" alt="Mistermilano Cover">
+        </div>
+        <div class="col-md-6">
+        <img src="/stream/mistermilano/web/coverback.png" class="img-responsive" alt="Mistermilano Cover">
+        </div>        
+    </div-->
+    <div class="row">
+        <div class="col-md-12">        
+        <h1>Mister Milano</h1>
+
+        <div>
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#it" aria-controls="it" role="tab" data-toggle="tab">IT</a></li>
+            <li role="presentation"><a href="#de" aria-controls="de" role="tab" data-toggle="tab">DE</a></li>
+            <li role="presentation"><a href="#jp" aria-controls="jp" role="tab" data-toggle="tab">JP</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="it">
+                <p>Mister Milano. Ecco, dimenticatevi degli obsoleti clichés sulla discomusic e lasciate spazio al Fazzoletti-Pop; musica per romantici esigenti. </p>
+
+                <p>I Mister Milano, di Bienne e Zurigo, sono Max Usata, frontman dei Puts Marie, gruppo svizzero che sta riscontrando un buon successo all’estero, Igor Stepniewski, altro membro dei Puts Marie, e il batterista zurighese Lou Caramella. </p>
+
+                <p>Il trio propone una combinazione tra un kitschoso elettro-pop italiano in stile 
+                anni ‘80, oscuri beats hip-hop e tastiere tipiche della DDR anni ’70. Malvagità e pesantezza ma anche grande gioia e delizia.</p>
+
+                <p>Dopo aver registrato ed essersi esibito a New York, Portland e San
+                Pietroburgo, il trio è ora in viaggio in Svizzera per presentare il nuovo album.</p>
+
+                <p>Una parodia seria sulla disorientata e malinconica cultura italiana del pop, della 
+                TV e della vita notturna. Un omaggio ai nostri vicini del sud, al rosa e all’azzurro, alla RAI, alle maggiorate, a un glamour cupo e bugiardo. I Mister Milano cantano dell’Italia, dei calciatori disonesti e delle redazioni corrotte, dei grigi e ricchi baroni della TV che adescano giovani e belle ragazze, o dei migranti feriti sulle recinzioni di confine o spaesati su piccole imbarcazioni nel Mediterraneo.</p>
+
+                <p>Nel 2012 i tre italo-svizzeri mettono in piedi un fortunato spettacolo musicale a New York e dopo varie repliche lo stesso viene anche presentato al Fringe Festival di Edimburgo. Dalla ricerca di un nuovo progetto condiviso prendonopoi vita i Mister Milano e nel 2014 esce il loro primo singolo “Il Collezionista”, dato alle stampe dall’etichetta americana Voodoo Doughnut Recording.</p>
+
+                <p>In collaborazione con il produttore Jeff Stuart Saltzman di Portland, Oregon e l’etichetta svizzera Two Gentlemen di Losanna (Sophie Hunger, Anna Aron, Young Gods, ...), i Mister Milano pubblicano ora il loro album di debutto.</p>
+
+                <p>Chi ha visto il video del loro ultimo singolo “Zecchino d’Oro” sarà sicuramente già stato contagiato dalla loro peculiare “italianità” e non potrà immaginarsi di perdere nessuno dei prossimi concerti.</p>
+
+                <p>Potrete vedere il trio presto a Zurigo, Basilea, Berna, Losanna, Lucerna, Coira, Sciaffusa, Bienne e Saignelégier.</p>                
+            </div>
+            <div role="tabpanel" class="tab-pane" id="de">
+                <p>Die Band Mister Milano aus Biel und Zürich räumt mit alten Disco Klischées auf und entwickelt daraus nichts weniger als einen neuen Musikstil: Fazzoletti-Pop, Musik für anspruchsvolle Romantiker.</p>
+                <p>Mister Milano sind Max Usata Frontmann von Puts Marie, einem der momentan erfolgreichsten Schweizer Musikexporte, Igor Stepniewski, ebenfalls von Puts Marie, und der Zürcher Schlagzeuger Lou Caramella. Das Trio produziert kitschigen italienischen 80er-Jahre Elektro-Pop mit treibenden obskuren Hip-Hop-Beats und ostdeutschen Siebzigerjahre-Orgeln. Das klingt unerhört böse, basslastig und ist trotzdem eine helle Freude. Nach Aufnahmen und Konzerttourneen in New York, Portland und St.Petersburg tourt das Trio jetzt durch die Schweiz und bringt sein neues Album mit.</p>
+                <p>Eine ernstgemeinte musikalische Parodie an die traurige, verlorene italienische Pop-, TV und Nachtkultur. Eine Hommage an unsere südlichen Nachbarn, pink und hellblau, RAI Uno und grossbusig, kitschig, glamourös, dunkel, romantisch, verliebt und verlogen.</p>
+                <p>Mister Milano singen von Italien, von bestochenen Fussballern und korrupten Redaktionen, von reichen grau gekleideten Fernsehbaronen, welche junge und schöne Mädchen verführen oder von Migranten auf Grenzzäunen verblutend oder orientierungslos in kleinen Holzbooten im Mittelmeer treibend. Die drei Italo-Schweizer führten 2012 in New York ein weitgereistes und erfolgreiches Musiktheater auf, welches sie bis ans Fringe Festival in Edinburgh brachte.</p>
+                <p>Als Folgeprojekt entstand daraus Mister Milano und zwei Jahre später veröffentlichten sie auf dem amerikanischen Label Voodoo doughnut recording ihre erste Single “Il Collezionista”. In Zusammenarbeit mit dem Produzenten Jeff Stuart Saltzman aus Portland Oregon und dem Lausanner Label Two Gentlemen (Sofie Hunger, Anna Aron, Young Gods...) bringen Mister Milano jetzt ihr Debut-Album raus.</p>
+                <p>Wer das Video zur neusten Single „Zecchino d’Oro“ gesehen hat, wird mit Bestimmtheit der neuen Italienischen Welle verfallen sein und keines der Konzerte von Mister Milano auslassen. Das Trio ist demnächst live in Zürich, Basel, Bern, Lausanne, Luzern, Chur, Schaffhausen, Biel und Saignelégier zu sehen. Ascolta!</p>                
+            </div>
+            <div role="tabpanel" class="tab-pane" id="jp">
+                <p>ミスター・ミラノ　   
+                スイスのチューリヒとビエンヌを拠点に活動。
+                ワンパターンなディスコミュージックとはかけ離れた新しいジャンルを発信している。高級ロマン主義者のためのファッツォレッティポップス。
+                現在世界に活動の場を広げているプッツ・マリーよりマックス・ウサタ、イゴール・シュテップニエブスキーそしてチューリヒ出身ドラム　ルー・カラメルのトリオ。
+                奇妙なドライビング・ヒップホップ・ビートや東ドイツの70年代オルガン音楽でなんとも安っぽくイタリア80年代エレクトロポップスを造り出している。ブーイングがおこりそう・・・。いや、それが楽しくてたまらない。
+                ニュー・ヨークやポートランドやセント・ピータースブルグでのレコーディング、ライブを終え現在ニューアルバムのリリースツアー中である。イタリアの哀愁ただよう懐かしいポップスとTV文化や水商売をもじっている。南欧の隣人（ピンクと水色、煌びやかな女性、めちゃくちゃ恋愛模様、ライ・ウノ）へのオマージュ。
+                ミスター・ミラノの詞からはイタリアの金になびくサッカー選手、富に支配され腐敗されたテレビ局、そして国境で血を流し、小舟で地中海に迷う移民たちの声が聞こえる。
+                イタリア系スイス人の３人は2012年ニュー・ヨークで成功をおさめたミュージカルに出演しその後エディンバーグのフリンゲフェスティバルまでの世界ツアーをはたした。ミスター・ミラノはそのプロジェクトを引き継ぎ２年後アメリカのレーベル 『ブードゥー』でファーストシングル『Il Collezionista』を発売。ポートランド、オレゴンに拠点のあるプロデューサ　ジェフ・シュトゥアト・サルツマンとルツェルンにあるレーベル　ツー・
+                ゼントルマン（ソフィー・ハンガー、アンナ・アーロン、ヤング・ゴーヅ）の協力で
+                ファーストアルバムを発売中。新しいビデオ『Zecchino d'Oro』をみたら、絶対に新しいイタリアンウエーブにはまってしまうだろう。そしてきっと、ミスター・ミラノの演奏を一つも聞き逃さない</p>
+            </div>            
+          </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid parallax home"> </div>

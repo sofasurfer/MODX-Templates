@@ -48,7 +48,8 @@ body.home{
 h1{
     font-weight: bolder;
     font-size: 4em;    
-    margin-top: 200px;    
+    margin-top: 200px;  
+    margin-bottom: 60px;  
 }
 
 a{
@@ -123,7 +124,13 @@ a:hover{
 /* Tour Dates */
 table td{
     text-align: left;
-    border-top: 1px solid #333 !important;
+    border-bottom: 1px solid #ff1493 !important;
+}
+table tr{
+    border-top:none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    border:none;
 }
 .date span{
     display:block;

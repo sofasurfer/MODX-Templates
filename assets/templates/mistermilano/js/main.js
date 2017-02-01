@@ -1,7 +1,5 @@
 
 $( document ).ready(function() {
-    console.log( "document loaded" );
-
 
     var movementStrength = 25;
     var height = movementStrength / $(window).height();

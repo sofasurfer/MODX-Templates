@@ -1,0 +1,121 @@
+/*
+
+    CSS Styles for mistermilano.it
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Warnes');
+
+
+html { 
+  height:100%;
+}
+
+body{
+  height:100%;
+  font-size: 2.5em;  
+  text-align: center;
+  background-color: transparent; 
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+.jumbotron{
+    background-image: url('/assets/templates/multikulti/images/flyer-back.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
+}
+.jumbotron h1,
+.jumbotron h2{
+    margin-bottom: 0px!important;
+    padding-bottom: 0px!important;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+.jumbotron h2{
+    margin-top: 0px!important;
+    padding-top: 0px!important;    
+    margin-bottom: 50px!important;    
+}
+.jumbotron h1,
+h1{
+    color: #ab0d0d;
+    font-weight: bolder;
+    font-size: 4em;    
+    margin-top: 200px;  
+    margin-bottom: 60px;  
+    font-family: 'Warnes', cursive;
+
+}
+h2{
+    color: #ab0d0d;
+    margin-top: 50px;  
+    font-size: 2em;    
+    font-family: 'Warnes', cursive;
+}
+a{
+    padding: 2px 5px;
+    margin-left: -5px;
+    color: #ab0d0d;
+    /*color: #d62d88;*/
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #ab0d0d;
+}
+
+
+a.carousel-control:link:hover,
+.logo a:link:hover,
+.logo a:visited:hover{
+    background-color: transparent;!important;
+}
+
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -4795px 0;}
+}
+        
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -4795px 0;}
+}
+
+
+
+footer{
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    bottom: 0px;
+    font-size: 1rem;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 900px){
+    body{
+      font-size: 2em;  
+    }
+    h1,
+    .jumbotron h1{
+        font-size: 2.4em; 
+        margin-top: 100px;    
+
+    }
+    h2,
+    .jumbotron h2{
+        font-size: 1.5em; 
+    }    
+
+    .logo{
+        margin-bottom: 100px;
+    }
+    .logo img{
+        width: 300px;
+    }    
+}
+
+

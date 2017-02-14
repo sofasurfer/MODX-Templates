@@ -21,11 +21,13 @@ body{
 }
 
 .jumbotron{
+    position: relative;
     background-image: url('/assets/templates/multikulti/images/flyer-back.png');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;    
+    /*border-bottom: solid 1px #ab0d0d;    */
 }
 .jumbotron h1,
 .jumbotron h2{
@@ -67,24 +69,35 @@ a:hover{
 }
 
 
-a.carousel-control:link:hover,
-.logo a:link:hover,
-.logo a:visited:hover{
-    background-color: transparent;!important;
+/*
+    Language Switch
+*/
+.jumbotron .languageswitch{
+    position: fixed;
+    padding: 0;
+    top: 0px;
+    right: 50px;
+    list-style-type: none;
+    z-index: 9999;
 }
-
-
-@-webkit-keyframes backgroundScroll {
-from {background-position: 0 0;}
-to {background-position: -4795px 0;}
+.jumbotron .languageswitch li{
+    float: left;
+    padding: 5px 10px;
+    border-bottom-left-radius: 0.1em;    
+    border-bottom-right-radius: 0.1em;
+    border-left: solid 1px #ab0d0d;
+    border-bottom: solid 1px #ab0d0d;
+    border-right: solid 1px #ab0d0d;
+    background-color: white;     
 }
-        
-@keyframes backgroundScroll {
-from {background-position: 0 0;}
-to {background-position: -4795px 0;}
+.jumbotron .languageswitch li:hover{
+    background-color: #ab0d0d; 
 }
-
-
+.jumbotron .languageswitch li.active,
+.jumbotron .languageswitch li.active:hover{
+    background-color: #ab0d0d;
+    color: white;
+}
 
 footer{
     display: block;
@@ -115,7 +128,10 @@ footer{
     }
     .logo img{
         width: 300px;
-    }    
+    }
+    .jumbotron .languageswitch{
+        right: 0px;
+    }
 }
 
 

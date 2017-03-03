@@ -3,7 +3,7 @@
 	        [[+tv.pageimage:notempty=`<img class="[[+clsImage]]" src="[[+tv.pageimage:phpthumbof=`w=[[+thumbWidth:default=`360`]]&h=[[+thumbHeight:default=`180`]]&zc=[[+zoomCrop:default=`1`]]`]]" alt="[[+name]]" />`]]	        
 		    <div class="caption item-hover-caption">
 	        [[+title:notempty=`<h3>[[+tv.navicon:notempty=`<i class="[[+tv.navicon]]"></i> `]][[+title]]</h3>`]]
-		    [[+description:isnot=``:then=`[[+description]]`:else=`[[+caption]]`]]
+		    [[+description:isnot=``:then=`[[+description:strip_tags=``]]`:else=`[[+caption:strip_tags=``]]`]]
 		    </div>  
 	    </a>
 </div>

@@ -359,6 +359,10 @@
         padding: 10px;
     }
 
+    .help-inline{
+        color: #660000;
+    }
+
     @media (min-width:767px) and (max-width: 997px){
         .navbar-right {
             padding:0px;

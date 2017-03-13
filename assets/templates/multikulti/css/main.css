@@ -68,7 +68,10 @@ a:hover{
     background-color: #ab0d0d;
 }
 
-
+/*
+    Ignore red BG on links
+*/
+a.carousel-control:hover,
 .sponsor a:hover{
     background-color: transparent;
 }

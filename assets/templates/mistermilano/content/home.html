@@ -54,12 +54,16 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="upcomming">
                 <div class="tablewrap">
-                <table class="table">[[!pmGetTours?bandId=`574`&itemTpl=`tour.item.table`]]</table>
+                <table itemscope itemtype="http://schema.org/Event" class="table">
+                    [[!pmGetTours?bandId=`574`&itemTpl=`tour.item.table`]]
+                </table>
                 </div>                
             </div>
             <div role="tabpanel" class="tab-pane" id="past">
                 <div class="tablewrap">
-                <table class="table">[[!pmGetTours?bandId=`574`&itemTpl=`tour.item.table`&showPast=`1`]]</table>
+                <table itemscope itemtype="http://schema.org/Event" class="table">
+                  [[!pmGetTours?bandId=`574`&itemTpl=`tour.item.table`&showPast=`1`]]
+                </table>
                 </div>                
             </div>
           </div>
@@ -69,19 +73,19 @@
     </div>
     <div class="row">
         <div class="col-md-12">        
-        <h1>Mister Milano</h1>
+        <h1>Mister Milano [[!getLang]]</h1>
         <div>
           <!-- Nav tabs -->
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#it" aria-controls="it" role="tab" data-toggle="tab">IT</a></li>
-            <li role="presentation"><a href="#de" aria-controls="de" role="tab" data-toggle="tab">DE</a></li>
-            <li role="presentation"><a href="#fr" aria-controls="fr" role="tab" data-toggle="tab">FR</a></li>
-            <li role="presentation"><a href="#en" aria-controls="en" role="tab" data-toggle="tab">EN</a></li>
-            <li role="presentation"><a href="#jp" aria-controls="jp" role="tab" data-toggle="tab">JP</a></li>
+            <li role="presentation" [[!getLang:isequalto=`it`:then=`class="active"`]]><a href="#it" aria-controls="it" role="tab" data-toggle="tab">IT</a></li>
+            <li role="presentation" [[!getLang:isequalto=`de`:then=`class="active"`]]><a href="#de" aria-controls="de" role="tab" data-toggle="tab">DE</a></li>
+            <li role="presentation" [[!getLang:isequalto=`fr`:then=`class="active"`]]><a href="#fr" aria-controls="fr" role="tab" data-toggle="tab">FR</a></li>
+            <li role="presentation" [[!getLang:isequalto=`en`:then=`class="active"`]]><a href="#en" aria-controls="en" role="tab" data-toggle="tab">EN</a></li>
+            <li role="presentation" [[!getLang:isequalto=`jp`:then=`class="active"`]]><a href="#jp" aria-controls="jp" role="tab" data-toggle="tab">JP</a></li>
           </ul>
           <!-- Tab panes -->
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="it">
+            <div role="tabpanel" class="tab-pane [[!getLang:isequalto=`it`:then=`active`]]" id="it">
                 <p>Ecco, dimenticatevi degli obsoleti clichés sulla discomusic e lasciate spazio al Fazzoletti-Pop; musica per romantici esigenti. </p>
                 <p>I Mister Milano, di Bienne e Zurigo, sono Max Usata, frontman dei Puts Marie, gruppo svizzero che sta riscontrando un buon successo all’estero, Igor Stepniewski, altro membro dei Puts Marie, e il batterista zurighese Lou Caramella. </p>
                 <p>Il trio propone una combinazione tra un kitschoso elettro-pop italiano in stile 
@@ -95,7 +99,7 @@
                 <p>Chi ha visto il video del loro ultimo singolo “Zecchino d’Oro” sarà sicuramente già stato contagiato dalla loro peculiare “italianità” e non potrà immaginarsi di perdere nessuno dei prossimi concerti.</p>
                 <p>Potrete vedere il trio presto a Zurigo, Basilea, Berna, Losanna, Lucerna, Coira, Sciaffusa, Bienne e Saignelégier.</p>                
             </div>
-            <div role="tabpanel" class="tab-pane" id="de">
+            <div role="tabpanel" class="tab-pane [[!getLang:isequalto=`de`:then=`active`]]" id="de">
                 <p>Die Band Mister Milano aus Biel und Zürich räumt mit alten Disco Klischées auf und entwickelt daraus nichts weniger als einen neuen Musikstil: Fazzoletti-Pop, Musik für anspruchsvolle Romantiker.</p>
                 <p>Mister Milano sind Max Usata Frontmann von Puts Marie, einem der momentan erfolgreichsten Schweizer Musikexporte, Igor Stepniewski, ebenfalls von Puts Marie, und der Zürcher Schlagzeuger Lou Caramella. Das Trio produziert kitschigen italienischen 80er-Jahre Elektro-Pop mit treibenden obskuren Hip-Hop-Beats und ostdeutschen Siebzigerjahre-Orgeln. Das klingt unerhört böse, basslastig und ist trotzdem eine helle Freude. Nach Aufnahmen und Konzerttourneen in New York, Portland und St.Petersburg tourt das Trio jetzt durch die Schweiz und bringt sein neues Album mit.</p>
                 <p>Eine ernstgemeinte musikalische Parodie an die traurige, verlorene italienische Pop-, TV und Nachtkultur. Eine Hommage an unsere südlichen Nachbarn, pink und hellblau, RAI Uno und grossbusig, kitschig, glamourös, dunkel, romantisch, verliebt und verlogen.</p>
@@ -103,7 +107,7 @@
                 <p>Als Folgeprojekt entstand daraus Mister Milano und zwei Jahre später veröffentlichten sie auf dem amerikanischen Label Voodoo doughnut recording ihre erste Single “Il Collezionista”. In Zusammenarbeit mit dem Produzenten Jeff Stuart Saltzman aus Portland Oregon und dem Lausanner Label Two Gentlemen (Sofie Hunger, Anna Aron, Young Gods...) bringen Mister Milano jetzt ihr Debut-Album raus.</p>
                 <p>Wer das Video zur neusten Single „Zecchino d’Oro“ gesehen hat, wird mit Bestimmtheit der neuen Italienischen Welle verfallen sein und keines der Konzerte von Mister Milano auslassen. Das Trio ist demnächst live in Zürich, Basel, Bern, Lausanne, Luzern, Chur, Schaffhausen, Biel und Saignelégier zu sehen. Ascolta!</p>                
             </div>
-            <div role="tabpanel" class="tab-pane" id="fr">
+            <div role="tabpanel" class="tab-pane [[!getLang:isequalto=`fr`:then=`active`]]" id="fr">
                 <p>Le groupe Mister Milano de Bienne et Zurich met fin aux vieux clichés de discothèques et il en résulte ni plus ni moins que le développement d’un nouveau style de musique : la pop Fazzoletti; de la musique destinée aux romantiques exigeants. Mister Milano, ce sont Max Usata, leader de Puts Marie - une exportation musicale suisse actuellement parmi les plus réussies - Igor Stepniewski, également de Puts Marie et le batteur zurichois Lou Caramella.</p>
                 <p>Ce trio produit de l’électro-pop kitsch italienne des années 80 à grand renfort de beats hip-hop entraînants et obscurs et d’orgues 70’s d’Allemagne de l’Est. Derrière une intention agressive, chargée de basse, on retrouve l’émerveillement pop des grands songwriters. À la suite d’enregistrements et de concerts à New York, Portland et Saint-Pétersbourg, le trio est maintenant en tournée suisse et annonce la sortie de son premier album.</p>
                 <p>Une parodie musicale sérieuse de la culture pop, TV et nocturne italienne, aussi triste que perdue. Un hommage à nos voisins du sud: pink et bleu ciel, RAI Uno et poitrines généreuses ; kitsch, glamour, sombre, romantique, amoureux et hypocrite. Mister Milano nous chante l’Italie des footballeurs soudoyés et des rédactions corrompues, des barons de la télévision riches et vêtus de gris séduisant de belles jeunes filles, ou de migrants perdant leur sang sur des clôtures de frontières ou dérivant désorientés dans de petites barques en bois sur les vagues de la Méditerranée.</p>
@@ -112,7 +116,7 @@
                 <p>Quiconque ayant visionné la vidéo du tout nouveau single «Zecchino d’Oro» sera certainement tombé sous l’emprise de la nouvelle vague talienne et ne manquera aucun concert de Mister Milano.Le trio se produira prochainement en live à Zurich, Bâle, Berne, Lausanne, Lucerne, Coire, Schaffhouse, Bienne et Saignelégier.</p>
                 <p>Ascolta!</p>
             </div>
-            <div role="tabpanel" class="tab-pane" id="en">
+            <div role="tabpanel" class="tab-pane [[!getLang:isequalto=`en`:then=`active`]]" id="en">
                 <p>The band Mister Milano clears the table of old disco clichés by creating nothing less than a new genre: Fazzoletti-Pop translating </p>
                 <p>Handkerchief-Pop. Music for ambitious romanticists. Mister Milano is Max Usata lead singer from the band Puts Marie, one of the more successfully exported Swiss music groups, Igor Stepniewski bassist for Puts Marie and the drummer Lou Caramella. The trio produces sleazy Italian Eighties electronical Pop driven by drifty & obscure Hip-Hop beats and Eastern German organs from the Seventies. A sound that`s unapologetic, mean, 
                 soaked with bass, and all a pure pleasure. After touring as well as recording in places like New York, Portland Oregon and St.Petersburg the trio is now releasing their album in all major cities in Switzerland.</p>
@@ -120,7 +124,7 @@
                 <p>In 2012 the three Italian Swiss performed a wide traveled theatre production, which even made it to the Fringe in Edinburgh. Out of that Mister Milano was spawned and two years later they released their first single “Il Collezionista” on the Oregonian label Voodoo Doughnut Recordings. In collaboration with the American producer Jeff Stuart Saltzman and the Swiss label Two Gentlemen (Sophie Hunger, Anna Aaron, Young Gods...) Mister Milano releases their self-titled debut album.</p>
                 <p>For the newcomer that hasn`t seen their latest clip to the single „Zecchino d’Oro“ will most definitely fall for the new Italian Wave and won’t miss a single show.The trio is coming up live in Zürich, Basel, Bern, Lausanne, Luzern, Chur, Schaffhausen, Biel & Saignelégier. Listen!</p>
             </div>            
-            <div role="tabpanel" class="tab-pane" id="jp">
+            <div role="tabpanel" class="tab-pane [[!getLang:isequalto=`jp`:then=`active`]]" id="jp">
                 <p>ミスター・ミラノ　   
                 スイスのチューリヒとビエンヌを拠点に活動。
                 ワンパターンなディスコミュージックとはかけ離れた新しいジャンルを発信している。高級ロマン主義者のためのファッツォレッティポップス。
@@ -133,7 +137,6 @@
                 ファーストアルバムを発売中。新しいビデオ『Zecchino d'Oro』をみたら、絶対に新しいイタリアンウエーブにはまってしまうだろう。そしてきっと、ミスター・ミラノの演奏を一つも聞き逃さない</p>
             </div>            
           </div>
-
         </div>
         <h2>Contact</h2>
         <p>
@@ -142,4 +145,3 @@
         </div>
     </div>
 </div>
-<div class="container-fluid parallax home"> </div>

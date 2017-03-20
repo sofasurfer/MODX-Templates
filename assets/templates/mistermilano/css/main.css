@@ -25,19 +25,7 @@ body{
 
 
 body.home{
-
-    /*font-family: 'Just Me Again Down Here', cursive;*/
-    /*font-family: 'Waiting for the Sunrise', cursive;*/
-    /*font-family: 'Shadows Into Light', cursive;*/
-    /*font-family: 'xPT Sans Narrow', sans-serif;*/
-    /*font-family: 'Bitter', serif;*/
     font-family: 'Kirjainkone', cursive;
-
-
-/*    background-image:  url(/stream/assets/mistermilano/web/background-large.png);
-    background-size: auto 100%;
-    background-repeat: repeat-x;
-    background-position: left top;*/
     background: url(/stream/mistermilano/web/background-plain.png) repeat-y center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -59,7 +47,6 @@ a{
     padding: 2px 5px;
     margin-left: -5px;
     color: #ff1493;
-    /*color: #d62d88;*/
 }
 a:hover{
     color: #333;
@@ -68,52 +55,45 @@ a:hover{
 }
 
 .logo{
-/*    position: absolute;
-    top: 0px;
-    left: 0px;*/
     margin-bottom: 200px;
+}
+.logo-title {
+    margin-bottom: 100px;
+}
+.logo-title img{
+    width: 500px;    
 }
 .logo img{
     width: 600px;
 }
 a.carousel-control:link:hover,
+.logo-title a:link:hover,
+.logo-title a:visited:hover,
 .logo a:link:hover,
 .logo a:visited:hover{
     background-color: transparent;!important;
 }
 
 
-.container{
-    /*background: url(/stream/assets/mistermilano/web/overlay.png);*/
+.carousel-control .glyphicon{
+    font-size: 6rem;
+    color: #ff1493;    
 }
 
 .parallax { 
-
-/*    background-image: url("/stream/assets/mistermilano/web/overlay.png");
-
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-*/
     height: 500px; 
-
+    margin-top: 250px;
+    margin-bottom: 100px;
     background: url(/stream/mistermilano/web/overlay.png) repeat-x ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 .home{
     margin-top: 50px;
     top:0;
     width:100%;
-    /*
-    -webkit-animation: backgroundScroll 100s linear infinite;
-    animation: backgroundScroll 100s linear infinite;    
-    */
 }
 .about{
     font-size: 3.5em;
@@ -164,22 +144,15 @@ span.month{
 }
 
 
-@-webkit-keyframes backgroundScroll {
-from {background-position: 0 0;}
-to {background-position: -4795px 0;}
-}
-        
-@keyframes backgroundScroll {
-from {background-position: 0 0;}
-to {background-position: -4795px 0;}
-}
-
-
-
+/*
+    Footer
+*/
 footer{
-    display: none;
-    position: fixed;
+    display: block;
+    position: relative;
+    margin-top: 50px;
     bottom: 0px;
+    font-size: 1rem;
 }
 
 
@@ -195,9 +168,24 @@ footer{
     .logo{
         margin-bottom: 100px;
     }
+    .logo-title img,
     .logo img{
         width: 300px;
     }    
+
+    .carousel-control .glyphicon{
+        font-size: 3rem;
+        color: #ff1493;    
+    }
+
+
+    span.day{
+        font-size: 1.0em;
+    }
+    span.month{
+        font-size: 1.2em;
+    }    
+
 }
 
 @media (max-width: 480px) {

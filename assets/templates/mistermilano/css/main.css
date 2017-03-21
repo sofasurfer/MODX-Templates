@@ -66,6 +66,8 @@ a:hover{
 .logo img{
     width: 600px;
 }
+p.sharing a:link:hover,
+p.sharing a:visited:hover,
 a.carousel-control:link:hover,
 .logo-title a:link:hover,
 .logo-title a:visited:hover,
@@ -74,6 +76,9 @@ a.carousel-control:link:hover,
     background-color: transparent;!important;
 }
 
+p.sharing i{
+    font-size: 6rem;
+}
 
 .carousel-control .glyphicon{
     font-size: 6rem;

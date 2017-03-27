@@ -139,6 +139,15 @@ span.month{
 }
 
 
+.btn.order{
+    border: none;
+    font-size: 2.5rem;
+    background-color: #ff1493;    
+}
+.btn.order:hover{
+    background-color: white;
+}
+
 /* Tabs*/
 .nav-tabs{
     border-bottom: 1px solid #ff1493;    

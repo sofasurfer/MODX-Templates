@@ -27,6 +27,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;    
+    height: 800px;
     /*border-bottom: solid 1px #ab0d0d;    */
 }
 .jumbotron h1,

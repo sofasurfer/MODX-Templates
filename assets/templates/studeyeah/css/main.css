@@ -22,7 +22,7 @@ body{
 
 .jumbotron{
     position: relative;
-    background-image: url('/assets/templates/studeyeah/images/header/header.png');
+    background-image: url('/assets/templates/studeyeah/images/header.png');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

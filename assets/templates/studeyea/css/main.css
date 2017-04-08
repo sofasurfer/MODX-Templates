@@ -1,0 +1,149 @@
+/*
+
+    CSS Styles for mistermilano.it
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Warnes');
+
+
+html { 
+  height:100%;
+}
+
+body{
+  height:100%;
+  font-size: 2.5em;  
+  text-align: center;
+  background-color: transparent; 
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+.jumbotron{
+    position: relative;
+    background-image: url('/assets/templates/studeyeah/images/header/header.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
+    /*border-bottom: solid 1px #ab0d0d;    */
+}
+.jumbotron h1,
+.jumbotron h2{
+    margin-bottom: 0px!important;
+    padding-bottom: 0px!important;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+.jumbotron h2{
+    margin-top: 0px!important;
+    padding-top: 0px!important;    
+    margin-bottom: 50px!important;    
+}
+.jumbotron h1,
+h1{
+    color: #ab0d0d;
+    font-weight: bolder;
+    font-size: 4em;    
+    margin-top: 200px;  
+    margin-bottom: 60px;  
+    font-family: 'Warnes', cursive;
+
+}
+h2{
+    color: #ab0d0d;
+    margin-top: 50px;  
+    font-size: 2em;    
+    font-family: 'Warnes', cursive;
+}
+a{
+    padding: 2px 5px;
+    margin-left: -5px;
+    color: #ab0d0d;
+    /*color: #d62d88;*/
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #ab0d0d;
+}
+
+/*
+    Ignore red BG on links
+*/
+a.carousel-control:hover,
+.sponsor a:hover{
+    background-color: transparent;
+}
+
+/*
+    Language Switch
+*/
+.jumbotron .languageswitch{
+    position: fixed;
+    padding: 0;
+    top: 0px;
+    right: 50px;
+    list-style-type: none;
+    z-index: 9999;
+}
+.jumbotron .languageswitch li{
+    float: left;
+    padding: 5px 10px;
+    border-bottom-left-radius: 0.1em;    
+    border-bottom-right-radius: 0.1em;
+    border-left: solid 1px #ab0d0d;
+    border-bottom: solid 1px #ab0d0d;
+    border-right: solid 1px #ab0d0d;
+    background-color: white;     
+}
+.jumbotron .languageswitch li:hover{
+    background-color: #ab0d0d; 
+}
+.jumbotron .languageswitch li.active,
+.jumbotron .languageswitch li.active:hover{
+    background-color: #ab0d0d;
+    color: white;
+}
+
+footer{
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    bottom: 0px;
+    font-size: 1rem;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 900px){
+    body{
+      font-size: 2em;  
+    }
+    h1,
+    .jumbotron h1{
+        font-size: 2.4em; 
+        margin-top: 100px;    
+
+    }
+    h2,
+    .jumbotron h2{
+        font-size: 1.5em; 
+    }    
+
+    .logo{
+        margin-bottom: 100px;
+    }
+    .logo img{
+        width: 300px;
+    }
+    .jumbotron .languageswitch{
+        right: 0px;
+    }
+
+    .sponsor img{
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+

@@ -4,8 +4,10 @@
 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Warnes');
 
+/*@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');*/
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
 
 html { 
   height:100%;
@@ -14,6 +16,7 @@ html {
 body{
   height:100%;
   font-size: 2.5em;  
+  font-family: 'Arvo', serif;  
   text-align: center;
   background-color: transparent; 
   margin-bottom: 100px;
@@ -22,19 +25,27 @@ body{
 
 .jumbotron{
     position: relative;
+    background-position: top center;    
     background-image: url('/assets/templates/studeyeah/images/header.png');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;    
+    background-size: cover;
     height: 800px;
-    /*border-bottom: solid 1px #ab0d0d;    */
+}
+.jumbotron.footer{
+    margin-top: 2em;
+    margin-bottom: 0px;
+    padding-bottom: 0Px;
+    height: 1200px;
+    background-position: center center;    
+    background-image: url('/assets/templates/studeyeah/images/footer.jpg');
 }
 .jumbotron h1,
 .jumbotron h2{
     margin-bottom: 0px!important;
     padding-bottom: 0px!important;
-    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    /*text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;*/
 }
 .jumbotron h2{
     margin-top: 0px!important;
@@ -43,68 +54,34 @@ body{
 }
 .jumbotron h1,
 h1{
-    color: #ab0d0d;
+    color: #DC143C;
     font-weight: bolder;
     font-size: 4em;    
-    margin-top: 200px;  
+    margin-top: 30px;  
     margin-bottom: 60px;  
-    font-family: 'Warnes', cursive;
-
+    font-family: 'Shrikhand', cursive;
 }
 h2{
-    color: #ab0d0d;
-    margin-top: 50px;  
+    color: #DC143C;
+    margin-top: 2em;  
+    margin-bottom: 1em;  
     font-size: 2em;    
-    font-family: 'Warnes', cursive;
+    font-family: 'Shrikhand', serif;
 }
 a{
     padding: 2px 5px;
     margin-left: -5px;
-    color: #ab0d0d;
+    color: #DC143C;
     /*color: #d62d88;*/
 }
 a:hover{
     color: white;
     text-decoration: none;
-    background-color: #ab0d0d;
+    background-color: #DC143C;
 }
 
-/*
-    Ignore red BG on links
-*/
-a.carousel-control:hover,
-.sponsor a:hover{
-    background-color: transparent;
-}
-
-/*
-    Language Switch
-*/
-.jumbotron .languageswitch{
-    position: fixed;
-    padding: 0;
-    top: 0px;
-    right: 50px;
-    list-style-type: none;
-    z-index: 9999;
-}
-.jumbotron .languageswitch li{
-    float: left;
-    padding: 5px 10px;
-    border-bottom-left-radius: 0.1em;    
-    border-bottom-right-radius: 0.1em;
-    border-left: solid 1px #ab0d0d;
-    border-bottom: solid 1px #ab0d0d;
-    border-right: solid 1px #ab0d0d;
-    background-color: white;     
-}
-.jumbotron .languageswitch li:hover{
-    background-color: #ab0d0d; 
-}
-.jumbotron .languageswitch li.active,
-.jumbotron .languageswitch li.active:hover{
-    background-color: #ab0d0d;
-    color: white;
+.spacetop{
+    margin-top: 20px;
 }
 
 footer{
@@ -120,27 +97,26 @@ footer{
     body{
       font-size: 2em;  
     }
+    .jumbotron{
+        height: 400px;
+        background-position: right center;
+    }    
     h1,
     .jumbotron h1{
         font-size: 2.4em; 
-        margin-top: 100px;    
+        margin-top: 20px;    
 
     }
     h2,
     .jumbotron h2{
         font-size: 1.5em; 
-    }    
-
+    }
     .logo{
         margin-bottom: 100px;
     }
     .logo img{
         width: 300px;
     }
-    .jumbotron .languageswitch{
-        right: 0px;
-    }
-
     .sponsor img{
         width: 50%;
         margin: 0 auto;

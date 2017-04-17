@@ -1,13 +1,9 @@
 /*
 
-    CSS Styles for mistermilano.it
+    CSS Styles for studeyeah.com
 
 */
-
-
-/*@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');*/
-@import url('https://fonts.googleapis.com/css?family=Shrikhand');
-@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Shrikhand|Arvo');
 
 html { 
   height:100%;
@@ -85,13 +81,19 @@ a:hover{
 }
 
 footer{
-    display: block;
-    position: relative;
-    margin-top: 50px;
-    bottom: 0px;
+    display: none;
+    position: absolute;
+    left: 20px;
+    bottom: 50px;
     font-size: 1rem;
 }
 
+
+@media screen and (min-width: 1400px){
+    .jumbotron{
+	    background-position: center center;
+    }
+}
 
 @media screen and (min-width: 0px) and (max-width: 900px){
     body{
@@ -120,6 +122,9 @@ footer{
     .sponsor img{
         width: 50%;
         margin: 0 auto;
+    }
+    .jumbotron.footer{
+        height: 500px;
     }
 }
 

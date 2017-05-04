@@ -1,0 +1,39 @@
+<!--
+<div class="span4">
+<center><h2>Recent Projects</h2></center>
+<div id="carousel-projects" class="carousel slide">
+<div class="carousel-inner">
+<div class="item active thumbnails">
+[[!_getResources? 
+ &parents=`8` 
+ &limit=`10` 
+ &depth=`0` 
+ &sortby=`{"menuindex":"ASC"}` 
+ &showHidden=`0` 
+ &includeTVs=`1` 
+ &processTVs=`1` 
+ &includeContent=`1` 
+ &cls=`span4` 
+ &clsItem=`hover-group`
+ &clsImage=`img-rounded`
+ &clsCaption=`hover-toggle`
+ &thumbWidth=`360`
+ &thumbHeight=`250`
+ &tpl=`tpl.resource.item` 
+ &name=`[[+menutitle]]` 
+ &caption=`[[+introtext]]` 
+ &pageSliderContent=`</div><div class="item thumbnails">` 
+ &pageSlider=`1` 
+]]
+</div>
+</div>
+<a class="carousel-control left" href="#carousel-projects" data-slide="prev">‹</a> 
+<a class="carousel-control right" href="#carousel-projects" data-slide="next">›</a>
+</div> 
+[[$tpl.resource.list]]
+</div>
+-->
+<h3 style="text-align:center;width:100%;">This is only a temporary mobile-friendly version.<br/>
+yeah right.</h3>
+<hr/>
+<div class="col-md-12">[[$tpl.resource.list?parents=`-1`&resources=`2,83,5`&clsImage=`hide`]]</div>

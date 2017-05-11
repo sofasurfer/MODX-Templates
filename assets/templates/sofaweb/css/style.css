@@ -141,9 +141,20 @@
     .title a{
         color: #5A5A5A;        
     }
+/*    .title a:hover{
+        color: #337ab7;
+        text-decoration: underline;
+        -moz-text-decoration-color: #337ab7;
+        text-decoration-color: #337ab7;
+    }*/
     #container{
         overflow: hidden;
     }
+
+    /*#container h2.title a:hover{
+        text-decoration: none;
+        background-color: #00BFFF;
+    }*/   
     abbr{
         margin-right:5px;
     }
@@ -315,7 +326,6 @@
         height: 100%;
     }
 
-
     #comments h3{
         clear: both;
     }
@@ -370,6 +380,7 @@
 
     @media (min-width:767px) and (max-width: 997px){
         .navbar-right {
+            width: 170px;
             padding:0px;
             margin-left:-10px;
         }

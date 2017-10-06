@@ -387,7 +387,27 @@
     .help-inline{
         color: #660000;
     }
+    .socialfeed .grid-item .thumbnail{
+        background-color: #f8f8f8;        
+    }
+    .socialfeed .grid-item .thumbnail .meta,
+    .socialfeed .grid-item .thumbnail .content,
+    .socialfeed .grid-item .thumbnail .info{
+        font-size: 12px;
+        padding: 0px 10px;        
+    }
+    .socialfeed .grid-item .thumbnail .content{
+        font-size: 16px;
+        padding: 10px 10px;
+    }
 
+    .socialfeed .grid-item .thumbnail .info i{
+        padding-right: 10px;
+    }
+    .socialfeed .grid-item .thumbnail .info i span{
+        padding-left: 5px;
+    }
+    
     @media (min-width:767px) and (max-width: 997px){
         .navbar-right {
             width: 170px;

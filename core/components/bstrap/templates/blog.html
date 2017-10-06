@@ -1,5 +1,5 @@
 [[$tpl.header]]
-<div class="page-header jumbotron">
+<div class="page-header jumbotron" [[*pageheader:notempty=`[[$tpl.pageheader]]`]]>
 	<div class="container">
 		<h1>[[*pagetitle]]</h1>
 		<div class=" subnav">
@@ -20,6 +20,9 @@
 		<br />
 		<h3>Add a Comment</h3>
 		[[+comments_form]]
+
+		[[$disqus_comments]]
+
 	</div>
 </div>
 [[$tpl.footer]]

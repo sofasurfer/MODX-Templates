@@ -2,7 +2,7 @@
 [[!getResources? 
     &parents=`[[+parents:default=`[[*id]]`]]`
     &resources=`[[+resources]]`
-    &limit=`10`
+    &limit=`[[+limit:default=`12`]]`
     &depth=`0`
     &sortby=`{"menuindex":"ASC"}`
     &showHidden=`0`

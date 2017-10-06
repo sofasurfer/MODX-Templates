@@ -10,10 +10,22 @@
     <meta name="description" content="[[*description:isnotempty:then=`[[*description:notags]]`:else=`[[*introtext:notags]]`]]" /> 
     <meta name="author" content="[[*publishedby:userinfo=`username`]]" />
     <base href="[[++site_url]]" id="site_url" />
-
-    <link href="[[++site_url]]stream/assets/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet"  />   
-    <link href="[[++site_url]]stream/assets/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="[[++theme_css]]" rel="stylesheet" />
+    [[MinifyX?
+        &jsSources=`
+         /stream/assets/jquery/jquery.min.js,
+         /stream/assets/bootstrap/3.3.5/js/bootstrap.min.js,
+         /stream/assets/code-prettify/js/run_prettify.js,
+         /stream/assets/blueimp-gallery/js/jquery.blueimp-gallery.min.js,
+         /assets/templates/sofaweb/js/default.js
+        `    
+        &cssSources=`
+         /stream/assets/font-awesome-4.5.0/css/font-awesome.min.css,
+         /stream/assets/bootstrap/3.3.5/css/bootstrap.min.css,
+         /stream/assets/blueimp-gallery/css/blueimp-gallery.min.css,
+         /assets/templates/sofaweb/css/style.css
+        `
+    ]]
+    [[+MinifyX.css]]
     <script type="text/javascript">
         var timerStart = Date.now();
     </script>    

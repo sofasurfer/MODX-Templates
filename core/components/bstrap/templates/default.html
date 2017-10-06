@@ -1,5 +1,5 @@
 [[$tpl.header]]
-<div class="jumbotron">
+<div class="jumbotron"  [[*pageheader:notempty=`[[$tpl.pageheader]]`]]>
 	<div class="container">
 		<h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
 	    [[*showbreadcrumb:isnot=`False`:then=`<div>

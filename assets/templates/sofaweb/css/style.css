@@ -18,6 +18,14 @@
     h3{
         margin-top:50px;
     }
+    h2,h3{
+        color: #5A5A5A;
+        letter-spacing:2px
+    }
+    .title,
+    .title a{
+        color: #5A5A5A;        
+    }    
     .clear{
         clear:both;
         padding-top: 10px;
@@ -26,8 +34,9 @@
         text-align: center;
         margin: 0 auto;
     }
-
-
+    .spacetop{
+        margin-top: 20px!important;
+    }
     .form-control input[type="checkbox"] {
         width: auto;
         float:left;
@@ -121,8 +130,16 @@
     }
     .jumbotron h3{
         display: inline-block;
-    }    
+    }
+    .jumbotron{
+        background-position: center;
+        background-repeat: no-repeat;
 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
     .row-fluid {
         margin: 0 auto;
     }
@@ -133,14 +150,6 @@
     .row-fluid .pagination-right{
         padding-right:30px;    
     }
-    h2,h3{
-        color: #5A5A5A;
-        letter-spacing:2px
-    }
-    .title,
-    .title a{
-        color: #5A5A5A;        
-    }
 /*    .title a:hover{
         color: #337ab7;
         text-decoration: underline;
@@ -149,6 +158,7 @@
     }*/
     #container{
         overflow: hidden;
+        padding-bottom: 50px;
     }
 
     /*#container h2.title a:hover{
@@ -424,6 +434,10 @@
 
     }
 
+
+.disqus-footer__wrapper{
+    display: none!important;
+}
 
     
 @charset "UTF-8";

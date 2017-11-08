@@ -9,6 +9,7 @@ define('FEED_CACHE_PATH',               $modx->getOption('socialfeed.cachepath')
     Instagram settings
 */
 define('INSTAGRAM_FEED',                $modx->getOption('socialfeed.instagramusername'));
+define('INSTAGRAM_ACCESSTOKEN',         $modx->getOption('socialfeed.instagramaccesstoken'));
 
 /*
     Twitter settings
@@ -42,7 +43,7 @@ class SocialFeed {
         */
         if( in_array('instagram', $sources)){
             $ig_feed = $this->get_instagram();
-            foreach($ig_feed->items as $ig){
+            foreach($ig_feed->data as $ig){
                 $media = array();
                 // Get video/image sources
                 if( $ig->type === 'video' ){
@@ -155,7 +156,7 @@ class SocialFeed {
         if($this->get_cache('instagram')){
             $json = $this->get_cache('instagram');
         }else{
-            $url = 'https://www.instagram.com/'.INSTAGRAM_FEED.'/media/';
+            $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=".INSTAGRAM_ACCESSTOKEN;
             if (!function_exists('curl_init')){ 
                 die('CURL is not installed!');
             }
@@ -256,7 +257,7 @@ class SocialFeed {
 
 $feed = new SocialFeed();
 
-$all = $feed->get_feeds(array('instagram-','twitter','facebook-'));
+$all = $feed->get_feeds(array('instagram','twitter','facebook'));
 
 $feed_content = "<div class=\"socialfeed grid all\">";
 

@@ -11,7 +11,52 @@
     <link href="[[++site_url]]assets/templates/studeyeah/css/main.css?ver=6" rel="stylesheet">
   </head>
   <body class="[[*alias]]">
-    [[*content]]
+    <div class="jumbotron">
+      <h1>Studeyeah</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            [[*content]]
+            </div>
+        </div>       
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Videos</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="[[*videolink]]" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="spacetop"><a href="https://www.youtube.com/channel/UC-PIf2MiyQXQbwOMLsSD-PQ" target="_blank">more videos</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Musig</h2>
+                <iframe src="http://mx3.ch/t/1mcQ/embed/standard" width="100%" height="68" scrolling="no" frameborder="no" allowfullscreen></iframe>
+                <p><a class="" href="http://mx3.ch/studeyeah" target="_blank">mx3.ch</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Konzerte</h2>
+                <div style="overflow-x:auto;">
+                <table class="table table-hover table-responsive">
+                  [[!GoogleSheet?list=`[[*concerts]]`]]
+                </table>
+                </div>      
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Kontakt</h2>
+                <p>+41 (0)77 437 38 67</p>
+                <p><a href="mailto:&#115;&#116;&#097;&#108;&#100;&#101;&#114;&#046;&#109;&#097;&#114;&#107;&#064;&#103;&#109;&#120;&#046;&#110;&#101;&#116;">&#115;&#116;&#097;&#108;&#100;&#101;&#114;&#046;&#109;&#097;&#114;&#107;&#064;&#103;&#109;&#120;&#046;&#110;&#101;&#116;</a></p>
+            </div>
+        </div>  
+    </div>
+    <div class="jumbotron footer">
+      <h1></h1>
+    </div>
     <footer>         
       <p><a href="https://www.sofasurfer.org" target="_blank" title="Built by SofaSurfer">Built by SofaSurfer</a></p>
     </footer>    

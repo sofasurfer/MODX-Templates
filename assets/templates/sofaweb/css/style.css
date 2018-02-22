@@ -57,6 +57,9 @@
         font-size: 0.7em;
         
     }
+    .list-group{
+ 	font-size: 14px;
+    }
     .list-group ul.list-group-child {
         padding-left: 0px;
         margin-left: 0px;
@@ -157,7 +160,8 @@
         text-decoration-color: #337ab7;
     }*/
     #container{
-        overflow: hidden;
+    	font-size: 18px;
+	overflow: hidden;
         padding-bottom: 50px;
     }
 
@@ -174,6 +178,10 @@
     }
     .post-content .thumbnail{
         margin:10px;
+    }
+    .post-info,
+    .postmeta{
+    	font-size: 14px;
     }
     .postmeta{
         clear:left;
@@ -199,6 +207,7 @@
     }
     .tagList li
     {
+	font-size: 12px;
         display: inline-block;
         list-style-type: none;
         margin-bottom: 10px;
@@ -407,7 +416,19 @@
     .socialfeed .grid-item .thumbnail .info i span{
         padding-left: 5px;
     }
-    
+
+    @media (min-width: 768px){
+	
+	.lead,
+	.jumbotron p {
+	    font-size: 28px;
+	}
+	.jumbotron .subnav p{
+	    font-size: 22px;
+	}
+    }
+   
+ 
     @media (min-width:767px) and (max-width: 997px){
         .navbar-right {
             width: 170px;

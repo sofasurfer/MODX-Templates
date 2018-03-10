@@ -41,12 +41,30 @@
         width: auto;
         float:left;
     }
-
+    .navbar-default{
+        border-color: #eee;
+    }
+    .navbar-default .navbar-nav>.active>a{
+        background-color: #eee;
+    }
     .navbar-brand{
         display: inline-block;
         font-family: 'Allerta', sans-serif;
         padding-right: 10px;
+        padding-top: 20px;
         font-size: 1.7em;
+    }
+    @media (min-width: 770px) {
+        .navbar-brand{
+            padding-right: 30px;
+            padding-top: 32px;
+        }
+        .navbar-form{
+            padding-top:20px;
+        }
+        .navbar-nav > li > a{
+            line-height: 50px;
+        }
     }
     .brand  .logo{
         position:absolute;      
@@ -127,7 +145,7 @@
         padding-right: 20px;
     }
     .jumbotron h1{
-        padding-top:30px;        
+        padding-top:50px;        
         color: #5A5A5A;
         letter-spacing:3px        
     }
@@ -397,24 +415,34 @@
         color: #660000;
     }
     .socialfeed .grid-item .thumbnail{
+	padding: 0px;
         background-color: #f8f8f8;        
     }
     .socialfeed .grid-item .thumbnail .meta,
     .socialfeed .grid-item .thumbnail .content,
     .socialfeed .grid-item .thumbnail .info{
         font-size: 12px;
-        padding: 0px 10px;        
+        padding: 10px 20px;        
     }
     .socialfeed .grid-item .thumbnail .content{
         font-size: 16px;
-        padding: 10px 10px;
+        padding: 0px 20px;
     }
-
+    .socialfeed .grid-item .thumbnail .meta{
+	padding-top: 20px;
+    }
+    .socialfeed .grid-item .thumbnail .info{
+	padding-bottom: 20px;
+    }
     .socialfeed .grid-item .thumbnail .info i{
         padding-right: 10px;
     }
     .socialfeed .grid-item .thumbnail .info i span{
         padding-left: 5px;
+    }
+    .socialfeed .grid-item .thumbnail .media{
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
     }
 
     @media (min-width: 768px){

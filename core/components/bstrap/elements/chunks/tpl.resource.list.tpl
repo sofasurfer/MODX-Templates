@@ -3,6 +3,7 @@
     &parents=`[[+parents:default=`[[*id]]`]]`
     &resources=`[[+resources]]`
     &limit=`[[+limit:default=`12`]]`
+    &url=`[[+parents:default=`[[~[[+id]]]]`]]`
     &depth=`0`
     &sortby=`{"menuindex":"ASC"}`
     &showHidden=`0`

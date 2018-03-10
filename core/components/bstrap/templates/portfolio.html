@@ -1,11 +1,11 @@
 [[$tpl.header]]
 <div class="jumbotron">
     <div class="container">
-        <h1>[[*longtitle:isnot=``:then=`[[*longtitle]]`:else=`[[*pagetitle]]` ]]</h1>
+        <h1>[[*pagetitle]]</h1>
         [[*showbreadcrumb:isnot=`False`:then=`<div>
             [[!BreadCrumb? &showBreadCrumbAtHome=`0` &showHomeCrumb=`0` &currentAsLink=`1` &crumbSeparator=`>` &containerTpl=`tpl.breadcrumb.container`&linkCrumbTpl=`tpl.breadcrumb.row` &cls=`breadcrumb`]]
         </div>`]]
-        [[*introtext:isnot=``:then=`<div class="lead">[[*introtext]]</div>`]]
+        [[*introtext:isnot=``:then=`<h2 class="lead">[[*introtext]]</h2>`]]
         [[*tags]]
         [[*siteurl:isnot=`http://`:then=`<p><a class="btn btn-primary spacetop" href="[[*siteurl]]" target="_blank">visit: [[*siteurl]]</a></p>`]]
     </div>

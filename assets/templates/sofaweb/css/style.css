@@ -54,17 +54,28 @@
         padding-top: 20px;
         font-size: 1.7em;
     }
+    .navbar-form{
+        padding-top:15px!important;
+    }    
     @media (min-width: 770px) {
         .navbar-brand{
             padding-right: 30px;
             padding-top: 32px;
         }
-        .navbar-form{
-            padding-top:20px;
-        }
         .navbar-nav > li > a{
             line-height: 50px;
         }
+    }
+
+    body.sticky .navbar-brand {
+        padding-right: 30px;
+        padding-top: 20px;
+    }
+    body.sticky .navbar-nav > li > a {
+        line-height: 20px;
+    }
+    body.sticky .navbar-form{
+        padding-top: 0px!important;
     }
     .brand  .logo{
         position:absolute;      
@@ -145,7 +156,7 @@
         padding-right: 20px;
     }
     .jumbotron h1{
-        padding-top:50px;        
+        padding-top:70px;        
         color: #5A5A5A;
         letter-spacing:3px        
     }
@@ -170,6 +181,10 @@
     .row-fluid .pull-right,
     .row-fluid .pagination-right{
         padding-right:30px;    
+    }
+    .pagination a.active{
+        color: white;
+        background-color: #337ab7;
     }
 /*    .title a:hover{
         color: #337ab7;
@@ -238,7 +253,17 @@
     .tagList .nav-header{
         display: block;
     }
-
+    body.sticky .row.tags{
+        position: fixed;
+        top: 50px;
+        z-index: 999;
+        background-color: white;
+        padding-top:20px;
+        padding-bottom: 0px;
+    }
+    .row.tags hr{
+        margin-top: 10px;
+    }
     .item-hover{
         position:relative;
         margin-bottom: 30px;
@@ -288,14 +313,51 @@
         border-radius:5px;  
         margin-bottom: 10px;
     }
+    .thumbnail{
+        padding:0px;
+        overflow:hidden;
+        background-color: #f8f8f8;        
+    }
+    .thumbnail img{
+      max-width: 100%;        
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;        
+    }
+    .thumbnail img:hover{
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
     .thumbnail .title{
         border:solid 0px aqua;
-        height:1.5em;
-        line-height: .8em;
+        line-height: 2.2rem;
+        margin-top:0px;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-left: -20px;
+        padding-right: 20px;
+        margin-right: -20px;
+        padding-bottom: 10px;  
+    }
+    .thumbnail .title:hover{
+        background-color: #5a5a5a;
+    }
+    .thumbnail .title:hover a{
+        color: white;
+        text-decoration: none;
+    }    
+    .thumbnail .content{
+        padding: 20px;
+        padding-top: 0px;
     }
     .thumbnail .caption{
         height: 200px;
         margin-bottom:10px;
+    }
+    .thumbnail .postmeta .readmore{
+        float: right;
+        margin-bottom: 20px;
     }
     /* For Mouse Over Caption */
     .hover-group{
@@ -414,6 +476,9 @@
     .help-inline{
         color: #660000;
     }
+    .grid nav{
+/*        display: none;
+*/    }
     .socialfeed .grid-item .thumbnail{
 	padding: 0px;
         background-color: #f8f8f8;        
@@ -446,14 +511,14 @@
     }
 
     @media (min-width: 768px){
-	
-	.lead,
-	.jumbotron p {
-	    font-size: 28px;
-	}
-	.jumbotron .subnav p{
-	    font-size: 22px;
-	}
+    	.lead,
+    	.jumbotron p {
+    	    font-size: 28px;
+    	}
+    	.jumbotron .subnav p{
+    	    font-size: 22px;
+            margin-top: 20px;
+    	}
     }
    
  

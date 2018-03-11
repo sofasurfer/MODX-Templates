@@ -2,7 +2,7 @@
 <div class="page-header jumbotron" [[*pageheader:notempty=`[[$tpl.pageheader]]`]]>
 	<div class="container">
 		<h1>[[*pagetitle]]</h1>
-		<div class=" subnav">
+		<div class="blogmeta subnav">
 			<p>Posted on [[*publishedon:strtotime:date=`%b %d, %Y`]] by <a href="[[~[[*parent]]]]author/[[*publishedby:userinfo=`username`]]">[[*publishedby:userinfo=`username`]]</a>
 			[[*articlestags:notempty=`<span class="tags">&nbsp;| Tags: [[+article_tags]]</span>`]]
 			[[+comments_enabled:is=`1`:then=`&nbsp;| <a href="[[~[[*id]]]]#comments" class="comments">Comments ([[+comments_count]])</a>`]]

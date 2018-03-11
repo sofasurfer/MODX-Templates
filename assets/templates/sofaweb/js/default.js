@@ -150,10 +150,12 @@ $(document).ready(function() {
   */
   $('#back-top').hide();
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 280) {
+    if ($(this).scrollTop() > 180) {
       $('#back-top').fadeIn();
+      $('body').addClass('sticky');
     } else {
       $('#back-top').fadeOut();
+      $('body').removeClass('sticky');
     }
   });
   $("#back-top").click(function(event) {
@@ -196,6 +198,9 @@ $(document).ready(function() {
       console.log('load githubRepoWidget');
     });
   };
+});
+
+$(window).load(function(){
 
   /*
     Masonry grid
@@ -204,4 +209,7 @@ $(document).ready(function() {
     // options
     itemSelector: '.grid-item',
   });
+
 });
+
+

@@ -1,6 +1,4 @@
 <?php
-
-
 $bandId = $modx->getOption('bandId',$scriptProperties,413);
 $showPast = $modx->getOption('showPast',$scriptProperties,false);
 
@@ -16,7 +14,7 @@ $json = json_decode($content, true);
 
 
 // Check if tours exist
-if( count($json['shows']) > 1){
+if( count($json['shows']) > 0 && !empty($json['shows'][0]) ){
     foreach($json['shows'] as $item) {
 
         $output[] = $modx->getChunk($modx->getOption('itemTpl',$scriptProperties,'tour.item'),$item);

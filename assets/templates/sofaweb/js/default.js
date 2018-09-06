@@ -149,8 +149,10 @@ $(document).ready(function() {
     Scroll Top
   */
   $('#back-top').hide();
+
+
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 180) {
+    if ($(this).scrollTop() > 280) {
       $('#back-top').fadeIn();
       $('body').addClass('sticky');
     } else {

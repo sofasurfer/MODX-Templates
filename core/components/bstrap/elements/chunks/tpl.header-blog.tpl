@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
 
-    <title>[[*longtitle:isnotempty:then=`[[*longtitle]]`:else=`[[*pagetitle]]`]] | [[++site_name]]</title>
+    <title>[[!getBlogTitle]]</title>
     <meta name="description" content="[[*introtext:isnot=``:then=`[[*introtext:notags]]`:else=`[[*description:notags]]`]]" /> 
     <meta name="author" content="[[*publishedby:userinfo=`username`]]" />
     <link rel="canonical" href="[[++site_url]][[*id:isnot=`[[++site_start]]`:then=`[[~[[*id]]]]`]]" />

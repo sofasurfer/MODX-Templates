@@ -90,6 +90,18 @@
 
 
 
+function setCookie(key, value) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+}
+
+function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+}
+
+
 /* 
 * Load dynamic CSS files 
 * If not already exists
@@ -116,6 +128,22 @@ $(document).ready(function() {
   */
   var loadTime = (Date.now()-timerStart);
   $('#debuginfo').html('Page loaded ' + loadTime + ' ms (cache)');
+
+
+
+  /*
+
+    Cookie Banner
+
+  */
+  if ( !getCookie('cookiebanner') ) {
+    $('#cookiebanner').show();
+    $('#closecookiebanner').click(function(){
+      event.preventDefault();
+      setCookie('cookiebanner','TRUE');
+      $('#cookiebanner').hide();
+    });
+  }
 
   /*
     Pritty Code 

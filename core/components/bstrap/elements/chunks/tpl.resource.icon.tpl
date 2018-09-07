@@ -1,5 +1,5 @@
 <div class="[[+cls]] item-hover">
-	    <a  class="[[+clsLink]]" title="[[+name]]" href="[[+tv.siteurl]]" target="_blank" >
+	    <a  class="[[+clsLink]]" title="[[+name]]" href="[[~[[+id]]]]"  >
 	        [[+tv.pageimage:notempty=`<img class="[[+clsImage]]" src="[[+tv.pageimage:phpthumbof=`w=[[+thumbWidth:default=`360`]]&h=[[+thumbHeight:default=`180`]]&zc=[[+zoomCrop:default=`1`]]`]]" alt="[[+name]]" />`]]	        
 		    <div class="caption item-hover-caption">
 	        [[+title:notempty=`<h3>[[+tv.navicon:notempty=`<i class="[[+tv.navicon]]"></i> `]][[+title]]</h3>`]]

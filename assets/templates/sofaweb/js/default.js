@@ -138,7 +138,7 @@ $(document).ready(function() {
   */
   if ( !getCookie('cookiebanner') ) {
     $('#cookiebanner').show();
-    $('#closecookiebanner').click(function(){
+    $('#closecookiebanner').click(function(event){
       event.preventDefault();
       setCookie('cookiebanner','TRUE');
       $('#cookiebanner').hide();

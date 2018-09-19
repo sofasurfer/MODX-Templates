@@ -1,0 +1,233 @@
+@font-face{
+    font-family: akzidenzGrotesk;
+    /*src: url('/assets/templates/putsmarie/fonts/akzidenz-grotesk-bold.ttf');*/
+    src: url('/assets/templates/putsmarie/fonts/DrukText-Medium.otf');
+    /*src: url('/assets/templates/putsmarie/fonts/DrukCond-Super.otf');*/
+    /*src: url('/assets/templates/putsmarie/fonts/DrukWide-Heavy.otf');*/
+    /*src: url('/assets/templates/putsmarie/fonts/DrukXCond-Super.otf');*/
+}
+@font-face{
+    font-family: fonttitle;
+    /*src: url('/assets/templates/putsmarie/fonts/DrukText-Medium.otf');*/
+    /*src: url('/assets/templates/putsmarie/fonts/DrukCond-Super.otf');*/
+    src: url('/assets/templates/putsmarie/fonts/DrukWide-Heavy.otf');
+    /*src: url('/assets/templates/putsmarie/fonts/DrukXCond-Super.otf');*/
+}
+@font-face{
+    font-family: fonttitle2;
+    src: url('/assets/templates/putsmarie/fonts/DrukText-Medium.otf');
+    /*src: url('/assets/templates/putsmarie/fonts/DrukCond-Super.otf');*/
+    /*src: url('/assets/templates/putsmarie/fonts/DrukWide-Heavy.otf');*/
+    /*src: url('/assets/templates/putsmarie/fonts/DrukXCond-Super.otf');*/
+}
+html,body{
+    background:white!important;
+    color:black;
+    text-align: center;
+    /*font-family: 'Finger Paint', cursive;*/
+    font-family: 'akzidenzGrotesk';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 24px;
+}
+h1{
+    padding:1.5em;
+}
+h2{
+    padding:1.5em; 
+    font-size: 2.5rem;
+    font-family: fonttitle2;
+
+}
+h1.no-padding{
+    padding-bottom: 0px !important;
+}
+a{
+    padding: 4px;
+    cursor: pointer;
+    color: black;
+    border-bottom: solid 4px black;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+.jumbotron{
+    text-align: center !important;
+    padding: 0px;
+    margin: 0px;
+    position:relative;
+}
+.jumbotron h1{
+    color: black;
+    font-family: fonttitle;
+    font-size: 5rem !important;
+    padding: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0px;
+    /*
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;*/
+
+}
+.pagetitle{
+/*    position: absolute;
+    top: 30px;*/
+    margin: 0 auto;
+    width: 100%;
+}
+.logo{
+    width:100%;
+}
+
+img.header{
+    width: 100%;
+}
+
+table{
+    display: table;
+    border: solid 10px black;
+}
+
+table td{
+    text-align: left;
+    border-top: 1px solid #7e7e7e !important;
+}
+td.location,
+td.venue{
+    font-size: 1.4em;
+    display: table-cell;
+    vertical-align: middle !important;
+}
+
+.location-small{
+    display: none;
+}        
+td.ticket{
+    padding-top: 20px !important;
+    vertical-align: middle !important;
+
+}
+tr:hover{
+    color: black;
+}
+.date span{
+    display:block;
+    text-align: center;
+    line-height: 1.2em;
+}
+span.day{
+    font-size: 1.4em;
+}
+span.month{
+    font-size: 1.6em;
+}
+.order{
+    margin-top: 1.9em;
+    margin-bottom: 2em;
+}
+.button,
+.buy,
+.ticket a{
+    color: black;
+    padding: 12px 50px 12px 50px;
+    text-transform: uppercase;
+    background-color: white;
+    border: solid 4px black;
+}
+.buy:hover,
+.ticket a:hover{        
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+.buy.france{
+    margin-top: 50px;
+}
+
+.mc-field-group input{
+    margin: 20px;
+    color: black;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 20px;
+    width: 80%;
+    text-align: center; 
+}
+
+
+.container-fluid.dark{
+    background-color: black;
+    color: white;
+    margin-top: 200px;
+}
+.container-fluid.dark h2{
+    padding-bottom: 5px;
+}
+.container-fluid.nopadding{
+
+    margin-left: -15px;
+    margin-right: -15px;
+
+}
+
+.carousel-control:hover{
+    background-color: transparent;
+}
+
+footer {
+    color: white;    
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: black;
+    font-size: 0.6rem;
+}
+footer a{
+    color: white;
+    cursor: pointer!important;
+}
+
+a .fa,
+a .fas,
+a .fab{
+    font-size: 1.5rem;
+    color: white!important;
+    padding: 0px 10px;
+}
+
+@media (max-width: 1280px) {
+    .ticket a{
+        padding: 5px;
+    }
+    .jumbotron h1{
+        font-size: 4rem!important;
+        margin-bottom: 50px;
+    }  
+}
+@media (max-width: 768px) {
+    table{
+        border: none;
+    }
+    td.location{
+        display:none;
+    }
+    .location-small{
+        display: block;
+    }
+    td.location,
+    td.venue{
+        font-size: 1rem;
+    }
+    td.ticket{
+        margin-right: 10px;
+    }
+    td.venue a{
+        border: none;
+    }
+    .jumbotron h1{
+        font-size: 1.5rem!important;
+        margin-bottom: 50px;
+    }
+}

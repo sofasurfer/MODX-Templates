@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>[[*longtitle]] [[++site_name]]</title>
+    <meta name="description" content="Nick Porsche - drums, Igor Stepniewski - bass, Sirup Gagavil - guitar, Max Usata - vocal, Beni 06 - Farfisa">
+    <meta name="keywords" content="pop, punk, indie, hip-hop, chanson, rock, folk, swing, rap, surf, yagwud">
+    <meta name="google-site-verification" content="2KC6nTlKXS1xgG15jEm0F67bnvosRzSYjOXX8G4eCGM" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    
+    <link rel="stylesheet" href="[[++site_url]]stream/assets/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="[[++site_url]]assets/templates/putsmarie/css/style-new.css?v=1.8">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header class="jumbotron">
+        <div class="pagetitle"><h1>PUTSMARIE</h1></div>
+        <img src="/assets/templates/putsmarie/images/header-new.jpg" class="img-responsive header" />
+    </header>
+    
+    [[*content]]
+
+    <footer class="container-fluid">
+        <center><small>Built by <a href="https://www.sofasurfer.org" title="Sofasurfer.org" target="_blank">sofasurfer.org</a></small></center>
+    </footer>
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//piwik.sofasurfer.org/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 12]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//piwik.sofasurfer.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="[[++site_url]]stream/assets/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        var pmScripts = {
+            data : [],
+            init : function() {
+                console.log( "init!" );
+                pmScripts.initTracking();
+            },
+
+            initTracking : function() {
+                $('.ticket').click(function() {
+                    _paq.push(['trackGoal', 3]);
+                    _paq.push(['trackEvent', 'links', 'linkticket', $(this).attr('href')]);                   
+                    //console.log('track event: ' +  $(this).attr('href'));
+                });
+            },
+        };
+        $(function() {
+            pmScripts.init();
+        });        
+    </script>
+</body>
+</html>
+

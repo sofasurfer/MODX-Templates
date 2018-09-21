@@ -22,9 +22,29 @@
     
     [[*content]]
 
+    <div class="container-fluid dark">
+            <div class="row">
+              <div class="col-md-4">
+                <h2 class="no-padding">Booking</h2>
+                <p><a href="http://twogentlemen.net/band/413" data-toggle="tooltip" data-placement="bottom" title="For bookings and other inquiries, please contact Two Gentlemen" target="_blank"><img src="/assets/templates/putsmarie/images/twogentelmen-logo.png" alt="Two Gentlemen" /></a></p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="no-padding">Music</h2>
+                <a href="http://putsmarie.bandcamp.com/"  data-toggle="tooltip" data-placement="bottom" title="Listen on Bandcamp" target="_new"><img src="https://s0.bcbits.com/img/buttons/bandcamp_130x27_black.png"></a>
+              </div>
+              <div class="col-md-4">
+                <h2 class="no-padding">Connect</h2>
+
+                <a href="mailto:info@putsmarie.com"  data-toggle="tooltip" data-placement="bottom" title="Send E-Mail"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.facebook.com/putsmariefans/"  data-toggle="tooltip" data-placement="bottom" title="Follow on Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/explore/tags/putsmarie/"  data-toggle="tooltip" data-placement="bottom" title="See on Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+    </div>
     <footer class="container-fluid">
         <center><small>Built by <a href="https://www.sofasurfer.org" title="Sofasurfer.org" target="_blank">sofasurfer.org</a></small></center>
     </footer>
+
     <!-- Piwik -->
     <script type="text/javascript">
       var _paq = _paq || [];
@@ -48,7 +68,6 @@
         var pmScripts = {
             data : [],
             init : function() {
-                console.log( "init!" );
                 pmScripts.initTracking();
             },
 
@@ -56,13 +75,61 @@
                 $('.ticket').click(function() {
                     _paq.push(['trackGoal', 3]);
                     _paq.push(['trackEvent', 'links', 'linkticket', $(this).attr('href')]);                   
-                    //console.log('track event: ' +  $(this).attr('href'));
                 });
             },
         };
         $(function() {
             pmScripts.init();
-        });        
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+        });
+
+
+        var $animation_elements = $('.animation-element');
+        var $window = $(window);
+
+        function check_if_in_view() {
+          var delay = 200;
+          var window_height = $window.height();
+          var window_top_position = $window.scrollTop();
+          var window_bottom_position = (window_top_position + window_height);
+
+          $.each($animation_elements, function() {
+
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+
+            //check to see if this current container is within viewport
+            if ((element_bottom_position >= window_top_position) &&
+              (element_top_position <= window_bottom_position)) {
+
+                setTimeout(function(element) {  
+                    $element.addClass('in-view');
+                }, delay);
+                if( $element.prop("tagName") == 'TR' ){
+                   delay = delay + 10;
+                }else{
+                   delay = delay + 200;
+                }
+            } else {
+                // if( $element.prop("tagName") != 'TR' ){
+                //     $element.removeClass('in-view');
+                // }
+            }
+
+          });
+        }
+
+        $window.on('scroll resize', check_if_in_view);
+        $window.trigger('scroll');
+
+
+
+
     </script>
 </body>
 </html>

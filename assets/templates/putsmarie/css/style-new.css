@@ -88,6 +88,7 @@ img.header{
 
 table{
     display: table;
+    overflow: hidden;
     border: solid 10px black;
 }
 
@@ -109,6 +110,9 @@ td.ticket{
     padding-top: 20px !important;
     vertical-align: middle !important;
 
+}
+tr{
+    overflow: hidden;
 }
 tr:hover{
     color: black;
@@ -176,6 +180,73 @@ span.month{
 .carousel-control:hover{
     background-color: transparent;
 }
+
+
+
+/*
+    Scroll Stuff
+*/
+.bounce-table .subject {
+  opacity: 0;
+  -moz-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  -moz-transform: translate3d(1200px, 0px, 0px);
+  -webkit-transform: translate3d(1200px, 0px, 0px);
+  -o-transform: translate(1200px, 0px);
+  -ms-transform: translate(1200px, 0px);
+  transform: translate3d(1200px, 0px, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-table.in-view .subject {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+
+.bounce-up .subject {
+  opacity: 0;
+  -moz-transition: all 500ms ease-out;
+  -webkit-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200px, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view .subject {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     color: white;    

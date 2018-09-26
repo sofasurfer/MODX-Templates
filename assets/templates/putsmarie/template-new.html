@@ -7,12 +7,28 @@
     <meta name="description" content="Nick Porsche - drums, Igor Stepniewski - bass, Sirup Gagavil - guitar, Max Usata - vocal, Beni 06 - Farfisa">
     <meta name="keywords" content="pop, punk, indie, hip-hop, chanson, rock, folk, swing, rap, surf, yagwud">
     <meta name="google-site-verification" content="2KC6nTlKXS1xgG15jEm0F67bnvosRzSYjOXX8G4eCGM" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    
-    <link rel="stylesheet" href="[[++site_url]]stream/assets/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="[[++site_url]]assets/templates/putsmarie/css/style-new.css?v=1.8">
-    <style>
 
-    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/templates/putsmarie/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/templates/putsmarie/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/templates/putsmarie/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/templates/putsmarie/images/site.webmanifest">
+    <link rel="mask-icon" href="/assets/templates/putsmarie/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    [[MinifyX?
+        &jsSources=`
+         /stream/assets/jquery/jquery.min.js,
+         /stream/assets/bootstrap/3.3.5/js/bootstrap.min.js,
+        `    
+        &cssSources=`
+         /stream/assets/font-awesome-4.5.0/css/font-awesome.min.css,
+         /stream/assets/bootstrap/3.3.5/css/bootstrap.min.css,
+         /assets/templates/putsmarie/css/style-new.css
+        `
+    ]]
+
 </head>
 <body>
     <header class="jumbotron">
@@ -45,6 +61,11 @@
         <center><small>Built by <a href="https://www.sofasurfer.org" title="Sofasurfer.org" target="_blank">sofasurfer.org</a></small></center>
     </footer>
 
+    
+    [[+MinifyX.css]]
+
+    [[+MinifyX.javascript]]
+
     <!-- Piwik -->
     <script type="text/javascript">
       var _paq = _paq || [];
@@ -61,9 +82,6 @@
     <noscript><p><img src="//piwik.sofasurfer.org/piwik.php?idsite=12" style="border:0;" alt="" /></p></noscript>
     <!-- End Piwik Code -->
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="[[++site_url]]stream/assets/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
         var pmScripts = {
             data : [],
@@ -115,10 +133,6 @@
                 }else{
                    delay = delay + 200;
                 }
-            } else {
-                // if( $element.prop("tagName") != 'TR' ){
-                //     $element.removeClass('in-view');
-                // }
             }
 
           });

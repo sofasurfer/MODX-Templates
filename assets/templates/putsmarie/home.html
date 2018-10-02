@@ -1,11 +1,16 @@
 <div class="container-fluid ">
     <div class="row">
-            <h2 class="hidden-lg">Videos</h2>
+            <h2 >Videos</h2>
             <div id="carousel-example-generic" class="carousel slide" data-interval="false" data-ride="carousel">
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
                <div class="item active">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.youtube.com/embed/jlN7E1X3mfQ" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+               <div class="item">
                   <div class="embed-responsive embed-responsive-16by9">
                     <iframe src="https://www.youtube.com/embed/mPgOG5Smb9o" frameborder="0" allowfullscreen></iframe>
                   </div>
@@ -53,7 +58,7 @@
         <div class="row">
           <div class="col-md-12">
             <h2>Tour dates</h2>
-            <table class="table table-hover">[[!pmGetTours?bandId=`413`&itemTpl=`tour.item.table`]]</table>          
+            <table class="table table-hover" itemscope itemtype="http://schema.org/Event" >[[!pmGetTours?bandId=`413`&itemTpl=`tour.item.table`]]</table>          
             <center><p style="margin-top: 50px; margin-bottom: 50px;"><a title="Show past dates." class="buy france" href="[[~1143]]">Show Past Shows</a></p></center>
           </div>
         </div>

@@ -107,14 +107,25 @@ $(document).ready(function() {
   /*
     Image gallery stuff
   */
-  document.getElementById('blueimp-gallery-images').onclick = function (event) {     
-      event = event || window.event;
-      var target = event.target || event.srcElement,
-          link = target.src ? target.parentNode : target,
-          options = {index: link, event: event},
-          links = this.getElementsByTagName('a');    
-      blueimp.Gallery(links, options);
-  };
+  if( $('#blueimp-gallery-images').length > 0 ){
+    document.getElementById('blueimp-gallery-images').onclick = function (event) {     
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');    
+        blueimp.Gallery(links, options);
+    };
+  }
+
+
+  $( "#links btn" ).text('');
+
+  $('.item-hover').hover( function() {
+      $(this).find('.item-hover-caption').fadeIn(300);
+  }, function() {
+      $(this).find('.item-hover-caption').fadeOut(100);
+  })
 
   /*
     GitHub Widget

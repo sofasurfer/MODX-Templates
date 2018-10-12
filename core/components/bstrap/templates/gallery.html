@@ -10,62 +10,10 @@
 </div>
 <div id="container" class="[[*layout:isequal=`fluid`:then=`container-fluid`:else=`container`]]">
 	[[*content]]
-    <div id="links" class="row">
-    [[!getPage?   
-        &elementClass=`modSnippet`  
-        &element=`Gallery`
-        &pageActiveTpl=`<li class="active"><a[[+activeClasses:default=` class="active"`]][[+title]] href="[[+href]]">[[+pageNo]]</a></li>`        
-        &totalVar=`total`
-        &limit=`260` 
-        &album=`[[*gallery]]` 
-        &itemCls=`col-md-3`
-        &clsImage=`thumbnail`
-        &linkToImage=`1`
-        &thumbWidth=`300`
-        &thumbHeight=`300`
-        &toPlaceholder=`page.list`]]
-        [[+page.list]]   
-    </div>
-    <nav>
-      <ul class="pagination">
-        [[!+page.nav]]
-      </ul>
-    </nav>
+
+    [[$tpl.gallery?gallery=`[[*gallery]]`]]
+
 </div>
 
-<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <!-- The container for the modal slides -->
-    <div class="slides"></div>
-    <!-- Controls for the borderless lightbox -->
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause">play</a>
-    <ol class="indicator"></ol>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->
-    <div class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body next"></div>
 
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        Previous
-                    </button>
-                    <button type="button" class="btn btn-primary next">
-                        Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 [[$tpl.footer]]

@@ -4,9 +4,7 @@
  ff-enzo-web
  
  */
-    /*@import url(//fonts.googleapis.com/css?family=Ubuntu|Oswald|Bevan|Wallpoet|Allerta);*/
-     @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
-
+    @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
     html,
     body{
         display: block!important;

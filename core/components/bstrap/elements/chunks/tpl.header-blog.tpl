@@ -11,6 +11,8 @@
     <meta name="author" content="[[*publishedby:userinfo=`username`]]" />
     <link rel="canonical" href="[[++site_url]][[*id:isnot=`[[++site_start]]`:then=`[[~[[*id]]]]`]]" />
     <base href="[[++site_url]]" id="site_url" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
+
     [[MinifyX?
         &jsSources=`
          /stream/assets/jquery/jquery.min.js,
